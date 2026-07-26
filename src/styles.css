@@ -2,20 +2,23 @@
 
 :root {
   font-family: "Manrope", sans-serif;
-  color: #14213a;
-  background: #f4f2ec;
+  color: #e8e5dc;
+  background: #0c111a;
   font-synthesis: none;
-  --paper: #f4f2ec;
-  --paper-deep: #e7e4dc;
-  --surface: #fbfaf7;
-  --surface-tint: #f0eee7;
-  --ink: #14213a;
-  --ink-soft: #22304a;
-  --muted: #687080;
-  --muted-light: #a5a9b1;
-  --gold: #d6b45c;
-  --gold-dark: #907128;
-  --red: #a53c34;
+  color-scheme: dark;
+  --paper: #0c111a;
+  --paper-deep: #202838;
+  --surface: #141b27;
+  --surface-tint: #101721;
+  --ink: #e8e5dc;
+  --ink-soft: #c8c1b1;
+  --muted: #a6acb8;
+  --muted-light: #737c8d;
+  --gold: #d9b45b;
+  --gold-dark: #c79c3f;
+  --red: #e38276;
+  --reel: #080d15;
+  --reel-soft: #111a28;
   --line: color-mix(in oklch, var(--ink) 13%, transparent);
   --line-strong: color-mix(in oklch, var(--ink) 24%, transparent);
 }
@@ -43,7 +46,7 @@ input {
 button:focus-visible,
 input:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid var(--red);
+  outline: 3px solid var(--gold);
   outline-offset: 3px;
 }
 

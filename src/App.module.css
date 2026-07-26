@@ -81,8 +81,8 @@
   gap: 16px;
   padding: 0 22px;
   color: var(--paper);
-  background: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--gold);
+  border: 1px solid var(--gold);
   border-radius: 5px;
   font-size: 13px;
   font-weight: 700;
@@ -94,11 +94,11 @@
 
 .primaryButton:hover,
 .generateButton:hover {
-  background: var(--ink-soft);
+  background: color-mix(in oklch, var(--gold) 82%, var(--ink));
 }
 
 .primaryButton span {
-  color: var(--gold);
+  color: var(--paper);
   font-size: 20px;
 }
 
@@ -110,10 +110,10 @@
   gap: 10px;
   padding: 14px;
   overflow: hidden;
-  background: var(--ink);
-  border: 1px solid color-mix(in oklch, var(--gold) 45%, var(--ink));
+  background: var(--reel);
+  border: 1px solid color-mix(in oklch, var(--gold) 42%, var(--reel));
   border-radius: 10px;
-  box-shadow: 0 24px 70px color-mix(in oklch, var(--ink) 17%, transparent);
+  box-shadow: 0 24px 70px color-mix(in oklch, #02050a 65%, transparent);
 }
 
 .roulette::before,
@@ -129,17 +129,17 @@
 
 .roulette::before {
   top: 0;
-  background: linear-gradient(var(--ink), transparent);
+  background: linear-gradient(var(--reel), transparent);
 }
 
 .roulette::after {
   bottom: 0;
-  background: linear-gradient(transparent, var(--ink));
+  background: linear-gradient(transparent, var(--reel));
 }
 
 .reel {
   overflow: hidden;
-  background: var(--ink-soft);
+  background: var(--reel-soft);
   border-radius: 5px;
 }
 
@@ -159,7 +159,7 @@
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
-  background: var(--ink);
+  background: var(--reel);
   border-radius: 3px;
 }
 
@@ -178,8 +178,8 @@
   left: 0;
   padding: 18px 6px 6px;
   overflow: hidden;
-  color: var(--paper);
-  background: linear-gradient(transparent, color-mix(in oklch, var(--ink) 88%, transparent));
+  color: var(--ink);
+  background: linear-gradient(transparent, color-mix(in oklch, var(--reel) 90%, transparent));
   font-size: 8px;
   font-weight: 700;
   text-overflow: ellipsis;
@@ -269,7 +269,7 @@
   width: 100%;
   padding: 12px 14px;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--surface-tint);
   border: 1px solid var(--line-strong);
   border-radius: 5px 0 0 5px;
   font-size: 18px;
@@ -284,8 +284,8 @@
   flex: 0 0 48px;
   place-items: center;
   color: var(--paper);
-  background: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--gold);
+  border: 1px solid var(--gold);
   border-radius: 0 5px 5px 0;
 }
 
@@ -322,7 +322,7 @@
   gap: 8px;
   padding: 0 13px;
   color: var(--paper);
-  background: var(--ink);
+  background: var(--gold);
   border: 0;
   border-radius: 4px;
   font-size: 11px;
@@ -481,7 +481,7 @@
   display: grid;
   place-items: center;
   color: var(--paper);
-  background: var(--ink);
+  background: var(--gold-dark);
   border-radius: 2px;
   font-size: 8px;
   font-style: normal;
@@ -568,7 +568,7 @@
   align-items: center;
   gap: 8px;
   padding: 7px;
-  background: var(--paper);
+  background: var(--surface-tint);
   border: 1px solid var(--line);
   border-radius: 4px;
 }
