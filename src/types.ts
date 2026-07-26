@@ -49,6 +49,11 @@ export interface MatchupOpponent {
   winRate: number;
 }
 
+export interface ObservedBuild {
+  starterItemIds: string[];
+  itemIds: string[];
+}
+
 export interface DragonSpell {
   id: string;
   name: string;
@@ -97,6 +102,7 @@ export interface StaticData {
   championRates: ChampionRates;
   rankedStats: Record<string, Partial<Record<RateRole, RankedStat>>>;
   matchups: Record<string, Partial<Record<RateRole, ChampionMatchups>>>;
+  builds: Record<string, Partial<Record<RateRole, ObservedBuild>>>;
   runeStyles: RuneStyle[];
   summoners: Record<string, DragonSummoner>;
 }

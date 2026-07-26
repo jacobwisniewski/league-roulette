@@ -26,7 +26,12 @@
   color: var(--gold);
 }
 
-.muteButton {
+.headerActions {
+  display: flex;
+  gap: 8px;
+}
+
+.headerButton {
   width: 34px;
   height: 34px;
   display: grid;
@@ -42,10 +47,150 @@
     background 140ms ease;
 }
 
-.muteButton:hover {
+.headerButton:hover {
   color: var(--ink);
   background: var(--surface);
   border-color: var(--line-strong);
+}
+
+.modalBackdrop {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(3 7 12 / 76%);
+}
+
+.configModal {
+  width: min(430px, 100%);
+  background: var(--surface);
+  border: 1px solid color-mix(in oklch, var(--gold) 38%, var(--line));
+  border-radius: 3px;
+  box-shadow: 0 24px 80px rgb(0 0 0 / 52%);
+}
+
+.configModal > header {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  background: var(--surface-tint);
+  border-bottom: 1px solid var(--line);
+}
+
+.configModal h2 {
+  margin: 0;
+  font:
+    600 23px/1 "Newsreader",
+    serif;
+}
+
+.modalClose {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.modalClose:hover {
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.optionRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 18px;
+  cursor: pointer;
+}
+
+.optionRow span {
+  min-width: 0;
+}
+
+.optionRow strong,
+.optionRow small {
+  display: block;
+}
+
+.optionRow strong {
+  font-size: 13px;
+}
+
+.optionRow small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.optionRow input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.optionRow > i {
+  position: relative;
+  width: 42px;
+  height: 22px;
+  flex: 0 0 42px;
+  background: var(--reel);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease;
+}
+
+.optionRow > i::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  content: "";
+  background: var(--muted);
+  border-radius: 1px;
+  transition:
+    background 140ms ease,
+    transform 140ms ease;
+}
+
+.optionRow input:checked + i {
+  background: #125e6d;
+  border-color: var(--gold-dark);
+}
+
+.optionRow input:checked + i::after {
+  background: var(--gold);
+  transform: translateX(20px);
+}
+
+.optionRow input:focus-visible + i {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.configModal > footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 18px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.configModal > footer .primaryButton {
+  min-height: 40px;
+  padding-inline: 20px;
 }
 
 .textButton,
@@ -632,6 +777,92 @@
   border-right: 1px solid var(--line);
 }
 
+.championLoading > :not(.championSkeleton) {
+  visibility: hidden;
+}
+
+.championSkeleton {
+  position: absolute;
+  inset: 14px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.championSkeleton span,
+.championSkeleton i,
+.championSkeleton b {
+  display: block;
+  background: color-mix(in oklch, var(--ink) 9%, var(--surface-tint));
+  border-radius: 2px;
+}
+
+.skeletonRole {
+  width: 72px;
+  height: 13px;
+}
+
+.skeletonIdentity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.skeletonIdentity > i {
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+}
+
+.skeletonIdentity > span {
+  flex: 1;
+  background: none;
+}
+
+.skeletonIdentity b:first-child {
+  width: 92%;
+  height: 17px;
+}
+
+.skeletonIdentity b:last-child {
+  width: 66%;
+  height: 8px;
+  margin-top: 9px;
+}
+
+.skeletonMatchups {
+  display: grid;
+  grid-template-columns: repeat(3, 42px);
+  gap: 7px 5px;
+  margin-top: 18px;
+}
+
+.skeletonMatchups span {
+  width: 42px;
+  height: 42px;
+}
+
+.skeletonFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.skeletonFooter span {
+  width: 68%;
+  height: 16px;
+}
+
+.skeletonButton {
+  width: 100%;
+  height: 29px;
+  margin-top: 9px;
+}
+
 .roleLabel {
   grid-column: 1 / -1;
   display: flex;
@@ -695,11 +926,44 @@
   white-space: nowrap;
 }
 
+.bannedButton {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 9px;
+  padding: 7px 10px;
+  color: var(--muted);
+  background: var(--reel);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bannedButton:hover {
+  color: var(--red);
+  background: color-mix(in oklch, var(--red) 5%, var(--reel));
+  border-color: color-mix(in oklch, var(--red) 46%, var(--line));
+}
+
+.bannedButton:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.championFooter {
+  margin-top: auto;
+}
+
 .championStats {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin: auto 0 0;
+  margin: 0;
   padding-top: 10px;
   border-top: 1px solid var(--line);
 }

@@ -6,6 +6,7 @@ const dataDirectory = new URL("../public/data/", import.meta.url);
 const ratesOutput = new URL("championrates.json", dataDirectory);
 const rankedOutput = new URL("rankedstats.json", dataDirectory);
 const matchupsOutput = new URL("matchups.json", dataDirectory);
+const buildsOutput = new URL("builds.json", dataDirectory);
 const ratesSource =
   "https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/championrates.json";
 const rankedSource =
@@ -147,6 +148,45 @@ async function fetchMatchup(champion, role, championMeta) {
   return strongInto.length && strugglesInto.length ? { strongInto, strugglesInto } : null;
 }
 
+function itemIds(fragment) {
+  return [...fragment.matchAll(/item64\/(\d+)\.webp/g)].map((match) => match[1]);
+}
+
+function highestWinBuild(html) {
+  const summaryStart = html.indexOf("summary_win");
+  if (summaryStart < 0) return null;
+  const summary = html.slice(summaryStart, summaryStart + 125_000);
+  const startingIndex = summary.indexOf("Starting Items");
+  const coreIndex = summary.indexOf("Core Build");
+  const item4Index = summary.indexOf("Item 4", coreIndex);
+  const item5Index = summary.indexOf("Item 5", item4Index);
+  const item6Index = summary.indexOf("Item 6", item5Index);
+  if ([startingIndex, coreIndex, item4Index, item5Index, item6Index].some((index) => index < 0)) {
+    return null;
+  }
+
+  const starterItemIds = [...new Set(itemIds(summary.slice(startingIndex, coreIndex)))];
+  const coreItemIds = [...new Set(itemIds(summary.slice(coreIndex, item4Index)))].slice(0, 3);
+  const selected = [...coreItemIds];
+  const chooseNext = (start, end) => {
+    const next = itemIds(summary.slice(start, end)).find((id) => !selected.includes(id));
+    if (next) selected.push(next);
+  };
+  chooseNext(item4Index, item5Index);
+  chooseNext(item5Index, item6Index);
+  chooseNext(item6Index, summary.length);
+  if (!starterItemIds.length || selected.length < 4) return null;
+  return { starterItemIds, itemIds: selected.slice(0, 6) };
+}
+
+async function fetchBuild(champion, role) {
+  const lane = laneMap[role];
+  const url = `https://lolalytics.com/lol/${champion.id.toLowerCase()}/build/?lane=${lane}&tier=emerald_plus`;
+  const response = await fetch(url, { headers: { "user-agent": "League Roulette data sync" } });
+  if (!response.ok) return null;
+  return highestWinBuild(await response.text());
+}
+
 async function syncMatchups(rates) {
   const versions = await fetch("https://ddragon.leagueoflegends.com/api/versions.json").then(
     (response) => response.json(),
@@ -168,23 +208,36 @@ async function syncMatchups(rates) {
     }
   }
   const data = {};
+  const builds = {};
   for (let offset = 0; offset < queue.length; offset += 8) {
     const batch = queue.slice(offset, offset + 8);
     const results = await Promise.all(
-      batch.map(({ champion, role }) =>
-        role ? fetchMatchup(champion, role, championMeta) : Promise.resolve(null),
-      ),
+      batch.map(async ({ champion, role }) => {
+        if (!role) return { matchup: null, build: null };
+        const [matchup, build] = await Promise.all([
+          fetchMatchup(champion, role, championMeta),
+          fetchBuild(champion, role),
+        ]);
+        return { matchup, build };
+      }),
     );
-    results.forEach((matchup, index) => {
-      if (!matchup) return;
+    results.forEach(({ matchup, build }, index) => {
       const { champion, role } = batch[index];
       const key = championKey(champion.id);
-      data[key] ||= {};
-      data[key][role] = matchup;
+      if (matchup) {
+        data[key] ||= {};
+        data[key][role] = matchup;
+      }
+      if (build) {
+        builds[key] ||= {};
+        builds[key][role] = build;
+      }
     });
   }
   await writeFile(matchupsOutput, `${JSON.stringify({ patch, data }, null, 2)}\n`);
+  await writeFile(buildsOutput, `${JSON.stringify({ patch, data: builds }, null, 2)}\n`);
   console.log("Synced role-specific champion matchups.");
+  console.log("Synced highest-win champion builds.");
 }
 
 await mkdir(dataDirectory, { recursive: true });

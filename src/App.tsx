@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { toBlob } from "html-to-image";
 import {
+  Ban,
   Check,
   Clipboard,
   Copy,
@@ -9,8 +10,10 @@ import {
   Info,
   RefreshCw,
   ScanSearch,
+  Settings2,
   Volume2,
   VolumeX,
+  X,
 } from "lucide-react";
 import { Inspectable } from "./components/Inspectable";
 import {
@@ -36,6 +39,23 @@ import styles from "./App.module.css";
 
 type CopyState = "link" | "image" | "download" | "error" | null;
 
+function parseRoleRerolls(value: string | null): Partial<Record<Role, number>> {
+  if (!value) return {};
+  const rerolls: Partial<Record<Role, number>> = {};
+  value
+    .split("-")
+    .slice(0, ROLES.length)
+    .forEach((count, index) => {
+      const parsed = Math.max(0, Number.parseInt(count, 10) || 0);
+      if (parsed > 0) rerolls[ROLES[index]] = parsed;
+    });
+  return rerolls;
+}
+
+function encodeRoleRerolls(rerolls: Partial<Record<Role, number>>): string {
+  return ROLES.map((role) => rerolls[role] || 0).join("-");
+}
+
 const emptyData: StaticData = {
   patch: FALLBACK_PATCH,
   ratePatch: "unknown",
@@ -44,6 +64,7 @@ const emptyData: StaticData = {
   championRates: {},
   rankedStats: {},
   matchups: {},
+  builds: {},
   runeStyles: [],
   summoners: {},
 };
@@ -82,6 +103,12 @@ function App() {
   const initialQuery = new URLSearchParams(window.location.search);
   const [view, setView] = useState<View>(initialQuery.has("seed") ? "result" : "landing");
   const [seed, setSeed] = useState(initialQuery.get("seed") || newSeed());
+  const [allowAnyRole, setAllowAnyRole] = useState(initialQuery.get("roles") === "any");
+  const [roleRerolls, setRoleRerolls] = useState<Partial<Record<Role, number>>>(() =>
+    parseRoleRerolls(initialQuery.get("bans")),
+  );
+  const [replacingRole, setReplacingRole] = useState<Role | null>(null);
+  const [optionsOpen, setOptionsOpen] = useState(false);
   const [data, setData] = useState<StaticData>(emptyData);
   const [details, setDetails] = useState<Record<string, ChampionDetail>>({});
   const [dataState, setDataState] = useState<"loading" | "live" | "error">("loading");
@@ -95,8 +122,8 @@ function App() {
   const lastTickRef = useRef(0);
 
   const selectedTeam = useMemo(
-    () => selectTeam(data.champions, data.championRates, seed),
-    [data.champions, data.championRates, seed],
+    () => selectTeam(data.champions, data.championRates, seed, allowAnyRole, roleRerolls),
+    [data.champions, data.championRates, seed, allowAnyRole, roleRerolls],
   );
   const allChampions = useMemo(() => Object.values(data.champions), [data.champions]);
   const championImages = useMemo(
@@ -119,12 +146,13 @@ function App() {
       Object.fromEntries(
         ROLES.map((role) => [
           role,
-          championsForRole(data.champions, data.championRates, role).sort((first, second) =>
-            first.name.localeCompare(second.name),
-          ),
+          (allowAnyRole
+            ? Object.values(data.champions)
+            : championsForRole(data.champions, data.championRates, role)
+          ).sort((first, second) => first.name.localeCompare(second.name)),
         ]),
       ),
-    [data.champions, data.championRates],
+    [data.champions, data.championRates, allowAnyRole],
   );
   const slotReels = useMemo<Partial<Record<Role, DragonChampion[]>>>(() => {
     if (!selectedTeam) return {};
@@ -220,30 +248,41 @@ function App() {
         }).then((response) => response.json())) as string[];
         const patch = versions[0] || FALLBACK_PATCH;
         const base = dragonBase(patch);
-        const [items, champions, runeStyles, summoners, championRates, rankedStats, matchups] =
-          await Promise.all([
-            fetch(`${base}/data/en_US/item.json`, {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-            fetch(`${base}/data/en_US/champion.json`, {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-            fetch(`${base}/data/en_US/runesReforged.json`, {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-            fetch(`${base}/data/en_US/summoner.json`, {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-            fetch("/data/championrates.json", {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-            fetch("/data/rankedstats.json", {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-            fetch("/data/matchups.json", {
-              signal: controller.signal,
-            }).then((response) => response.json()),
-          ]);
+        const [
+          items,
+          champions,
+          runeStyles,
+          summoners,
+          championRates,
+          rankedStats,
+          matchups,
+          builds,
+        ] = await Promise.all([
+          fetch(`${base}/data/en_US/item.json`, {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch(`${base}/data/en_US/champion.json`, {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch(`${base}/data/en_US/runesReforged.json`, {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch(`${base}/data/en_US/summoner.json`, {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch("/data/championrates.json", {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch("/data/rankedstats.json", {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch("/data/matchups.json", {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+          fetch("/data/builds.json", {
+            signal: controller.signal,
+          }).then((response) => response.json()),
+        ]);
         setData({
           patch,
           ratePatch: championRates.patch || "unknown",
@@ -252,6 +291,7 @@ function App() {
           championRates: championRates.data || {},
           rankedStats: rankedStats.data || {},
           matchups: matchups.data || {},
+          builds: builds.data || {},
           runeStyles: runeStyles || [],
           summoners: summoners.data || {},
         });
@@ -304,8 +344,8 @@ function App() {
   useEffect(() => {
     if (!selectedTeam || view !== "result") return;
     const controller = new AbortController();
-    const champions = Object.values(selectedTeam);
-    setDetails({});
+    const champions = Object.values(selectedTeam).filter((champion) => !details[champion.id]);
+    if (!champions.length) return;
     void Promise.all(
       champions.map(async (champion) => {
         const json = await fetch(
@@ -315,7 +355,12 @@ function App() {
         return [champion.id, json.data[champion.id]] as const;
       }),
     )
-      .then((entries) => setDetails(Object.fromEntries(entries)))
+      .then((entries) =>
+        setDetails((current) => ({
+          ...current,
+          ...Object.fromEntries(entries),
+        })),
+      )
       .catch((error: Error) => {
         if (error.name !== "AbortError") setDataState("error");
       });
@@ -327,11 +372,27 @@ function App() {
     if (view === "result") {
       url.searchParams.set("seed", seed);
       url.searchParams.delete("name");
+      if (allowAnyRole) url.searchParams.set("roles", "any");
+      else url.searchParams.delete("roles");
+      if (Object.values(roleRerolls).some(Boolean)) {
+        url.searchParams.set("bans", encodeRoleRerolls(roleRerolls));
+      } else {
+        url.searchParams.delete("bans");
+      }
     } else {
       url.search = "";
     }
     window.history.replaceState({}, "", url);
-  }, [view, seed]);
+  }, [view, seed, allowAnyRole, roleRerolls]);
+
+  useEffect(() => {
+    if (!optionsOpen) return;
+    const closeOnEscape = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") setOptionsOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [optionsOpen]);
 
   const loadouts = useMemo<GeneratedLoadout[]>(() => {
     if (!selectedTeam) return [];
@@ -345,18 +406,56 @@ function App() {
   const isReady = loadouts.length === ROLES.length;
   function rollTeam(): void {
     playSound("start");
+    setRoleRerolls({});
     setSeed(newSeed());
     setView("selection");
   }
 
   function rollAgain(): void {
     playSound("start");
+    setRoleRerolls({});
     setSeed(newSeed());
     setView("selection");
   }
 
   function acceptTeam(): void {
     setView("result");
+  }
+
+  async function replaceBannedChampion(role: Role): Promise<void> {
+    if (replacingRole) return;
+    const nextRerolls = {
+      ...roleRerolls,
+      [role]: (roleRerolls[role] || 0) + 1,
+    };
+    const nextTeam = selectTeam(
+      data.champions,
+      data.championRates,
+      seed,
+      allowAnyRole,
+      nextRerolls,
+    );
+    const nextChampion = nextTeam?.[role];
+    if (!nextChampion) return;
+
+    setReplacingRole(role);
+    try {
+      let nextDetail = details[nextChampion.id];
+      if (!details[nextChampion.id]) {
+        const json = await fetch(
+          `${dragonBase(data.patch)}/data/en_US/champion/${nextChampion.id}.json`,
+        ).then((response) => response.json());
+        nextDetail = json.data[nextChampion.id];
+      }
+      setDetails((current) => ({
+        ...current,
+        [nextChampion.id]: nextDetail,
+      }));
+      setRoleRerolls(nextRerolls);
+      setReplacingRole(null);
+    } catch {
+      setReplacingRole(null);
+    }
   }
 
   function settleRole(role: Role, roleIndex: number): void {
@@ -413,21 +512,79 @@ function App() {
       <button className={styles.brand} onClick={() => setView("landing")}>
         <span>LEAGUE</span> ROULETTE
       </button>
-      <button
-        className={styles.muteButton}
-        onClick={toggleMute}
-        aria-label={isMuted ? "Turn sound on" : "Mute sound"}
-        title={isMuted ? "Turn sound on" : "Mute sound"}
-      >
-        {isMuted ? <VolumeX size={17} /> : <Volume2 size={17} />}
-      </button>
+      <div className={styles.headerActions}>
+        <button
+          className={styles.headerButton}
+          onClick={() => setOptionsOpen(true)}
+          aria-label="Team options"
+          title="Team options"
+        >
+          <Settings2 size={17} />
+        </button>
+        <button
+          className={styles.headerButton}
+          onClick={toggleMute}
+          aria-label={isMuted ? "Turn sound on" : "Mute sound"}
+          title={isMuted ? "Turn sound on" : "Mute sound"}
+        >
+          {isMuted ? <VolumeX size={17} /> : <Volume2 size={17} />}
+        </button>
+      </div>
     </header>
   );
+
+  const configModal = optionsOpen ? (
+    <div
+      className={styles.modalBackdrop}
+      onMouseDown={(event) => {
+        if (event.currentTarget === event.target) setOptionsOpen(false);
+      }}
+    >
+      <section
+        className={styles.configModal}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="team-options-title"
+      >
+        <header>
+          <h2 id="team-options-title">Team options</h2>
+          <button
+            className={styles.modalClose}
+            onClick={() => setOptionsOpen(false)}
+            aria-label="Close team options"
+          >
+            <X size={17} />
+          </button>
+        </header>
+        <label className={styles.optionRow}>
+          <span>
+            <strong>Any champion in any role</strong>
+            <small>Ignore primary roles when rolling.</small>
+          </span>
+          <input
+            type="checkbox"
+            checked={allowAnyRole}
+            onChange={(event) => {
+              setAllowAnyRole(event.target.checked);
+              setRoleRerolls({});
+            }}
+          />
+          <i aria-hidden="true" />
+        </label>
+        <footer>
+          <button className={styles.primaryButton} onClick={() => setOptionsOpen(false)}>
+            Done
+          </button>
+        </footer>
+      </section>
+    </div>
+  ) : null;
 
   if (view === "landing") {
     return (
       <main className={styles.shell}>
         {siteHeader}
+        {configModal}
         <section className={styles.landing}>
           <div className={styles.hero}>
             <button
@@ -481,6 +638,7 @@ function App() {
     return (
       <main className={styles.shell}>
         {siteHeader}
+        {configModal}
         <section className={styles.selection}>
           <div className={styles.selectionGrid} aria-live="polite">
             {ROLES.map((role) => {
@@ -551,6 +709,7 @@ function App() {
   return (
     <main className={styles.shell}>
       {siteHeader}
+      {configModal}
       <div className={styles.resultBar}>
         <button className={styles.back} onClick={rollAgain}>
           <RefreshCw size={15} /> New team
@@ -593,7 +752,12 @@ function App() {
             <div className={styles.lanes}>
               {loadouts.map((loadout) => (
                 <article className={styles.lane} key={loadout.role}>
-                  <div className={styles.champion}>
+                  <div
+                    className={`${styles.champion} ${
+                      replacingRole === loadout.role ? styles.championLoading : ""
+                    }`}
+                    aria-busy={replacingRole === loadout.role}
+                  >
                     <strong className={styles.roleLabel}>
                       <img
                         crossOrigin="anonymous"
@@ -661,17 +825,52 @@ function App() {
                         </div>
                       </div>
                     )}
-                    {loadout.rankedStat && (
-                      <dl className={styles.championStats}>
-                        <div>
-                          <dt>WIN RATE</dt>
-                          <dd>{loadout.rankedStat.winRate.toFixed(2)}%</dd>
+                    <div className={styles.championFooter}>
+                      {loadout.rankedStat && (
+                        <dl className={styles.championStats}>
+                          <div>
+                            <dt>WIN RATE</dt>
+                            <dd>{loadout.rankedStat.winRate.toFixed(2)}%</dd>
+                          </div>
+                          <div>
+                            <dt>PICK RATE</dt>
+                            <dd>{loadout.rankedStat.pickRate.toFixed(2)}%</dd>
+                          </div>
+                        </dl>
+                      )}
+                      <button
+                        className={styles.bannedButton}
+                        disabled={replacingRole !== null}
+                        onClick={() => void replaceBannedChampion(loadout.role)}
+                      >
+                        <Ban size={12} />
+                        {replacingRole === loadout.role ? "Replacing…" : "Champ banned"}
+                      </button>
+                    </div>
+                    {replacingRole === loadout.role && (
+                      <div className={styles.championSkeleton} aria-hidden="true">
+                        <span className={styles.skeletonRole} />
+                        <div className={styles.skeletonIdentity}>
+                          <i />
+                          <span>
+                            <b />
+                            <b />
+                          </span>
                         </div>
-                        <div>
-                          <dt>PICK RATE</dt>
-                          <dd>{loadout.rankedStat.pickRate.toFixed(2)}%</dd>
+                        <div className={styles.skeletonMatchups}>
+                          <span />
+                          <span />
+                          <span />
+                          <span />
+                          <span />
+                          <span />
                         </div>
-                      </dl>
+                        <div className={styles.skeletonFooter}>
+                          <span />
+                          <span />
+                        </div>
+                        <span className={styles.skeletonButton} />
+                      </div>
                     )}
                   </div>
 

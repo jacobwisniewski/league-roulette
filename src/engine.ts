@@ -100,6 +100,8 @@ export function selectTeam(
   champions: Record<string, DragonChampion>,
   _rates: StaticData["championRates"],
   seed: string,
+  allowAnyRole = false,
+  roleRerolls: Partial<Record<Role, number>> = {},
 ): Record<Role, DragonChampion> | null {
   const all = Object.values(champions);
   if (!all.length) return null;
@@ -107,12 +109,37 @@ export function selectTeam(
   const team = {} as Record<Role, DragonChampion>;
 
   for (const role of ROLES) {
-    const rolePool = championsForRole(champions, _rates, role);
+    const rolePool = allowAnyRole ? all : championsForRole(champions, _rates, role);
     const pool = rolePool.filter((champion) => !used.has(champion.id));
     const champion = pool[seededIndex(`${seed}-${role}`, pool.length)];
     team[role] = champion;
     used.add(champion.id);
   }
+
+  for (const role of ROLES) {
+    const rerollCount = roleRerolls[role] || 0;
+    if (!rerollCount) continue;
+    const unavailable = new Set(
+      ROLES.filter((candidateRole) => candidateRole !== role).map(
+        (candidateRole) => team[candidateRole].id,
+      ),
+    );
+    const rolePool = allowAnyRole ? all : championsForRole(champions, _rates, role);
+    let pool = rolePool.filter(
+      (champion) => !unavailable.has(champion.id) && champion.id !== team[role].id,
+    );
+    for (let reroll = 1; reroll <= rerollCount; reroll += 1) {
+      if (!pool.length) {
+        pool = rolePool.filter(
+          (champion) => !unavailable.has(champion.id) && champion.id !== team[role].id,
+        );
+      }
+      const champion = pool[seededIndex(`${seed}-${role}-banned-${reroll}`, pool.length)];
+      team[role] = champion;
+      pool = pool.filter((candidate) => candidate.id !== champion.id);
+    }
+  }
+
   return team;
 }
 
@@ -272,6 +299,24 @@ function deriveStarterItems(
   return purchases;
 }
 
+function observedStarterItems(
+  catalog: Record<string, DragonItem>,
+  itemIds: string[],
+): GeneratedLoadout["starterItems"] {
+  const counts = new Map<string, number>();
+  itemIds.forEach((id) => counts.set(id, (counts.get(id) || 0) + 1));
+  return [...counts.entries()].flatMap(([id, quantity]) =>
+    catalog[id] ? [{ id, item: catalog[id], quantity }] : [],
+  );
+}
+
+function observedItems(
+  catalog: Record<string, DragonItem>,
+  itemIds: string[],
+): [string, DragonItem][] {
+  return itemIds.flatMap((id) => (catalog[id] ? [[id, catalog[id]]] : []));
+}
+
 function runeScore(rune: DragonRune, profile: Profile, role: Role, seed: string): number {
   const text = `${rune.name} ${plainText(rune.longDesc || rune.shortDesc)}`.toLowerCase();
   const terms: Record<Profile, string[]> = {
@@ -389,6 +434,15 @@ export function generateLoadout(
   const playRates = roleRates(champion, role, data.championRates);
   const rankedRole = rateRole[role];
   const championKey = champion.id.toLowerCase().replaceAll(/[^a-z0-9]/g, "");
+  const observedBuild =
+    data.builds[championKey]?.[rankedRole] ||
+    data.builds[championKey]?.[rateRole[playRates.primaryRole]];
+  const starterItems = observedBuild
+    ? observedStarterItems(data.items, observedBuild.starterItemIds)
+    : deriveStarterItems(data.items, role, profile);
+  const items = observedBuild
+    ? observedItems(data.items, observedBuild.itemIds)
+    : deriveItems(data.items, profile, `${seed}-${role}`);
   return {
     role,
     champion,
@@ -399,8 +453,8 @@ export function generateLoadout(
     rankedStat: data.rankedStats[championKey]?.[rankedRole],
     matchups: data.matchups[championKey]?.[rankedRole],
     abilityOrder: deriveAbilityOrder(detail, profile, seed),
-    starterItems: deriveStarterItems(data.items, role, profile),
-    items: deriveItems(data.items, profile, `${seed}-${role}`),
+    starterItems,
+    items,
     runes: deriveRunes(data.runeStyles, profile, role, `${seed}-${role}`),
     summoners: deriveSummoners(data.summoners, role, profile),
   };
