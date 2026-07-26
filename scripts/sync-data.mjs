@@ -8,7 +8,7 @@ if (!response.ok) {
   throw new Error(`Champion-rate sync failed with ${response.status}`);
 }
 
-const data = await response.text();
+const data = await response.json();
 await mkdir(new URL("../public/data/", import.meta.url), { recursive: true });
-await writeFile(output, data);
+await writeFile(output, `${JSON.stringify(data, null, 2)}\n`);
 console.log("Synced automated champion role rates.");
