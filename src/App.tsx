@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { toBlob } from "html-to-image";
 import {
   ArrowLeft,
@@ -10,7 +11,6 @@ import {
   Info,
   RefreshCw,
   ScanSearch,
-  Swords,
 } from "lucide-react";
 import { Inspectable } from "./components/Inspectable";
 import {
@@ -63,11 +63,9 @@ function App() {
   const initialQuery = new URLSearchParams(window.location.search);
   const [view, setView] = useState<View>(initialQuery.has("seed") ? "result" : "landing");
   const [seed, setSeed] = useState(initialQuery.get("seed") || newSeed());
-  const [setName, setSetName] = useState(initialQuery.get("name") || "");
   const [data, setData] = useState<StaticData>(emptyData);
   const [details, setDetails] = useState<Record<string, ChampionDetail>>({});
   const [dataState, setDataState] = useState<"loading" | "live" | "error">("loading");
-  const [showMethod, setShowMethod] = useState(false);
   const [copyState, setCopyState] = useState<CopyState>(null);
   const boardRef = useRef<HTMLDivElement>(null);
 
@@ -145,13 +143,12 @@ function App() {
     const url = new URL(window.location.href);
     if (view === "result") {
       url.searchParams.set("seed", seed);
-      if (setName.trim()) url.searchParams.set("name", setName.trim());
-      else url.searchParams.delete("name");
+      url.searchParams.delete("name");
     } else {
       url.search = "";
     }
     window.history.replaceState({}, "", url);
-  }, [view, seed, setName]);
+  }, [view, seed]);
 
   const loadouts = useMemo<GeneratedLoadout[]>(() => {
     if (!selectedTeam) return [];
@@ -163,10 +160,16 @@ function App() {
   }, [selectedTeam, details, data, seed]);
 
   const isReady = loadouts.length === ROLES.length;
+  const reelChampions = useMemo(
+    () =>
+      Object.values(data.champions)
+        .sort((first, second) => first.name.localeCompare(second.name))
+        .slice(0, 18),
+    [data.champions],
+  );
 
   function goHome(): void {
     setView("landing");
-    setShowMethod(false);
   }
 
   function generate(): void {
@@ -216,58 +219,48 @@ function App() {
   const nav = (
     <nav className={styles.nav}>
       <button className={styles.brand} onClick={goHome} aria-label="League Roulette home">
-        <span className={styles.brandMark}>
-          <Swords size={16} />
-        </span>
-        LEAGUE ROULETTE
-      </button>
-      <div className={styles.dataStatus}>
-        <span className={dataState === "live" ? styles.live : styles.pending} />
-        {dataState === "loading"
-          ? "SYNCING DATA"
-          : dataState === "error"
-            ? "DATA ERROR"
-            : `PATCH ${data.patch}`}
-      </div>
-      <button className={styles.textButton} onClick={() => setShowMethod((current) => !current)}>
-        <Info size={15} /> Method
+        <span>LEAGUE</span> ROULETTE
       </button>
     </nav>
-  );
-
-  const method = (
-    <section className={`${styles.method} ${showMethod ? styles.methodOpen : ""}`}>
-      <div>
-        <span>FULLY AUTOMATED DATASET</span>
-        <h2>No saved builds.</h2>
-      </div>
-      <p>
-        Each set is generated from Riot&apos;s current champion, ability, item, rune, and summoner
-        data plus automated role play rates. League Roulette excludes each champion&apos;s measured
-        primary role, detects alternate kit signals, then scores the current catalogue.
-      </p>
-    </section>
   );
 
   if (view === "landing") {
     return (
       <main className={styles.shell}>
         {nav}
-        {method}
         <section className={styles.landing}>
-          <div className={styles.kicker}>FIVE LANES · ONE SEED · CURRENT PATCH</div>
-          <div>
-            <h1>
-              A FULL TEAM.
-              <br />
-              <em>OFF SCRIPT.</em>
-            </h1>
-            <p>Generate a complete, shareable League loadout set from live game data.</p>
+          <div className={styles.hero}>
+            <div className={styles.kicker}>LEAGUE ROULETTE</div>
+            <h1>Your next five.</h1>
             <button className={styles.primaryButton} onClick={() => setView("config")}>
-              SET UP A ROULETTE <span>→</span>
+              Roll a team <span>→</span>
             </button>
           </div>
-          <small>Nothing is manually curated. Every seed is reproducible.</small>
+          <div className={styles.roulette} aria-hidden="true">
+            {[0, 1, 2].map((column) => {
+              const champions = reelChampions.slice(column * 6, column * 6 + 6);
+              return (
+                <div className={styles.reel} key={column}>
+                  <div
+                    className={styles.reelTrack}
+                    style={{ "--duration": `${13 + column * 2}s` } as CSSProperties}
+                  >
+                    {[...champions, ...champions].map((champion, index) => (
+                      <div className={styles.reelChampion} key={`${champion.id}-${index}`}>
+                        <img
+                          crossOrigin="anonymous"
+                          src={`${dragonBase(data.patch)}/img/champion/${champion.image.full}`}
+                          alt=""
+                        />
+                        <span>{champion.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+            <div className={styles.selector} />
+          </div>
         </section>
       </main>
     );
@@ -277,30 +270,17 @@ function App() {
     return (
       <main className={styles.shell}>
         {nav}
-        {method}
         <section className={styles.config}>
           <button className={styles.back} onClick={goHome}>
             <ArrowLeft size={15} /> Back
           </button>
           <header>
-            <span>SET CONFIGURATION</span>
-            <h1>Five lanes. One roll.</h1>
-            <p>The team seed controls every champion and loadout.</p>
+            <span>ROULETTE SETUP</span>
+            <h1>Choose a seed.</h1>
           </header>
           <div className={styles.form}>
             <label>
-              <span>
-                SET NAME <small>OPTIONAL</small>
-              </span>
-              <input
-                value={setName}
-                maxLength={40}
-                onChange={(event) => setSetName(event.target.value)}
-                placeholder="Friday night five"
-              />
-            </label>
-            <label>
-              <span>SEED</span>
+              <span>TEAM SEED</span>
               <div className={styles.seedInput}>
                 <input
                   value={seed}
@@ -315,29 +295,13 @@ function App() {
               </div>
             </label>
           </div>
-          <div className={styles.scope}>
-            <div>
-              <span>FORMAT</span>
-              <strong>Summoner&apos;s Rift · 5 lanes</strong>
-            </div>
-            <div>
-              <span>SOURCE</span>
-              <strong>
-                Riot {data.patch} · role rates {data.ratePatch}
-              </strong>
-            </div>
-            <div>
-              <span>OUTPUT</span>
-              <strong>Champions · items · runes · summoners</strong>
-            </div>
-          </div>
           <button
             className={styles.generateButton}
             disabled={dataState !== "live" || !seed}
             onClick={generate}
           >
             <Dices size={22} />
-            {dataState === "loading" ? "SYNCING RIOT DATA" : "GENERATE FIVE-LANE SET"}
+            {dataState === "loading" ? "Loading game data…" : "Generate team"}
           </button>
         </section>
       </main>
@@ -347,12 +311,10 @@ function App() {
   return (
     <main className={styles.shell}>
       {nav}
-      {method}
       <div className={styles.resultBar}>
         <button className={styles.back} onClick={() => setView("config")}>
-          <ArrowLeft size={15} /> Config
+          <ArrowLeft size={15} /> Change seed
         </button>
-        <span>SEED #{seed}</span>
         <div>
           <button className={styles.textButton} onClick={copyLink}>
             {copyState === "link" ? <Check size={15} /> : <Copy size={15} />}
@@ -390,95 +352,130 @@ function App() {
           <section className={styles.board} ref={boardRef}>
             <header className={styles.boardHeader}>
               <div>
-                <span>
-                  LEAGUE ROULETTE / GAME {data.patch} / ROLE DATA {data.ratePatch}
-                </span>
-                <h1>{setName.trim() || "OFF-META FIVE"}</h1>
-              </div>
-              <div>
-                <span>SHARE SEED</span>
-                <strong>#{seed}</strong>
+                <span>LEAGUE ROULETTE</span>
+                <h1>Team #{seed}</h1>
               </div>
             </header>
 
             <div className={styles.lanes}>
-              {loadouts.map((loadout) => (
+              {loadouts.map((loadout, laneIndex) => (
                 <article className={styles.lane} key={loadout.role}>
                   <div className={styles.champion}>
-                    <span>{loadout.role}</span>
+                    <span className={styles.laneNumber}>{laneIndex + 1}</span>
                     <img
                       crossOrigin="anonymous"
                       src={`${dragonBase(data.patch)}/img/champion/${loadout.champion.image.full}`}
                       alt=""
                     />
                     <div>
+                      <span>{loadout.role}</span>
                       <h2>{loadout.champion.name}</h2>
                       <small>
-                        {loadout.profile} · {loadout.rolePlayRate.toFixed(2)}% role rate
+                        {loadout.profile} · picked here in {loadout.rolePlayRate.toFixed(2)}% of
+                        games
                       </small>
                     </div>
                   </div>
 
-                  <div className={styles.assignment}>
-                    <span>MAX</span>
-                    <Inspectable
-                      compact
-                      image={`${dragonBase(data.patch)}/img/spell/${loadout.maxSpell.image.full}`}
-                      name={loadout.maxSpell.name}
-                      meta="Max first"
-                      description={plainText(
-                        loadout.maxSpell.tooltip || loadout.maxSpell.description,
-                      )}
-                    />
-                    <strong>{loadout.maxSpell.name}</strong>
-                  </div>
-
-                  <div className={styles.iconGroup}>
-                    <span>SUMMONERS</span>
-                    <div>
-                      {loadout.summoners.map((summoner) => (
-                        <Inspectable
-                          compact
-                          key={summoner.id}
-                          image={`${dragonBase(data.patch)}/img/spell/${summoner.image.full}`}
-                          name={summoner.name}
-                          meta={`${summoner.cooldownBurn}s cooldown`}
-                          description={plainText(summoner.description)}
-                        />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className={styles.iconGroup}>
-                    <span>RUNES</span>
-                    <div>
-                      {loadout.runes.map((rune) => (
-                        <Inspectable
-                          compact
-                          key={rune.id}
-                          image={`https://ddragon.leagueoflegends.com/cdn/img/${rune.icon}`}
-                          name={rune.name}
-                          description={plainText(rune.longDesc || rune.shortDesc)}
-                        />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className={`${styles.iconGroup} ${styles.items}`}>
-                    <span>BUY ORDER</span>
-                    <div>
-                      {loadout.items.map(([id, item], index) => (
-                        <div className={styles.orderedItem} key={id}>
-                          <b>{index + 1}</b>
-                          <Inspectable
-                            compact
-                            image={`${dragonBase(data.patch)}/img/item/${id}.png`}
-                            name={item.name}
-                            meta={`${item.gold.total.toLocaleString()} gold · ${itemStats(item.stats) || "Passive item"}`}
-                            description={plainText(item.description || item.plaintext)}
-                          />
+                  <div className={styles.loadout}>
+                    <div className={styles.utilities}>
+                      <div className={styles.abilityOrder}>
+                        <span>ABILITY ORDER</span>
+                        <div>
+                          {loadout.abilityOrder.map((spell, index) => (
+                            <div className={styles.ability} key={spell.id}>
+                              <i>
+                                {["Q", "W", "E"][
+                                  loadout.detail.spells.findIndex(
+                                    (candidate) => candidate.id === spell.id,
+                                  )
+                                ] || "?"}
+                              </i>
+                              <Inspectable
+                                compact
+                                image={`${dragonBase(data.patch)}/img/spell/${spell.image.full}`}
+                                name={spell.name}
+                                meta={`${index === 0 ? "Max first" : index === 1 ? "Max second" : "Max last"}`}
+                                description={plainText(spell.tooltip || spell.description)}
+                              />
+                              <b>{index < loadout.abilityOrder.length - 1 ? "→" : ""}</b>
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      </div>
+                      <div className={styles.iconGroup}>
+                        <span>SUMMONERS</span>
+                        <div>
+                          {loadout.summoners.map((summoner) => (
+                            <Inspectable
+                              compact
+                              key={summoner.id}
+                              image={`${dragonBase(data.patch)}/img/spell/${summoner.image.full}`}
+                              name={summoner.name}
+                              meta={`${summoner.cooldownBurn}s cooldown`}
+                              description={plainText(summoner.description)}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={styles.runeSetup}>
+                      <span>RUNES</span>
+                      <div>
+                        {[loadout.runes.slice(0, 4), loadout.runes.slice(4)].map(
+                          (runes, groupIndex) => {
+                            const tree = data.runeStyles.find((style) =>
+                              style.slots.some((slot) =>
+                                slot.runes.some((rune) => rune.id === runes[0]?.id),
+                              ),
+                            );
+                            return (
+                              <div className={styles.runeTree} key={groupIndex}>
+                                <small>
+                                  {groupIndex === 0 ? "PRIMARY" : "SECONDARY"} ·{" "}
+                                  {tree?.name || "RUNES"}
+                                </small>
+                                <div>
+                                  {runes.map((rune) => (
+                                    <div className={styles.runeChoice} key={rune.id}>
+                                      <Inspectable
+                                        compact
+                                        image={`https://ddragon.leagueoflegends.com/cdn/img/${rune.icon}`}
+                                        name={rune.name}
+                                        description={plainText(rune.longDesc || rune.shortDesc)}
+                                      />
+                                      <strong>{rune.name}</strong>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          },
+                        )}
+                      </div>
+                    </div>
+
+                    <div className={styles.items}>
+                      <span>BUY IN THIS ORDER</span>
+                      <div>
+                        {loadout.items.map(([id, item], index) => (
+                          <div className={styles.orderedItem} key={id}>
+                            <b>{index + 1}</b>
+                            <Inspectable
+                              compact
+                              image={`${dragonBase(data.patch)}/img/item/${id}.png`}
+                              name={item.name}
+                              meta={`${item.gold.total.toLocaleString()} gold · ${itemStats(item.stats) || "Passive item"}`}
+                              description={plainText(item.description || item.plaintext)}
+                            />
+                            <div>
+                              <strong>{item.name}</strong>
+                              <small>{item.gold.total.toLocaleString()}g</small>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </article>
@@ -486,13 +483,11 @@ function App() {
             </div>
 
             <footer className={styles.boardFooter}>
-              <span>DATA-DRIVEN · RIOT + MERAKI · NO SAVED BUILDS</span>
               <span>roulette.jacobwisniewski.dev</span>
             </footer>
           </section>
 
           <div className={styles.actions} data-capture="exclude">
-            <p>Hover any icon for live Riot details. On touch, tap an icon to inspect it.</p>
             <button onClick={reroll}>
               <RefreshCw size={16} /> Generate another set
             </button>

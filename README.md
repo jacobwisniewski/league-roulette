@@ -36,6 +36,9 @@ npm run check
 npm run deploy
 ```
 
+Pushes to `main` are automatically built and deployed by Cloudflare. Pull
+requests and pushes are independently checked by GitHub Actions.
+
 League Roulette is not endorsed by Riot Games. League of Legends and Riot Games
 are trademarks of Riot Games, Inc. Position-rate data is provided by
 [Meraki Analytics](https://github.com/meraki-analytics/lolstaticdata).

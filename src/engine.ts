@@ -212,7 +212,7 @@ function deriveItems(
     "Haste utility": "3158",
   };
   const bootId = boots[profile];
-  if (catalog[bootId]) result.push([bootId, catalog[bootId]]);
+  if (catalog[bootId]) result.splice(1, 0, [bootId, catalog[bootId]]);
   return result;
 }
 
@@ -299,11 +299,11 @@ function deriveSummoners(
   return [first, second].filter((spell): spell is DragonSummoner => spell !== undefined);
 }
 
-function deriveMaxSpell(
+function deriveAbilityOrder(
   detail: ChampionDetail,
   profile: Profile,
   seed: string,
-): ChampionDetail["spells"][number] {
+): ChampionDetail["spells"] {
   const keywords: Record<Profile, RegExp> = {
     "On-hit hybrid": /attack|on-hit|attack speed|empower/,
     "AP burst": /scaleap|magic damage|ability power/,
@@ -311,7 +311,7 @@ function deriveMaxSpell(
     "AP bruiser": /scaleap|health|heal|shield/,
     "Haste utility": /shield|heal|slow|stun|movement/,
   };
-  return [...detail.spells].sort((first, second) => {
+  return [...detail.spells].slice(0, 3).sort((first, second) => {
     const firstText = `${first.description} ${first.tooltip}`.toLowerCase();
     const secondText = `${second.description} ${second.tooltip}`.toLowerCase();
     const firstScore =
@@ -319,7 +319,7 @@ function deriveMaxSpell(
     const secondScore =
       (keywords[profile].test(secondText) ? 10 : 0) + seededIndex(`${seed}-${second.id}`, 50);
     return secondScore - firstScore;
-  })[0];
+  });
 }
 
 export function generateLoadout(
@@ -338,7 +338,7 @@ export function generateLoadout(
     profile,
     signals,
     ...playRates,
-    maxSpell: deriveMaxSpell(detail, profile, seed),
+    abilityOrder: deriveAbilityOrder(detail, profile, seed),
     items: deriveItems(data.items, profile, `${seed}-${role}`),
     runes: deriveRunes(data.runeStyles, profile, role, `${seed}-${role}`),
     summoners: deriveSummoners(data.summoners, role, profile),

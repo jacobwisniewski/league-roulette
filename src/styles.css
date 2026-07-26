@@ -1,17 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
 
 :root {
-  font-family: "DM Sans", sans-serif;
-  color: #24261f;
-  background: #f1eddf;
+  font-family: "Manrope", sans-serif;
+  color: #14213a;
+  background: #f4f2ec;
   font-synthesis: none;
-  --paper: #f1eddf;
-  --paper-deep: #e2dbc8;
-  --ink: #24261f;
-  --muted: #707267;
-  --acid: #c9f04a;
-  --red: #e6533c;
-  --line: color-mix(in oklch, var(--ink) 19%, transparent);
+  --paper: #f4f2ec;
+  --paper-deep: #e7e4dc;
+  --surface: #fbfaf7;
+  --surface-tint: #f0eee7;
+  --ink: #14213a;
+  --ink-soft: #22304a;
+  --muted: #687080;
+  --muted-light: #a5a9b1;
+  --gold: #d6b45c;
+  --gold-dark: #907128;
+  --red: #a53c34;
+  --line: color-mix(in oklch, var(--ink) 13%, transparent);
+  --line-strong: color-mix(in oklch, var(--ink) 24%, transparent);
 }
 
 * {

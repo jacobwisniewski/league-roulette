@@ -85,7 +85,7 @@ export interface GeneratedLoadout {
   champion: DragonChampion;
   detail: ChampionDetail;
   profile: Profile;
-  maxSpell: DragonSpell;
+  abilityOrder: DragonSpell[];
   items: [string, DragonItem][];
   runes: DragonRune[];
   summoners: DragonSummoner[];

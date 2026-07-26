@@ -76,9 +76,8 @@
 
 .head strong {
   font:
-    700 16px/1.1 "Barlow Condensed",
+    700 14px/1.2 "Manrope",
     sans-serif;
-  text-transform: uppercase;
 }
 
 .head small {
@@ -98,7 +97,7 @@
 .hint {
   display: block;
   margin-top: 12px;
-  color: var(--acid);
+  color: var(--gold);
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.08em;
