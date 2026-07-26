@@ -26,7 +26,6 @@ export function Inspectable({ image, name, meta, description, compact = false }:
           </div>
         </div>
         <p>{description}</p>
-        <span className={styles.hint}>Hover, focus, or tap to inspect</span>
       </div>
     </div>
   );

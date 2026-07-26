@@ -1,0 +1,1657 @@
+{
+  "patch": "16.7",
+  "data": {
+    "malphite": {
+      "TOP": {
+        "winRate": 53.44,
+        "pickRate": 8.153458806783561,
+        "banRate": 21.54480595422761,
+        "tier": "S"
+      },
+      "JUNGLE": {
+        "winRate": 50.57000000000001,
+        "pickRate": 4.8249270021399715,
+        "banRate": 21.54480595422761,
+        "tier": "A"
+      }
+    },
+    "garen": {
+      "TOP": {
+        "winRate": 51.07000000000001,
+        "pickRate": 7.049716539194612,
+        "banRate": 5.152819303284906,
+        "tier": "S"
+      }
+    },
+    "sett": {
+      "TOP": {
+        "winRate": 51.300000000000004,
+        "pickRate": 6.1297485168882195,
+        "banRate": 3.0699651104184302,
+        "tier": "S"
+      }
+    },
+    "darius": {
+      "TOP": {
+        "winRate": 49.68,
+        "pickRate": 7.054591187610592,
+        "banRate": 16.826149080784305,
+        "tier": "S"
+      }
+    },
+    "aatrox": {
+      "TOP": {
+        "winRate": 48.78,
+        "pickRate": 7.512076941450598,
+        "banRate": 12.510581868182951,
+        "tier": "S"
+      }
+    },
+    "mordekaiser": {
+      "TOP": {
+        "winRate": 50.72,
+        "pickRate": 5.755131786119926,
+        "banRate": 8.781237919543548,
+        "tier": "S"
+      }
+    },
+    "jax": {
+      "TOP": {
+        "winRate": 49.95,
+        "pickRate": 5.866273770004338,
+        "banRate": 14.273166339627814,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 49.89,
+        "pickRate": 2.7063766410878385,
+        "banRate": 10.765663863728697,
+        "tier": "B"
+      }
+    },
+    "drmundo": {
+      "TOP": {
+        "winRate": 51.06,
+        "pickRate": 4.809815592050424,
+        "banRate": 10.277746514711856,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 51.6,
+        "pickRate": 5.059275724738353,
+        "banRate": 10.277746514711856,
+        "tier": "A"
+      }
+    },
+    "sion": {
+      "TOP": {
+        "winRate": 50.470000000000006,
+        "pickRate": 4.613610993307108,
+        "banRate": 1.4193160076140516,
+        "tier": "A"
+      }
+    },
+    "renekton": {
+      "TOP": {
+        "winRate": 49.57,
+        "pickRate": 4.946183881487547,
+        "banRate": 3.3844851462377488,
+        "tier": "A"
+      }
+    },
+    "ambessa": {
+      "TOP": {
+        "winRate": 48.559999999999995,
+        "pickRate": 5.577085252726147,
+        "banRate": 9.178822562255638,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 48.67,
+        "pickRate": 3.0449491330437795,
+        "banRate": 9.178822562255638,
+        "tier": "B"
+      }
+    },
+    "kayle": {
+      "TOP": {
+        "winRate": 52,
+        "pickRate": 3.398848608044145,
+        "banRate": 2.606197916411805,
+        "tier": "A"
+      }
+    },
+    "nasus": {
+      "TOP": {
+        "winRate": 50.57000000000001,
+        "pickRate": 4.127422663150404,
+        "banRate": 5.917004977480045,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 52.21,
+        "pickRate": 1.4395526679312876,
+        "banRate": 5.917004977480045,
+        "tier": "C"
+      }
+    },
+    "teemo": {
+      "TOP": {
+        "winRate": 51.339999999999996,
+        "pickRate": 3.4680686155511036,
+        "banRate": 8.342916142670497,
+        "tier": "A"
+      }
+    },
+    "ornn": {
+      "TOP": {
+        "winRate": 51.019999999999996,
+        "pickRate": 3.4765992502790737,
+        "banRate": 0.5441404587025773,
+        "tier": "A"
+      }
+    },
+    "fiora": {
+      "TOP": {
+        "winRate": 50.61,
+        "pickRate": 3.613820603188995,
+        "banRate": 4.927480561169315,
+        "tier": "A"
+      }
+    },
+    "gwen": {
+      "TOP": {
+        "winRate": 49.91,
+        "pickRate": 3.677434765017573,
+        "banRate": 4.074447418513499,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 48.980000000000004,
+        "pickRate": 1.0768098350906439,
+        "banRate": 4.074447418513499,
+        "tier": "D"
+      }
+    },
+    "irelia": {
+      "TOP": {
+        "winRate": 49.63,
+        "pickRate": 3.693399238579917,
+        "banRate": 10.387357542364173,
+        "tier": "B"
+      },
+      "MIDDLE": {
+        "winRate": 49.730000000000004,
+        "pickRate": 2.577835948582208,
+        "banRate": 10.387357542364173,
+        "tier": "C"
+      }
+    },
+    "jayce": {
+      "TOP": {
+        "winRate": 48.77,
+        "pickRate": 4.146375942635137,
+        "banRate": 3.5200309259685163,
+        "tier": "B"
+      }
+    },
+    "riven": {
+      "TOP": {
+        "winRate": 49.82,
+        "pickRate": 3.5670239783955586,
+        "banRate": 2.0144696343199957,
+        "tier": "B"
+      }
+    },
+    "yorick": {
+      "TOP": {
+        "winRate": 50.11,
+        "pickRate": 3.361313815241076,
+        "banRate": 6.4624019495104195,
+        "tier": "B"
+      }
+    },
+    "singed": {
+      "TOP": {
+        "winRate": 52.2,
+        "pickRate": 2.4343994189419087,
+        "banRate": 0.7951692854241801,
+        "tier": "B"
+      }
+    },
+    "chogath": {
+      "TOP": {
+        "winRate": 49.95,
+        "pickRate": 3.2668675021814053,
+        "banRate": 1.5480110981165498,
+        "tier": "B"
+      }
+    },
+    "yone": {
+      "TOP": {
+        "winRate": 47.63,
+        "pickRate": 4.451407067265274,
+        "banRate": 4.800498142973884,
+        "tier": "B"
+      },
+      "MIDDLE": {
+        "winRate": 47.82,
+        "pickRate": 5.505184188590397,
+        "banRate": 4.800498142973884,
+        "tier": "B"
+      }
+    },
+    "shen": {
+      "TOP": {
+        "winRate": 49.980000000000004,
+        "pickRate": 3.20215654445923,
+        "banRate": 0.717976697869925,
+        "tier": "B"
+      },
+      "JUNGLE": {
+        "winRate": 49.34,
+        "pickRate": 0.1847491749657556,
+        "banRate": 0.717976697869925,
+        "tier": "D"
+      }
+    },
+    "gnar": {
+      "TOP": {
+        "winRate": 50.080000000000005,
+        "pickRate": 3.0650570577597085,
+        "banRate": 0.8396987654079341,
+        "tier": "B"
+      }
+    },
+    "urgot": {
+      "TOP": {
+        "winRate": 51.43,
+        "pickRate": 2.4450017792466716,
+        "banRate": 1.0159816792996637,
+        "tier": "B"
+      }
+    },
+    "gangplank": {
+      "TOP": {
+        "winRate": 48.89,
+        "pickRate": 3.2409099993662953,
+        "banRate": 1.6437984135761086,
+        "tier": "B"
+      }
+    },
+    "zaahen": {
+      "TOP": {
+        "winRate": 49.18,
+        "pickRate": 3.086497272105711,
+        "banRate": 7.312336142116846,
+        "tier": "B"
+      },
+      "JUNGLE": {
+        "winRate": 49.54,
+        "pickRate": 3.7020517395182875,
+        "banRate": 60.20972895737403,
+        "tier": "B"
+      }
+    },
+    "illaoi": {
+      "TOP": {
+        "winRate": 51.17,
+        "pickRate": 2.234295101465807,
+        "banRate": 4.051693343576745,
+        "tier": "B"
+      }
+    },
+    "camille": {
+      "TOP": {
+        "winRate": 49.120000000000005,
+        "pickRate": 2.765266180176755,
+        "banRate": 0.958729490749123,
+        "tier": "B"
+      }
+    },
+    "yasuo": {
+      "TOP": {
+        "winRate": 48.97,
+        "pickRate": 2.82079471356192,
+        "banRate": 19.35722406843962,
+        "tier": "B"
+      },
+      "MIDDLE": {
+        "winRate": 49.1,
+        "pickRate": 8.845515773610845,
+        "banRate": 19.35722406843962,
+        "tier": "S"
+      }
+    },
+    "olaf": {
+      "TOP": {
+        "winRate": 51.83,
+        "pickRate": 1.580604748882487,
+        "banRate": 1.04521944225603,
+        "tier": "B"
+      }
+    },
+    "kennen": {
+      "TOP": {
+        "winRate": 50.88,
+        "pickRate": 1.8491978766031498,
+        "banRate": 1.1778292123175393,
+        "tier": "C"
+      }
+    },
+    "vladimir": {
+      "TOP": {
+        "winRate": 49.84,
+        "pickRate": 2.180795835100393,
+        "banRate": 6.818393121908015,
+        "tier": "C"
+      },
+      "MIDDLE": {
+        "winRate": 50.14999999999999,
+        "pickRate": 3.3859307897417894,
+        "banRate": 6.818393121908015,
+        "tier": "B"
+      }
+    },
+    "quinn": {
+      "TOP": {
+        "winRate": 51.4,
+        "pickRate": 1.6137523581111712,
+        "banRate": 2.279811508179234,
+        "tier": "C"
+      }
+    },
+    "vayne": {
+      "TOP": {
+        "winRate": 51.38,
+        "pickRate": 1.5932788347640428,
+        "banRate": 6.1652533042342155,
+        "tier": "C"
+      },
+      "BOTTOM": {
+        "winRate": 51.980000000000004,
+        "pickRate": 7.621147199758218,
+        "banRate": 6.1652533042342155,
+        "tier": "A"
+      }
+    },
+    "volibear": {
+      "TOP": {
+        "winRate": 48.3,
+        "pickRate": 2.449510829031456,
+        "banRate": 3.006473901320715,
+        "tier": "C"
+      },
+      "JUNGLE": {
+        "winRate": 50.629999999999995,
+        "pickRate": 1.8702807310022762,
+        "banRate": 3.006473901320715,
+        "tier": "C"
+      }
+    },
+    "pantheon": {
+      "TOP": {
+        "winRate": 49.85,
+        "pickRate": 1.8880731977206144,
+        "banRate": 3.376900454592164,
+        "tier": "C"
+      },
+      "UTILITY": {
+        "winRate": 49.39,
+        "pickRate": 3.4757461868062762,
+        "banRate": 3.376900454592164,
+        "tier": "C"
+      },
+      "JUNGLE": {
+        "winRate": 46.54,
+        "pickRate": 1.9132995032733264,
+        "banRate": 3.376900454592164,
+        "tier": "D"
+      }
+    },
+    "poppy": {
+      "TOP": {
+        "winRate": 52.38,
+        "pickRate": 1.1704030846775177,
+        "banRate": 5.0049178161960075,
+        "tier": "C"
+      },
+      "UTILITY": {
+        "winRate": 51.239999999999995,
+        "pickRate": 3.0984483994091923,
+        "banRate": 5.0049178161960075,
+        "tier": "B"
+      }
+    },
+    "ksante": {
+      "TOP": {
+        "winRate": 46.160000000000004,
+        "pickRate": 3.2712699745092984,
+        "banRate": 2.0227771591244545,
+        "tier": "C"
+      }
+    },
+    "gragas": {
+      "TOP": {
+        "winRate": 48.39,
+        "pickRate": 2.281701057311242,
+        "banRate": 0.9581178220680273,
+        "tier": "C"
+      },
+      "JUNGLE": {
+        "winRate": 49.220000000000006,
+        "pickRate": 0.7370468404966292,
+        "banRate": 0.9581178220680273,
+        "tier": "D"
+      }
+    },
+    "kled": {
+      "TOP": {
+        "winRate": 51.24999999999999,
+        "pickRate": 1.3917121227631457,
+        "banRate": 0.679441570960907,
+        "tier": "C"
+      }
+    },
+    "rumble": {
+      "TOP": {
+        "winRate": 48.980000000000004,
+        "pickRate": 1.976182467839507,
+        "banRate": 0.6215777137292705,
+        "tier": "C"
+      }
+    },
+    "tryndamere": {
+      "TOP": {
+        "winRate": 47.92,
+        "pickRate": 2.303271376551966,
+        "banRate": 1.6094226336985404,
+        "tier": "C"
+      }
+    },
+    "heimerdinger": {
+      "TOP": {
+        "winRate": 51.370000000000005,
+        "pickRate": 1.1950200591782316,
+        "banRate": 1.907549948864498,
+        "tier": "C"
+      }
+    },
+    "akali": {
+      "TOP": {
+        "winRate": 49.95,
+        "pickRate": 1.424615999571031,
+        "banRate": 10.050572766552976,
+        "tier": "C"
+      },
+      "MIDDLE": {
+        "winRate": 49.4,
+        "pickRate": 6.554817858761937,
+        "banRate": 10.050572766552976,
+        "tier": "A"
+      }
+    },
+    "warwick": {
+      "TOP": {
+        "winRate": 50.739999999999995,
+        "pickRate": 1.1612631188975497,
+        "banRate": 3.522355266956679,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 51.849999999999994,
+        "pickRate": 3.3543674412483,
+        "banRate": 3.522355266956679,
+        "tier": "A"
+      }
+    },
+    "cassiopeia": {
+      "TOP": {
+        "winRate": 51.18000000000001,
+        "pickRate": 0.5661904135164251,
+        "banRate": 1.51106630977838,
+        "tier": "D"
+      },
+      "MIDDLE": {
+        "winRate": 50.38,
+        "pickRate": 1.6584772573278153,
+        "banRate": 1.51106630977838,
+        "tier": "D"
+      }
+    },
+    "varus": {
+      "TOP": {
+        "winRate": 48.93,
+        "pickRate": 0.8751212568793475,
+        "banRate": 1.0305393939097371,
+        "tier": "D"
+      },
+      "BOTTOM": {
+        "winRate": 46.69,
+        "pickRate": 4.575588735662441,
+        "banRate": 1.0305393939097371,
+        "tier": "C"
+      }
+    },
+    "tahmkench": {
+      "TOP": {
+        "winRate": 47.99,
+        "pickRate": 0.8191846663059426,
+        "banRate": 1.433751388487906,
+        "tier": "D"
+      },
+      "UTILITY": {
+        "winRate": 49.21,
+        "pickRate": 2.285113311202429,
+        "banRate": 1.433751388487906,
+        "tier": "D"
+      }
+    },
+    "monkeyking": {
+      "TOP": {
+        "winRate": 47.89,
+        "pickRate": 0.661124191417694,
+        "banRate": 1.2912325857926492,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 51.11,
+        "pickRate": 2.9301511628473795,
+        "banRate": 1.2912325857926492,
+        "tier": "B"
+      }
+    },
+    "trundle": {
+      "TOP": {
+        "winRate": 46.379999999999995,
+        "pickRate": 0.7643448716261341,
+        "banRate": 0.9779358873355224,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 51.43,
+        "pickRate": 1.9079373900157452,
+        "banRate": 0.9779358873355224,
+        "tier": "C"
+      }
+    },
+    "udyr": {
+      "TOP": {
+        "winRate": 48.3,
+        "pickRate": 0.4092267345217726,
+        "banRate": 1.1560538072705386,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 50.260000000000005,
+        "pickRate": 1.6830942318285291,
+        "banRate": 1.1560538072705386,
+        "tier": "C"
+      }
+    },
+    "skarner": {
+      "TOP": {
+        "winRate": 41.89,
+        "pickRate": 0.14282719858830184,
+        "banRate": 0.3656555375589037,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 46.72,
+        "pickRate": 0.9304485164007547,
+        "banRate": 0.3656555375589037,
+        "tier": "D"
+      }
+    },
+    "ahri": {
+      "MIDDLE": {
+        "winRate": 51.24999999999999,
+        "pickRate": 8.58632758612285,
+        "banRate": 2.350642741450095,
+        "tier": "S"
+      }
+    },
+    "mel": {
+      "MIDDLE": {
+        "winRate": 49.74,
+        "pickRate": 9.55309223322268,
+        "banRate": 51.81763465274346,
+        "tier": "S"
+      },
+      "UTILITY": {
+        "winRate": 47.370000000000005,
+        "pickRate": 4.3316125824424905,
+        "banRate": 51.81763465274346,
+        "tier": "C"
+      }
+    },
+    "malzahar": {
+      "MIDDLE": {
+        "winRate": 51.38,
+        "pickRate": 6.776736227899563,
+        "banRate": 10.79362788034782,
+        "tier": "S"
+      }
+    },
+    "syndra": {
+      "MIDDLE": {
+        "winRate": 50.519999999999996,
+        "pickRate": 6.82024246501221,
+        "banRate": 4.140262968599377,
+        "tier": "S"
+      }
+    },
+    "katarina": {
+      "MIDDLE": {
+        "winRate": 50.11,
+        "pickRate": 6.882150499895196,
+        "banRate": 8.331783772674559,
+        "tier": "A"
+      }
+    },
+    "sylas": {
+      "MIDDLE": {
+        "winRate": 49.57,
+        "pickRate": 6.9336999068942164,
+        "banRate": 22.067660342828063,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 50.68,
+        "pickRate": 10.609550411176594,
+        "banRate": 22.067660342828063,
+        "tier": "S"
+      }
+    },
+    "orianna": {
+      "MIDDLE": {
+        "winRate": 49.059999999999995,
+        "pickRate": 7.281262338953804,
+        "banRate": 2.5518817375305223,
+        "tier": "A"
+      }
+    },
+    "viktor": {
+      "MIDDLE": {
+        "winRate": 49.74,
+        "pickRate": 6.316325685009969,
+        "banRate": 2.516404954026982,
+        "tier": "A"
+      }
+    },
+    "zed": {
+      "MIDDLE": {
+        "winRate": 49.54,
+        "pickRate": 6.063087699799652,
+        "banRate": 25.5327634212342,
+        "tier": "A"
+      },
+      "JUNGLE": {
+        "winRate": 48.32,
+        "pickRate": 4.800675626270455,
+        "banRate": 25.5327634212342,
+        "tier": "A"
+      }
+    },
+    "xerath": {
+      "MIDDLE": {
+        "winRate": 51.839999999999996,
+        "pickRate": 3.8742486948128865,
+        "banRate": 6.213697463776981,
+        "tier": "A"
+      },
+      "UTILITY": {
+        "winRate": 49.65,
+        "pickRate": 3.200937882355235,
+        "banRate": 6.213697463776981,
+        "tier": "C"
+      }
+    },
+    "fizz": {
+      "MIDDLE": {
+        "winRate": 50.57000000000001,
+        "pickRate": 4.534397956547384,
+        "banRate": 6.7287224932594105,
+        "tier": "A"
+      }
+    },
+    "diana": {
+      "MIDDLE": {
+        "winRate": 51.43,
+        "pickRate": 3.6411186343185,
+        "banRate": 7.019632117988442,
+        "tier": "B"
+      },
+      "JUNGLE": {
+        "winRate": 51.57000000000001,
+        "pickRate": 5.804975066173353,
+        "banRate": 7.019632117988442,
+        "tier": "S"
+      }
+    },
+    "leblanc": {
+      "MIDDLE": {
+        "winRate": 49.38,
+        "pickRate": 4.764359495571382,
+        "banRate": 19.29019519570951,
+        "tier": "B"
+      }
+    },
+    "veigar": {
+      "MIDDLE": {
+        "winRate": 50.62,
+        "pickRate": 3.9967242362644595,
+        "banRate": 1.0893819210311266,
+        "tier": "B"
+      }
+    },
+    "galio": {
+      "MIDDLE": {
+        "winRate": 49.64,
+        "pickRate": 4.245818770321191,
+        "banRate": 2.1253039993345046,
+        "tier": "B"
+      }
+    },
+    "anivia": {
+      "MIDDLE": {
+        "winRate": 51.29,
+        "pickRate": 3.2487094368318683,
+        "banRate": 2.0060286065208777,
+        "tier": "B"
+      },
+      "UTILITY": {
+        "winRate": 48.65,
+        "pickRate": 0.44213061132965775,
+        "banRate": 2.0060286065208777,
+        "tier": "D"
+      }
+    },
+    "lux": {
+      "MIDDLE": {
+        "winRate": 50.36000000000001,
+        "pickRate": 3.670610257235197,
+        "banRate": 4.729789243439242,
+        "tier": "B"
+      },
+      "UTILITY": {
+        "winRate": 48.44,
+        "pickRate": 6.385545692516928,
+        "banRate": 4.729789243439242,
+        "tier": "B"
+      }
+    },
+    "hwei": {
+      "MIDDLE": {
+        "winRate": 50,
+        "pickRate": 3.8295237955962422,
+        "banRate": 2.8845071663102675,
+        "tier": "B"
+      }
+    },
+    "zoe": {
+      "MIDDLE": {
+        "winRate": 48.85,
+        "pickRate": 4.16307161345988,
+        "banRate": 4.395818143561086,
+        "tier": "B"
+      }
+    },
+    "twistedfate": {
+      "MIDDLE": {
+        "winRate": 49.6,
+        "pickRate": 3.7044890637262795,
+        "banRate": 0.6237797209812144,
+        "tier": "B"
+      }
+    },
+    "lissandra": {
+      "MIDDLE": {
+        "winRate": 51.06,
+        "pickRate": 2.917477076965824,
+        "banRate": 1.3033436256783406,
+        "tier": "B"
+      }
+    },
+    "ekko": {
+      "MIDDLE": {
+        "winRate": 51.019999999999996,
+        "pickRate": 2.921986126750608,
+        "banRate": 1.8044226092317932,
+        "tier": "B"
+      },
+      "JUNGLE": {
+        "winRate": 50.86000000000001,
+        "pickRate": 3.7567696679876965,
+        "banRate": 1.8044226092317932,
+        "tier": "A"
+      }
+    },
+    "vex": {
+      "MIDDLE": {
+        "winRate": 51.129999999999995,
+        "pickRate": 2.7399180084136434,
+        "banRate": 2.9554607333173486,
+        "tier": "C"
+      }
+    },
+    "naafiri": {
+      "MIDDLE": {
+        "winRate": 53.26,
+        "pickRate": 1.836523790721594,
+        "banRate": 5.46097798482083,
+        "tier": "C"
+      },
+      "JUNGLE": {
+        "winRate": 50.19,
+        "pickRate": 2.4153882901195756,
+        "banRate": 5.46097798482083,
+        "tier": "B"
+      }
+    },
+    "ryze": {
+      "MIDDLE": {
+        "winRate": 48.730000000000004,
+        "pickRate": 3.489395202371029,
+        "banRate": 0.6084880039538263,
+        "tier": "C"
+      }
+    },
+    "kassadin": {
+      "MIDDLE": {
+        "winRate": 50.7,
+        "pickRate": 2.4985010456120853,
+        "banRate": 1.9887795497139835,
+        "tier": "C"
+      }
+    },
+    "akshan": {
+      "MIDDLE": {
+        "winRate": 50.38,
+        "pickRate": 2.4012518097132243,
+        "banRate": 2.4914488718382843,
+        "tier": "C"
+      }
+    },
+    "aurora": {
+      "MIDDLE": {
+        "winRate": 49.14,
+        "pickRate": 2.8147438615989824,
+        "banRate": 3.051982051194222,
+        "tier": "C"
+      }
+    },
+    "aurelionsol": {
+      "MIDDLE": {
+        "winRate": 49.8,
+        "pickRate": 2.4220909316915518,
+        "banRate": 0.7654421875229376,
+        "tier": "C"
+      }
+    },
+    "velkoz": {
+      "MIDDLE": {
+        "winRate": 52.2,
+        "pickRate": 1.2826418644555262,
+        "banRate": 1.3317250524811728,
+        "tier": "C"
+      },
+      "UTILITY": {
+        "winRate": 51.25999999999999,
+        "pickRate": 3.0098516644487017,
+        "banRate": 1.3317250524811728,
+        "tier": "B"
+      }
+    },
+    "qiyana": {
+      "MIDDLE": {
+        "winRate": 49.120000000000005,
+        "pickRate": 2.195054181717144,
+        "banRate": 6.950880558233305,
+        "tier": "C"
+      },
+      "JUNGLE": {
+        "winRate": 46.9,
+        "pickRate": 4.0904393520617335,
+        "banRate": 6.950880558233305,
+        "tier": "B"
+      }
+    },
+    "taliyah": {
+      "MIDDLE": {
+        "winRate": 48.96,
+        "pickRate": 2.241363341668982,
+        "banRate": 0.4889679436677612,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 50.11,
+        "pickRate": 0.4552921620528119,
+        "banRate": 0.4889679436677612,
+        "tier": "D"
+      }
+    },
+    "talon": {
+      "MIDDLE": {
+        "winRate": 51.33,
+        "pickRate": 1.4609321302701042,
+        "banRate": 2.8327599958895866,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 49.81,
+        "pickRate": 3.1018606533003807,
+        "banRate": 2.8327599958895866,
+        "tier": "B"
+      }
+    },
+    "annie": {
+      "MIDDLE": {
+        "winRate": 50.38,
+        "pickRate": 1.4101139205334816,
+        "banRate": 0.4893349448764185,
+        "tier": "D"
+      }
+    },
+    "azir": {
+      "MIDDLE": {
+        "winRate": 44.9,
+        "pickRate": 2.9476998971449184,
+        "banRate": 0.5185727078327844,
+        "tier": "D"
+      }
+    },
+    "ziggs": {
+      "MIDDLE": {
+        "winRate": 50.07,
+        "pickRate": 1.0307444075596046,
+        "banRate": 1.2994289461193294,
+        "tier": "D"
+      },
+      "BOTTOM": {
+        "winRate": 51.849999999999994,
+        "pickRate": 2.640597046937989,
+        "banRate": 1.2994289461193294,
+        "tier": "C"
+      }
+    },
+    "nami": {
+      "UTILITY": {
+        "winRate": 52.28,
+        "pickRate": 11.096040323091696,
+        "banRate": 2.386975861107169,
+        "tier": "S"
+      }
+    },
+    "thresh": {
+      "UTILITY": {
+        "winRate": 50.11,
+        "pickRate": 12.067801484817906,
+        "banRate": 5.149760959879428,
+        "tier": "S"
+      }
+    },
+    "milio": {
+      "UTILITY": {
+        "winRate": 52.68000000000001,
+        "pickRate": 8.230112653124893,
+        "banRate": 9.04719146208388,
+        "tier": "S"
+      }
+    },
+    "lulu": {
+      "UTILITY": {
+        "winRate": 50.24999999999999,
+        "pickRate": 9.01700277367495,
+        "banRate": 11.904173537744851,
+        "tier": "S"
+      }
+    },
+    "leona": {
+      "UTILITY": {
+        "winRate": 51.27,
+        "pickRate": 7.7075503429315155,
+        "banRate": 7.006420074476778,
+        "tier": "A"
+      }
+    },
+    "karma": {
+      "UTILITY": {
+        "winRate": 50.79,
+        "pickRate": 7.7515440448857635,
+        "banRate": 4.234215278015649,
+        "tier": "A"
+      }
+    },
+    "nautilus": {
+      "UTILITY": {
+        "winRate": 49.29,
+        "pickRate": 9.274140477618051,
+        "banRate": 13.365327683145836,
+        "tier": "A"
+      }
+    },
+    "seraphine": {
+      "UTILITY": {
+        "winRate": 51.29,
+        "pickRate": 6.962831751822941,
+        "banRate": 1.6508544722789726,
+        "tier": "A"
+      }
+    },
+    "soraka": {
+      "UTILITY": {
+        "winRate": 52.05,
+        "pickRate": 5.159327883476404,
+        "banRate": 2.869704784227756,
+        "tier": "A"
+      }
+    },
+    "bard": {
+      "UTILITY": {
+        "winRate": 50.980000000000004,
+        "pickRate": 5.815211827846917,
+        "banRate": 2.3150436242103356,
+        "tier": "A"
+      }
+    },
+    "pyke": {
+      "UTILITY": {
+        "winRate": 48.9,
+        "pickRate": 6.6601102645471695,
+        "banRate": 19.736958000381684,
+        "tier": "A"
+      }
+    },
+    "morgana": {
+      "UTILITY": {
+        "winRate": 50.5,
+        "pickRate": 5.387705161765207,
+        "banRate": 24.152594209210264,
+        "tier": "A"
+      }
+    },
+    "blitzcrank": {
+      "UTILITY": {
+        "winRate": 49.2,
+        "pickRate": 6.333630686886709,
+        "banRate": 16.4911993110164,
+        "tier": "B"
+      }
+    },
+    "braum": {
+      "UTILITY": {
+        "winRate": 50.370000000000005,
+        "pickRate": 5.097541714803819,
+        "banRate": 4.431050259592189,
+        "tier": "B"
+      }
+    },
+    "janna": {
+      "UTILITY": {
+        "winRate": 52.07000000000001,
+        "pickRate": 3.624179231072959,
+        "banRate": 0.7782872298259436,
+        "tier": "B"
+      }
+    },
+    "zyra": {
+      "UTILITY": {
+        "winRate": 51.92,
+        "pickRate": 3.441258049263196,
+        "banRate": 3.4890804907050827,
+        "tier": "B"
+      },
+      "JUNGLE": {
+        "winRate": 50.74999999999999,
+        "pickRate": 0.717304514411898,
+        "banRate": 3.4890804907050827,
+        "tier": "D"
+      }
+    },
+    "rakan": {
+      "UTILITY": {
+        "winRate": 49.89,
+        "pickRate": 4.31199212256816,
+        "banRate": 0.3902446185389437,
+        "tier": "B"
+      }
+    },
+    "alistar": {
+      "UTILITY": {
+        "winRate": 48.93,
+        "pickRate": 4.488941860068342,
+        "banRate": 1.791577566928787,
+        "tier": "B"
+      }
+    },
+    "yuumi": {
+      "UTILITY": {
+        "winRate": 48.32,
+        "pickRate": 4.75351340284582,
+        "banRate": 7.069421948629618,
+        "tier": "B"
+      }
+    },
+    "brand": {
+      "UTILITY": {
+        "winRate": 51.300000000000004,
+        "pickRate": 3.1453668904130287,
+        "banRate": 2.9285473113491456,
+        "tier": "B"
+      }
+    },
+    "senna": {
+      "UTILITY": {
+        "winRate": 49.75,
+        "pickRate": 3.847194396104181,
+        "banRate": 0.77058020444414,
+        "tier": "B"
+      },
+      "BOTTOM": {
+        "winRate": 49.18,
+        "pickRate": 0.4170261719873454,
+        "banRate": 0.77058020444414,
+        "tier": "D"
+      }
+    },
+    "sona": {
+      "UTILITY": {
+        "winRate": 51.870000000000005,
+        "pickRate": 2.5958721477213453,
+        "banRate": 0.2972709790124242,
+        "tier": "C"
+      }
+    },
+    "neeko": {
+      "UTILITY": {
+        "winRate": 48.66,
+        "pickRate": 3.9635766270357746,
+        "banRate": 2.6866935148439754,
+        "tier": "C"
+      }
+    },
+    "rell": {
+      "UTILITY": {
+        "winRate": 49.24,
+        "pickRate": 3.3430338836811395,
+        "banRate": 1.0942752704798908,
+        "tier": "C"
+      }
+    },
+    "zilean": {
+      "UTILITY": {
+        "winRate": 51.1,
+        "pickRate": 2.5343297114695607,
+        "banRate": 1.1829672292387416,
+        "tier": "C"
+      }
+    },
+    "maokai": {
+      "UTILITY": {
+        "winRate": 51.31,
+        "pickRate": 2.04212024472836,
+        "banRate": 0.24690113140488865,
+        "tier": "C"
+      }
+    },
+    "swain": {
+      "UTILITY": {
+        "winRate": 48.49,
+        "pickRate": 2.8926163700443106,
+        "banRate": 1.5138799857114196,
+        "tier": "C"
+      },
+      "BOTTOM": {
+        "winRate": 54.33,
+        "pickRate": 0.5780114359251839,
+        "banRate": 1.5138799857114196,
+        "tier": "D"
+      }
+    },
+    "taric": {
+      "UTILITY": {
+        "winRate": 52.12,
+        "pickRate": 1.399633426439118,
+        "banRate": 0.2254610758518098,
+        "tier": "C"
+      }
+    },
+    "elise": {
+      "UTILITY": {
+        "winRate": 51.71,
+        "pickRate": 1.2962908800202784,
+        "banRate": 1.8994759222740374,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 50.54,
+        "pickRate": 2.0159108524297684,
+        "banRate": 1.8994759222740374,
+        "tier": "C"
+      }
+    },
+    "shaco": {
+      "UTILITY": {
+        "winRate": 50.67,
+        "pickRate": 1.5657370712137388,
+        "banRate": 24.228441125666105,
+        "tier": "D"
+      },
+      "JUNGLE": {
+        "winRate": 49.15,
+        "pickRate": 3.8406136207426043,
+        "banRate": 24.228441125666105,
+        "tier": "B"
+      }
+    },
+    "renata": {
+      "UTILITY": {
+        "winRate": 49.830000000000005,
+        "pickRate": 1.6076590475911923,
+        "banRate": 0.25555517496170954,
+        "tier": "D"
+      }
+    },
+    "viego": {
+      "JUNGLE": {
+        "winRate": 50.14999999999999,
+        "pickRate": 10.253335478178634,
+        "banRate": 8.840692115346032,
+        "tier": "S"
+      }
+    },
+    "leesin": {
+      "JUNGLE": {
+        "winRate": 49.16,
+        "pickRate": 10.006678268329896,
+        "banRate": 10.525472330555543,
+        "tier": "S"
+      }
+    },
+    "jarvaniv": {
+      "JUNGLE": {
+        "winRate": 51.04,
+        "pickRate": 6.189097361352812,
+        "banRate": 2.5682744581838826,
+        "tier": "S"
+      }
+    },
+    "kayn": {
+      "JUNGLE": {
+        "winRate": 50.27,
+        "pickRate": 6.616725893644921,
+        "banRate": 5.919974163114911,
+        "tier": "S"
+      }
+    },
+    "khazix": {
+      "JUNGLE": {
+        "winRate": 50.74999999999999,
+        "pickRate": 5.704069843962504,
+        "banRate": 4.380893427742356,
+        "tier": "A"
+      }
+    },
+    "masteryi": {
+      "JUNGLE": {
+        "winRate": 50.74999999999999,
+        "pickRate": 5.325431528251024,
+        "banRate": 12.25698403300075,
+        "tier": "A"
+      }
+    },
+    "graves": {
+      "JUNGLE": {
+        "winRate": 50.12,
+        "pickRate": 5.509936970795982,
+        "banRate": 3.6385723163648285,
+        "tier": "A"
+      }
+    },
+    "briar": {
+      "JUNGLE": {
+        "winRate": 52.400000000000006,
+        "pickRate": 3.8450008043169883,
+        "banRate": 7.843427497687892,
+        "tier": "A"
+      }
+    },
+    "nocturne": {
+      "JUNGLE": {
+        "winRate": 50.43,
+        "pickRate": 3.791623404161975,
+        "banRate": 6.035701877578183,
+        "tier": "A"
+      }
+    },
+    "xinzhao": {
+      "JUNGLE": {
+        "winRate": 49.89,
+        "pickRate": 3.8014945672043408,
+        "banRate": 1.9797268532337702,
+        "tier": "A"
+      }
+    },
+    "amumu": {
+      "JUNGLE": {
+        "winRate": 51.65,
+        "pickRate": 2.833754990421316,
+        "banRate": 1.96602547477723,
+        "tier": "B"
+      }
+    },
+    "lillia": {
+      "JUNGLE": {
+        "winRate": 50.629999999999995,
+        "pickRate": 3.281369581218955,
+        "banRate": 2.364466453642854,
+        "tier": "B"
+      }
+    },
+    "zac": {
+      "JUNGLE": {
+        "winRate": 51.33,
+        "pickRate": 2.5717426380622297,
+        "banRate": 1.613826648202428,
+        "tier": "B"
+      }
+    },
+    "rengar": {
+      "JUNGLE": {
+        "winRate": 46.88,
+        "pickRate": 4.729993224238703,
+        "banRate": 5.968907657602553,
+        "tier": "B"
+      }
+    },
+    "fiddlesticks": {
+      "JUNGLE": {
+        "winRate": 51.88,
+        "pickRate": 2.148257556923707,
+        "banRate": 1.515347990546049,
+        "tier": "B"
+      }
+    },
+    "nidalee": {
+      "JUNGLE": {
+        "winRate": 49.11,
+        "pickRate": 3.148169813252219,
+        "banRate": 2.014836635528653,
+        "tier": "B"
+      }
+    },
+    "kindred": {
+      "JUNGLE": {
+        "winRate": 49.97,
+        "pickRate": 2.579785807948602,
+        "banRate": 1.9060819440298689,
+        "tier": "B"
+      }
+    },
+    "evelynn": {
+      "JUNGLE": {
+        "winRate": 50.72,
+        "pickRate": 2.2073626689675003,
+        "banRate": 2.7077349174736614,
+        "tier": "B"
+      }
+    },
+    "vi": {
+      "JUNGLE": {
+        "winRate": 48.22,
+        "pickRate": 2.9930341274135603,
+        "banRate": 0.8765212200098845,
+        "tier": "C"
+      }
+    },
+    "nunu": {
+      "JUNGLE": {
+        "winRate": 50.19,
+        "pickRate": 2.054054976284835,
+        "banRate": 0.49055828223860953,
+        "tier": "C"
+      }
+    },
+    "hecarim": {
+      "JUNGLE": {
+        "winRate": 49.2,
+        "pickRate": 2.404176598762814,
+        "banRate": 1.7179326577248861,
+        "tier": "C"
+      }
+    },
+    "rammus": {
+      "JUNGLE": {
+        "winRate": 51.959999999999994,
+        "pickRate": 1.4086515260086865,
+        "banRate": 3.674538434813245,
+        "tier": "C"
+      }
+    },
+    "belveth": {
+      "JUNGLE": {
+        "winRate": 50.38,
+        "pickRate": 1.6717606742613689,
+        "banRate": 3.3113295719787237,
+        "tier": "C"
+      }
+    },
+    "reksai": {
+      "JUNGLE": {
+        "winRate": 51.44,
+        "pickRate": 1.3194454599961978,
+        "banRate": 0.6462891284455297,
+        "tier": "C"
+      }
+    },
+    "ivern": {
+      "JUNGLE": {
+        "winRate": 51.35999999999999,
+        "pickRate": 1.2750861594107523,
+        "banRate": 0.6396831066896981,
+        "tier": "C"
+      }
+    },
+    "sejuani": {
+      "JUNGLE": {
+        "winRate": 48.46,
+        "pickRate": 1.739640153453932,
+        "banRate": 0.23035442530057398,
+        "tier": "C"
+      }
+    },
+    "shyvana": {
+      "JUNGLE": {
+        "winRate": 50.28,
+        "pickRate": 1.004908770954895,
+        "banRate": 0.19610097915922473,
+        "tier": "C"
+      }
+    },
+    "karthus": {
+      "JUNGLE": {
+        "winRate": 48.22,
+        "pickRate": 1.3667295496312328,
+        "banRate": 1.060511159283418,
+        "tier": "D"
+      }
+    },
+    "missfortune": {
+      "BOTTOM": {
+        "winRate": 51.959999999999994,
+        "pickRate": 19.213304865386586,
+        "banRate": 9.06260551284749,
+        "tier": "S"
+      }
+    },
+    "kaisa": {
+      "BOTTOM": {
+        "winRate": 49.33,
+        "pickRate": 19.10910925549495,
+        "banRate": 3.5903728242945014,
+        "tier": "S"
+      }
+    },
+    "jhin": {
+      "BOTTOM": {
+        "winRate": 50.31,
+        "pickRate": 16.369556845712502,
+        "banRate": 2.2083686062272765,
+        "tier": "S"
+      }
+    },
+    "jinx": {
+      "BOTTOM": {
+        "winRate": 50.72,
+        "pickRate": 11.919855905392824,
+        "banRate": 2.5175059576529537,
+        "tier": "A"
+      }
+    },
+    "ashe": {
+      "BOTTOM": {
+        "winRate": 50.690000000000005,
+        "pickRate": 11.661621405556124,
+        "banRate": 8.115130725830525,
+        "tier": "A"
+      }
+    },
+    "caitlyn": {
+      "BOTTOM": {
+        "winRate": 48.870000000000005,
+        "pickRate": 13.493392414072133,
+        "banRate": 17.784266902852334,
+        "tier": "A"
+      }
+    },
+    "smolder": {
+      "BOTTOM": {
+        "winRate": 51.1,
+        "pickRate": 9.67544590846385,
+        "banRate": 5.354547634310209,
+        "tier": "A"
+      }
+    },
+    "ezreal": {
+      "BOTTOM": {
+        "winRate": 48.27,
+        "pickRate": 12.272049253447596,
+        "banRate": 2.783337166457068,
+        "tier": "A"
+      }
+    },
+    "lucian": {
+      "BOTTOM": {
+        "winRate": 49.41,
+        "pickRate": 8.591080368328434,
+        "banRate": 3.1970698623500797,
+        "tier": "B"
+      }
+    },
+    "tristana": {
+      "BOTTOM": {
+        "winRate": 50.79,
+        "pickRate": 6.7111722067045925,
+        "banRate": 2.582098170376641,
+        "tier": "B"
+      }
+    },
+    "sivir": {
+      "BOTTOM": {
+        "winRate": 50.93,
+        "pickRate": 5.839097605085233,
+        "banRate": 2.868236779393127,
+        "tier": "B"
+      }
+    },
+    "yunara": {
+      "BOTTOM": {
+        "winRate": 47.52,
+        "pickRate": 7.444928659520432,
+        "banRate": 5.119666860769528,
+        "tier": "B"
+      }
+    },
+    "aphelios": {
+      "BOTTOM": {
+        "winRate": 49.08,
+        "pickRate": 5.774386647363059,
+        "banRate": 2.182311520412607,
+        "tier": "B"
+      }
+    },
+    "xayah": {
+      "BOTTOM": {
+        "winRate": 50.09,
+        "pickRate": 4.499300487952307,
+        "banRate": 0.6933876168898849,
+        "tier": "B"
+      }
+    },
+    "samira": {
+      "BOTTOM": {
+        "winRate": 50.05,
+        "pickRate": 4.234485212754031,
+        "banRate": 6.404171091070126,
+        "tier": "B"
+      }
+    },
+    "twitch": {
+      "BOTTOM": {
+        "winRate": 49.87,
+        "pickRate": 3.708145050038266,
+        "banRate": 4.021232243258187,
+        "tier": "B"
+      }
+    },
+    "draven": {
+      "BOTTOM": {
+        "winRate": 48.69,
+        "pickRate": 4.198900279317354,
+        "banRate": 15.539442843231763,
+        "tier": "C"
+      }
+    },
+    "zeri": {
+      "BOTTOM": {
+        "winRate": 49.55,
+        "pickRate": 2.861418620182019,
+        "banRate": 0.3416781252599592,
+        "tier": "C"
+      }
+    },
+    "nilah": {
+      "BOTTOM": {
+        "winRate": 52.33,
+        "pickRate": 1.6125336960071752,
+        "banRate": 2.6629607700174693,
+        "tier": "C"
+      }
+    },
+    "kogmaw": {
+      "BOTTOM": {
+        "winRate": 51.61,
+        "pickRate": 1.3329726093505505,
+        "banRate": 0.4531241589555635,
+        "tier": "C"
+      }
+    },
+    "corki": {
+      "BOTTOM": {
+        "winRate": 48.370000000000005,
+        "pickRate": 1.5814578123552838,
+        "banRate": 0.3736072304131455,
+        "tier": "D"
+      }
+    },
+    "kalista": {
+      "BOTTOM": {
+        "winRate": 46.32,
+        "pickRate": 1.7379340265083383,
+        "banRate": 0.3208813901027114,
+        "tier": "D"
+      }
+    }
+  }
+}

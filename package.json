@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "sync:data": "node scripts/sync-data.mjs",
+    "sync:matchups": "node scripts/sync-data.mjs --matchups",
     "build": "npm run sync:data && vite build",
     "preview": "vite preview",
     "format": "oxfmt --write .",
@@ -17,6 +18,8 @@
   },
   "dependencies": {
     "html-to-image": "^1.11.13",
+    "hyparquet": "^1.26.2",
+    "hyparquet-compressors": "^1.1.1",
     "lucide-react": "^0.468.0",
     "react": "19.2.6",
     "react-dom": "19.2.6"

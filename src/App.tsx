@@ -1,17 +1,36 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { toBlob } from "html-to-image";
-import { Check, Clipboard, Copy, Download, Info, RefreshCw, ScanSearch } from "lucide-react";
+import {
+  Check,
+  Clipboard,
+  Copy,
+  Download,
+  Info,
+  RefreshCw,
+  ScanSearch,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { Inspectable } from "./components/Inspectable";
 import {
+  championsForRole,
   FALLBACK_PATCH,
   dragonBase,
   generateLoadout,
   newSeed,
   plainText,
+  seededIndex,
   selectTeam,
 } from "./engine";
-import type { ChampionDetail, GeneratedLoadout, StaticData, View } from "./types";
+import type {
+  ChampionDetail,
+  DragonChampion,
+  GeneratedLoadout,
+  Role,
+  StaticData,
+  View,
+} from "./types";
 import { ROLES } from "./types";
 import styles from "./App.module.css";
 
@@ -23,8 +42,18 @@ const emptyData: StaticData = {
   items: {},
   champions: {},
   championRates: {},
+  rankedStats: {},
+  matchups: {},
   runeStyles: [],
   summoners: {},
+};
+
+const roleIcons: Record<Role, string> = {
+  Top: "top",
+  Jungle: "jungle",
+  Mid: "middle",
+  Bot: "bottom",
+  Support: "utility",
 };
 
 function itemStats(stats: Record<string, number>): string {
@@ -57,12 +86,130 @@ function App() {
   const [details, setDetails] = useState<Record<string, ChampionDetail>>({});
   const [dataState, setDataState] = useState<"loading" | "live" | "error">("loading");
   const [copyState, setCopyState] = useState<CopyState>(null);
-  const boardRef = useRef<HTMLDivElement>(null);
+  const [lockedRoles, setLockedRoles] = useState<Role[]>([]);
+  const [isRolling, setIsRolling] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const shareRef = useRef<HTMLDivElement>(null);
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const mutedRef = useRef(false);
+  const lastTickRef = useRef(0);
 
   const selectedTeam = useMemo(
     () => selectTeam(data.champions, data.championRates, seed),
     [data.champions, data.championRates, seed],
   );
+  const allChampions = useMemo(() => Object.values(data.champions), [data.champions]);
+  const championImages = useMemo(
+    () =>
+      Object.fromEntries(
+        allChampions.flatMap((champion) => [
+          [champion.id.toLowerCase().replaceAll(/[^a-z0-9]/g, ""), champion.image.full],
+          [champion.name.toLowerCase().replaceAll(/[^a-z0-9]/g, ""), champion.image.full],
+        ]),
+      ),
+    [allChampions],
+  );
+  const reelChampions = useMemo(
+    () =>
+      [...allChampions].sort((first, second) => first.name.localeCompare(second.name)).slice(0, 18),
+    [allChampions],
+  );
+  const roleReelPools = useMemo<Partial<Record<Role, DragonChampion[]>>>(
+    () =>
+      Object.fromEntries(
+        ROLES.map((role) => [
+          role,
+          championsForRole(data.champions, data.championRates, role).sort((first, second) =>
+            first.name.localeCompare(second.name),
+          ),
+        ]),
+      ),
+    [data.champions, data.championRates],
+  );
+  const slotReels = useMemo<Partial<Record<Role, DragonChampion[]>>>(() => {
+    if (!selectedTeam) return {};
+    return Object.fromEntries(
+      ROLES.map((role, roleIndex) => {
+        const targetIndex = 24 + roleIndex * 6;
+        const visualPool = (roleReelPools[role] || allChampions).filter(
+          (champion) => champion.id !== selectedTeam[role].id,
+        );
+        const filler: DragonChampion[] = [];
+        for (let index = 0; index < targetIndex + 3; index += 1) {
+          const initialIndex = seededIndex(`${seed}-${role}-reel-${index}`, visualPool.length);
+          const previous = index > 0 ? visualPool.indexOf(filler[index - 1]) : -1;
+          const candidateIndex =
+            visualPool.length > 1 && initialIndex === previous
+              ? (initialIndex + 1) % visualPool.length
+              : initialIndex;
+          filler.push(visualPool[candidateIndex]);
+        }
+        const reel = [
+          ...filler.slice(0, targetIndex),
+          selectedTeam[role],
+          ...filler.slice(targetIndex),
+        ];
+        return [role, reel];
+      }),
+    );
+  }, [allChampions, roleReelPools, seed, selectedTeam]);
+
+  function playSound(kind: "start" | "tick" | "lock" | "finish", index = 0): void {
+    if (mutedRef.current) return;
+    const context = audioContextRef.current || new AudioContext();
+    audioContextRef.current = context;
+    void context.resume();
+    const now = context.currentTime;
+
+    const tone = (
+      frequency: number,
+      endFrequency: number,
+      duration: number,
+      volume: number,
+      type: OscillatorType,
+      delay = 0,
+    ): void => {
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
+      const start = now + delay;
+      oscillator.type = type;
+      oscillator.frequency.setValueAtTime(frequency, start);
+      oscillator.frequency.exponentialRampToValueAtTime(endFrequency, start + duration);
+      gain.gain.setValueAtTime(volume, start);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+      oscillator.connect(gain);
+      gain.connect(context.destination);
+      oscillator.start(start);
+      oscillator.stop(start + duration);
+    };
+
+    if (kind === "tick") {
+      if (now - lastTickRef.current < 0.038) return;
+      lastTickRef.current = now;
+      tone(150 + index * 9, 90, 0.025, 0.022, "square");
+      return;
+    }
+    if (kind === "start") {
+      tone(70, 145, 0.18, 0.045, "sawtooth");
+      tone(190, 105, 0.12, 0.022, "square", 0.08);
+      return;
+    }
+    if (kind === "lock") {
+      tone(105, 48, 0.12, 0.075, "sine");
+      tone(520 + index * 55, 610 + index * 55, 0.2, 0.032, "triangle", 0.025);
+      return;
+    }
+    tone(540, 680, 0.3, 0.035, "sine");
+    tone(680, 840, 0.34, 0.03, "sine", 0.06);
+    tone(810, 1_020, 0.38, 0.026, "sine", 0.12);
+  }
+
+  function toggleMute(): void {
+    const nextMuted = !mutedRef.current;
+    mutedRef.current = nextMuted;
+    setIsMuted(nextMuted);
+    if (!nextMuted) playSound("lock", 1);
+  }
 
   useEffect(() => {
     const controller = new AbortController();
@@ -73,29 +220,38 @@ function App() {
         }).then((response) => response.json())) as string[];
         const patch = versions[0] || FALLBACK_PATCH;
         const base = dragonBase(patch);
-        const [items, champions, runeStyles, summoners, championRates] = await Promise.all([
-          fetch(`${base}/data/en_US/item.json`, {
-            signal: controller.signal,
-          }).then((response) => response.json()),
-          fetch(`${base}/data/en_US/champion.json`, {
-            signal: controller.signal,
-          }).then((response) => response.json()),
-          fetch(`${base}/data/en_US/runesReforged.json`, {
-            signal: controller.signal,
-          }).then((response) => response.json()),
-          fetch(`${base}/data/en_US/summoner.json`, {
-            signal: controller.signal,
-          }).then((response) => response.json()),
-          fetch("/data/championrates.json", {
-            signal: controller.signal,
-          }).then((response) => response.json()),
-        ]);
+        const [items, champions, runeStyles, summoners, championRates, rankedStats, matchups] =
+          await Promise.all([
+            fetch(`${base}/data/en_US/item.json`, {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+            fetch(`${base}/data/en_US/champion.json`, {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+            fetch(`${base}/data/en_US/runesReforged.json`, {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+            fetch(`${base}/data/en_US/summoner.json`, {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+            fetch("/data/championrates.json", {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+            fetch("/data/rankedstats.json", {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+            fetch("/data/matchups.json", {
+              signal: controller.signal,
+            }).then((response) => response.json()),
+          ]);
         setData({
           patch,
           ratePatch: championRates.patch || "unknown",
           items: items.data || {},
           champions: champions.data || {},
           championRates: championRates.data || {},
+          rankedStats: rankedStats.data || {},
+          matchups: matchups.data || {},
           runeStyles: runeStyles || [],
           summoners: summoners.data || {},
         });
@@ -107,6 +263,43 @@ function App() {
     void loadData();
     return () => controller.abort();
   }, []);
+
+  useEffect(() => {
+    if (!selectedTeam || view !== "selection") return;
+    const timeouts: number[] = [];
+    let cancelled = false;
+    const preloads = ROLES.map((role) => {
+      const image = new Image();
+      image.crossOrigin = "anonymous";
+      image.src = `${dragonBase(data.patch)}/img/champion/${selectedTeam[role].image.full}`;
+      return image;
+    });
+
+    setLockedRoles([]);
+    setIsRolling(true);
+
+    const startedAt = performance.now();
+    const tick = (): void => {
+      if (cancelled) return;
+      const elapsed = performance.now() - startedAt;
+      playSound("tick", Math.floor(elapsed / 140) % ROLES.length);
+      if (elapsed >= 3_200) return;
+      const progress = elapsed / 3_200;
+      timeouts.push(window.setTimeout(tick, 55 + Math.pow(progress, 3) * 145));
+    };
+    tick();
+    ROLES.forEach((role, roleIndex) => {
+      timeouts.push(window.setTimeout(() => settleRole(role, roleIndex), 1_450 + roleIndex * 400));
+    });
+
+    return () => {
+      cancelled = true;
+      timeouts.forEach(window.clearTimeout);
+      preloads.forEach((image) => {
+        image.src = "";
+      });
+    };
+  }, [selectedTeam, view, seed, data.patch]);
 
   useEffect(() => {
     if (!selectedTeam || view !== "result") return;
@@ -150,25 +343,29 @@ function App() {
   }, [selectedTeam, details, data, seed]);
 
   const isReady = loadouts.length === ROLES.length;
-  const reelChampions = useMemo(
-    () =>
-      Object.values(data.champions)
-        .sort((first, second) => first.name.localeCompare(second.name))
-        .slice(0, 18),
-    [data.champions],
-  );
-
-  function goHome(): void {
-    setView("landing");
+  function rollTeam(): void {
+    playSound("start");
+    setSeed(newSeed());
+    setView("selection");
   }
 
-  function rollTeam(): void {
+  function rollAgain(): void {
+    playSound("start");
     setSeed(newSeed());
+    setView("selection");
+  }
+
+  function acceptTeam(): void {
     setView("result");
   }
 
-  function reroll(): void {
-    setSeed(newSeed());
+  function settleRole(role: Role, roleIndex: number): void {
+    setLockedRoles((current) => (current.includes(role) ? current : [...current, role]));
+    playSound("lock", roleIndex);
+    if (roleIndex === ROLES.length - 1) {
+      setIsRolling(false);
+      window.setTimeout(() => playSound("finish"), 130);
+    }
   }
 
   async function copyLink(): Promise<void> {
@@ -178,16 +375,20 @@ function App() {
   }
 
   async function copyImage(): Promise<void> {
-    if (!boardRef.current) return;
+    if (!shareRef.current) return;
     try {
       await document.fonts.ready;
-      const blob = await toBlob(boardRef.current, {
-        backgroundColor: "#f1eddf",
-        cacheBust: true,
-        pixelRatio: 2,
-        skipFonts: true,
-        filter: (node) => !(node instanceof HTMLElement && node.dataset.capture === "exclude"),
-      });
+      const blob = await Promise.race([
+        toBlob(shareRef.current, {
+          backgroundColor: "#0c111a",
+          cacheBust: false,
+          height: 810,
+          width: 1600,
+          pixelRatio: 1,
+          skipFonts: true,
+        }),
+        new Promise<null>((resolve) => window.setTimeout(() => resolve(null), 12_000)),
+      ]);
       if (!blob) throw new Error("Image renderer returned no image");
       try {
         await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
@@ -207,49 +408,64 @@ function App() {
     window.setTimeout(() => setCopyState(null), 5000);
   }
 
-  const nav = (
-    <nav className={styles.nav}>
-      <button className={styles.brand} onClick={goHome} aria-label="League Roulette home">
+  const siteHeader = (
+    <header className={styles.siteHeader}>
+      <button className={styles.brand} onClick={() => setView("landing")}>
         <span>LEAGUE</span> ROULETTE
       </button>
-    </nav>
+      <button
+        className={styles.muteButton}
+        onClick={toggleMute}
+        aria-label={isMuted ? "Turn sound on" : "Mute sound"}
+        title={isMuted ? "Turn sound on" : "Mute sound"}
+      >
+        {isMuted ? <VolumeX size={17} /> : <Volume2 size={17} />}
+      </button>
+    </header>
   );
 
   if (view === "landing") {
     return (
       <main className={styles.shell}>
-        {nav}
+        {siteHeader}
         <section className={styles.landing}>
           <div className={styles.hero}>
-            <div className={styles.kicker}>LEAGUE ROULETTE</div>
-            <h1>Your next five.</h1>
             <button
               className={styles.primaryButton}
               disabled={dataState !== "live"}
               onClick={rollTeam}
             >
-              {dataState === "loading" ? "Loading…" : "Roll a team"} <span>→</span>
+              {dataState === "loading" ? "Loading…" : "Roll"} <span>→</span>
             </button>
           </div>
           <div className={styles.roulette} aria-hidden="true">
-            {[0, 1, 2].map((column) => {
-              const champions = reelChampions.slice(column * 6, column * 6 + 6);
+            {ROLES.map((role, roleIndex) => {
+              const champions = (roleReelPools[role] || reelChampions).slice(0, 6);
               return (
-                <div className={styles.reel} key={column}>
-                  <div
-                    className={styles.reelTrack}
-                    style={{ "--duration": `${13 + column * 2}s` } as CSSProperties}
-                  >
-                    {[...champions, ...champions].map((champion, index) => (
-                      <div className={styles.reelChampion} key={`${champion.id}-${index}`}>
-                        <img
-                          crossOrigin="anonymous"
-                          src={`${dragonBase(data.patch)}/img/champion/${champion.image.full}`}
-                          alt=""
-                        />
-                        <span>{champion.name}</span>
-                      </div>
-                    ))}
+                <div className={styles.landingReel} key={role}>
+                  <header>
+                    <img
+                      crossOrigin="anonymous"
+                      src={`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-${roleIcons[role]}.svg`}
+                      alt=""
+                    />
+                  </header>
+                  <div className={styles.reel}>
+                    <div
+                      className={styles.reelTrack}
+                      style={{ "--duration": `${13 + roleIndex * 1.5}s` } as CSSProperties}
+                    >
+                      {[...champions, ...champions].map((champion, index) => (
+                        <div className={styles.reelChampion} key={`${champion.id}-${index}`}>
+                          <img
+                            crossOrigin="anonymous"
+                            src={`${dragonBase(data.patch)}/img/champion/${champion.image.full}`}
+                            alt=""
+                          />
+                          <span>{champion.name}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               );
@@ -261,11 +477,82 @@ function App() {
     );
   }
 
+  if (view === "selection") {
+    return (
+      <main className={styles.shell}>
+        {siteHeader}
+        <section className={styles.selection}>
+          <div className={styles.selectionGrid} aria-live="polite">
+            {ROLES.map((role) => {
+              const locked = lockedRoles.includes(role);
+              const strip = slotReels[role] || [];
+              const roleIndex = ROLES.indexOf(role);
+              const targetIndex = 24 + roleIndex * 6;
+              return (
+                <article
+                  className={`${styles.rolePick} ${locked ? styles.roleLocked : ""}`}
+                  key={role}
+                >
+                  <span title={role}>
+                    <img
+                      crossOrigin="anonymous"
+                      src={`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-${roleIcons[role]}.svg`}
+                      alt={role}
+                    />
+                  </span>
+                  {strip.length ? (
+                    <div className={styles.slotWindow}>
+                      <div
+                        className={`${styles.slotStrip} ${styles.slotSpinning} ${
+                          locked ? styles.slotStopped : ""
+                        }`}
+                        key={`${seed}-${role}`}
+                        style={
+                          {
+                            "--reel-duration": `${1_450 + roleIndex * 400}ms`,
+                            "--reel-target": `calc(-${(targetIndex + 0.5) * 100}cqw + ${
+                              targetIndex * 8 + 8
+                            }px)`,
+                          } as CSSProperties
+                        }
+                      >
+                        {strip.map((stripChampion, index) => (
+                          <div className={styles.slotChampion} key={`${stripChampion.id}-${index}`}>
+                            <img
+                              crossOrigin="anonymous"
+                              src={`${dragonBase(data.patch)}/img/champion/${stripChampion.image.full}`}
+                              alt=""
+                            />
+                            <span>{stripChampion.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className={styles.slotWindow} />
+                  )}
+                </article>
+              );
+            })}
+          </div>
+          <div className={`${styles.selectionActions} ${isRolling ? styles.actionsWaiting : ""}`}>
+            <button className={styles.secondaryButton} disabled={isRolling} onClick={rollAgain}>
+              <RefreshCw size={15} /> Roll again
+            </button>
+            <button className={styles.primaryButton} disabled={isRolling} onClick={acceptTeam}>
+              Use this team <span>→</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
   return (
     <main className={styles.shell}>
-      {nav}
+      {siteHeader}
       <div className={styles.resultBar}>
-        <button className={styles.back} onClick={reroll}>
+        <button className={styles.back} onClick={rollAgain}>
           <RefreshCw size={15} /> New team
         </button>
         <div>
@@ -302,32 +589,90 @@ function App() {
         </section>
       ) : (
         <>
-          <section className={styles.board} ref={boardRef}>
-            <header className={styles.boardHeader}>
-              <div>
-                <span>LEAGUE ROULETTE</span>
-                <h1>Team #{seed}</h1>
-              </div>
-            </header>
-
+          <section className={styles.board}>
             <div className={styles.lanes}>
-              {loadouts.map((loadout, laneIndex) => (
+              {loadouts.map((loadout) => (
                 <article className={styles.lane} key={loadout.role}>
                   <div className={styles.champion}>
-                    <span className={styles.laneNumber}>{laneIndex + 1}</span>
-                    <img
-                      crossOrigin="anonymous"
-                      src={`${dragonBase(data.patch)}/img/champion/${loadout.champion.image.full}`}
-                      alt=""
-                    />
-                    <div>
+                    <strong className={styles.roleLabel}>
+                      <img
+                        crossOrigin="anonymous"
+                        src={`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-${roleIcons[loadout.role]}.svg`}
+                        alt=""
+                      />
                       <span>{loadout.role}</span>
-                      <h2>{loadout.champion.name}</h2>
-                      <small>
-                        {loadout.profile} · picked here in {loadout.rolePlayRate.toFixed(2)}% of
-                        games
-                      </small>
+                    </strong>
+                    <div className={styles.championIdentity}>
+                      <img
+                        crossOrigin="anonymous"
+                        src={`${dragonBase(data.patch)}/img/champion/${loadout.champion.image.full}`}
+                        alt=""
+                      />
+                      <div>
+                        <h2>{loadout.champion.name}</h2>
+                        <span>{loadout.champion.title}</span>
+                      </div>
                     </div>
+                    {loadout.rankedStat && (
+                      <div className={styles.tierBadge}>
+                        <span>TIER</span>
+                        <b>{loadout.rankedStat.tier}</b>
+                      </div>
+                    )}
+                    {loadout.matchups && (
+                      <div className={styles.matchups}>
+                        <div>
+                          <span>STRONG INTO</span>
+                          <div>
+                            {loadout.matchups.strongInto.map((opponent) => (
+                              <figure key={opponent.id} title={opponent.name}>
+                                <img
+                                  crossOrigin="anonymous"
+                                  src={`${dragonBase(data.patch)}/img/champion/${
+                                    championImages[
+                                      opponent.name.toLowerCase().replaceAll(/[^a-z0-9]/g, "")
+                                    ]
+                                  }`}
+                                  alt={opponent.name}
+                                />
+                                <figcaption>{opponent.winRate.toFixed(1)}%</figcaption>
+                              </figure>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <span>STRUGGLES INTO</span>
+                          <div>
+                            {loadout.matchups.strugglesInto.map((opponent) => (
+                              <figure key={opponent.id} title={opponent.name}>
+                                <img
+                                  crossOrigin="anonymous"
+                                  src={`${dragonBase(data.patch)}/img/champion/${
+                                    championImages[
+                                      opponent.name.toLowerCase().replaceAll(/[^a-z0-9]/g, "")
+                                    ]
+                                  }`}
+                                  alt={opponent.name}
+                                />
+                                <figcaption>{opponent.winRate.toFixed(1)}%</figcaption>
+                              </figure>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    {loadout.rankedStat && (
+                      <dl className={styles.championStats}>
+                        <div>
+                          <dt>WIN RATE</dt>
+                          <dd>{loadout.rankedStat.winRate.toFixed(2)}%</dd>
+                        </div>
+                        <div>
+                          <dt>PICK RATE</dt>
+                          <dd>{loadout.rankedStat.pickRate.toFixed(2)}%</dd>
+                        </div>
+                      </dl>
+                    )}
                   </div>
 
                   <div className={styles.loadout}>
@@ -377,30 +722,58 @@ function App() {
                       <span>RUNES</span>
                       <div>
                         {[loadout.runes.slice(0, 4), loadout.runes.slice(4)].map(
-                          (runes, groupIndex) => {
+                          (selectedRunes, groupIndex) => {
                             const tree = data.runeStyles.find((style) =>
                               style.slots.some((slot) =>
-                                slot.runes.some((rune) => rune.id === runes[0]?.id),
+                                slot.runes.some((rune) => rune.id === selectedRunes[0]?.id),
                               ),
                             );
+                            const slots = groupIndex === 0 ? tree?.slots : tree?.slots.slice(1);
                             return (
                               <div className={styles.runeTree} key={groupIndex}>
-                                <small>
-                                  {groupIndex === 0 ? "PRIMARY" : "SECONDARY"} ·{" "}
-                                  {tree?.name || "RUNES"}
-                                </small>
-                                <div>
-                                  {runes.map((rune) => (
-                                    <div className={styles.runeChoice} key={rune.id}>
-                                      <Inspectable
-                                        compact
-                                        image={`https://ddragon.leagueoflegends.com/cdn/img/${rune.icon}`}
-                                        name={rune.name}
-                                        description={plainText(rune.longDesc || rune.shortDesc)}
-                                      />
-                                      <strong>{rune.name}</strong>
-                                    </div>
-                                  ))}
+                                <header>
+                                  {tree && (
+                                    <img
+                                      crossOrigin="anonymous"
+                                      src={`https://ddragon.leagueoflegends.com/cdn/img/${tree.icon}`}
+                                      alt=""
+                                    />
+                                  )}
+                                  <div>
+                                    <strong>{tree?.name || "Runes"}</strong>
+                                  </div>
+                                </header>
+                                <div className={styles.runeRows}>
+                                  {slots?.map((slot) => {
+                                    const selected = slot.runes.find((rune) =>
+                                      selectedRunes.some((choice) => choice.id === rune.id),
+                                    );
+                                    return (
+                                      <div className={styles.runeRow} key={slot.runes[0]?.id}>
+                                        <div>
+                                          {slot.runes.map((rune) => (
+                                            <div
+                                              className={`${styles.runeOption} ${
+                                                selected?.id === rune.id
+                                                  ? styles.runeSelected
+                                                  : styles.runeInactive
+                                              }`}
+                                              key={rune.id}
+                                            >
+                                              <Inspectable
+                                                compact
+                                                image={`https://ddragon.leagueoflegends.com/cdn/img/${rune.icon}`}
+                                                name={rune.name}
+                                                description={plainText(
+                                                  rune.longDesc || rune.shortDesc,
+                                                )}
+                                              />
+                                            </div>
+                                          ))}
+                                        </div>
+                                      </div>
+                                    );
+                                  })}
                                 </div>
                               </div>
                             );
@@ -410,35 +783,159 @@ function App() {
                     </div>
 
                     <div className={styles.items}>
-                      <span>BUY IN THIS ORDER</span>
-                      <div>
-                        {loadout.items.map(([id, item], index) => (
-                          <div className={styles.orderedItem} key={id}>
-                            <b>{index + 1}</b>
-                            <Inspectable
-                              compact
-                              image={`${dragonBase(data.patch)}/img/item/${id}.png`}
-                              name={item.name}
-                              meta={`${item.gold.total.toLocaleString()} gold · ${itemStats(item.stats) || "Passive item"}`}
-                              description={plainText(item.description || item.plaintext)}
-                            />
-                            <div>
-                              <strong>{item.name}</strong>
-                              <small>{item.gold.total.toLocaleString()}g</small>
-                            </div>
+                      <div className={styles.itemRow}>
+                        <div className={styles.starterItems}>
+                          <span>START</span>
+                          <div>
+                            {loadout.starterItems.map(({ id, item, quantity }) => (
+                              <div className={styles.starterItem} key={id}>
+                                <Inspectable
+                                  compact
+                                  image={`${dragonBase(data.patch)}/img/item/${id}.png`}
+                                  name={item.name}
+                                  meta={`${item.gold.total.toLocaleString()} gold`}
+                                  description={plainText(item.description || item.plaintext)}
+                                />
+                                {quantity > 1 && <b>×{quantity}</b>}
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        </div>
+                        <div className={styles.completedItems}>
+                          {loadout.items.map(([id, item], index) => (
+                            <div className={styles.orderedItem} key={id}>
+                              <b>{index + 1}</b>
+                              <Inspectable
+                                compact
+                                image={`${dragonBase(data.patch)}/img/item/${id}.png`}
+                                name={item.name}
+                                meta={`${item.gold.total.toLocaleString()} gold · ${itemStats(item.stats) || "Passive item"}`}
+                                description={plainText(item.description || item.plaintext)}
+                              />
+                              <div>
+                                <strong>{item.name}</strong>
+                                <small>{item.gold.total.toLocaleString()}g</small>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </article>
               ))}
             </div>
-
-            <footer className={styles.boardFooter}>
-              <span>roulette.jacobwisniewski.dev</span>
-            </footer>
           </section>
+          <div className={styles.shareStage} aria-hidden="true">
+            <section className={styles.shareCard} ref={shareRef}>
+              <header>
+                <strong>
+                  <span>LEAGUE</span> ROULETTE
+                </strong>
+              </header>
+              {loadouts.map((loadout) => (
+                <article className={styles.shareLane} key={loadout.role}>
+                  <div className={styles.shareChampion}>
+                    <span>
+                      <img
+                        crossOrigin="anonymous"
+                        src={`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/position-${roleIcons[loadout.role]}.svg`}
+                        alt=""
+                      />
+                      {loadout.role}
+                    </span>
+                    <div>
+                      <img
+                        crossOrigin="anonymous"
+                        src={`${dragonBase(data.patch)}/img/champion/${loadout.champion.image.full}`}
+                        alt=""
+                      />
+                      <strong>{loadout.champion.name}</strong>
+                    </div>
+                  </div>
+                  <div className={styles.shareAbilities}>
+                    <small>ABILITY ORDER</small>
+                    <div>
+                      {loadout.abilityOrder.map((spell) => (
+                        <span key={spell.id}>
+                          <img
+                            crossOrigin="anonymous"
+                            src={`${dragonBase(data.patch)}/img/spell/${spell.image.full}`}
+                            alt=""
+                          />
+                          <b>
+                            {["Q", "W", "E"][
+                              loadout.detail.spells.findIndex(
+                                (candidate) => candidate.id === spell.id,
+                              )
+                            ] || "?"}
+                          </b>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={styles.shareSummoners}>
+                    <small>SUMMONERS</small>
+                    <div>
+                      {loadout.summoners.map((summoner) => (
+                        <img
+                          crossOrigin="anonymous"
+                          src={`${dragonBase(data.patch)}/img/spell/${summoner.image.full}`}
+                          alt=""
+                          key={summoner.id}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className={styles.shareRunes}>
+                    <small>RUNES</small>
+                    <div>
+                      {loadout.runes.map((rune) => (
+                        <img
+                          crossOrigin="anonymous"
+                          src={`https://ddragon.leagueoflegends.com/cdn/img/${rune.icon}`}
+                          alt=""
+                          key={rune.id}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className={styles.shareItems}>
+                    <div>
+                      <small>START</small>
+                      <span>
+                        {loadout.starterItems.map(({ id, quantity }) => (
+                          <i key={id}>
+                            <img
+                              crossOrigin="anonymous"
+                              src={`${dragonBase(data.patch)}/img/item/${id}.png`}
+                              alt=""
+                            />
+                            {quantity > 1 && <b>×{quantity}</b>}
+                          </i>
+                        ))}
+                      </span>
+                    </div>
+                    <ol>
+                      {loadout.items.map(([id, item]) => (
+                        <li key={id}>
+                          <img
+                            crossOrigin="anonymous"
+                            src={`${dragonBase(data.patch)}/img/item/${id}.png`}
+                            alt=""
+                          />
+                          <span>
+                            <strong>{item.name}</strong>
+                            <small>{item.gold.total.toLocaleString()}g</small>
+                          </span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                </article>
+              ))}
+            </section>
+          </div>
         </>
       )}
     </main>

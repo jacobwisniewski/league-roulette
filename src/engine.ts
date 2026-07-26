@@ -16,16 +16,23 @@ import { ROLES } from "./types";
 export const FALLBACK_PATCH = "16.14.1";
 
 export function seededIndex(seed: string, length: number): number {
-  let hash = 2166136261;
+  let hash = 1779033703 ^ seed.length;
   for (let index = 0; index < seed.length; index += 1) {
-    hash ^= seed.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
+    hash = Math.imul(hash ^ seed.charCodeAt(index), 3432918353);
+    hash = (hash << 13) | (hash >>> 19);
   }
-  return Math.abs(hash) % Math.max(1, length);
+  hash = Math.imul(hash ^ (hash >>> 16), 2246822507);
+  hash = Math.imul(hash ^ (hash >>> 13), 3266489909);
+  return ((hash ^ (hash >>> 16)) >>> 0) % Math.max(1, length);
 }
 
 export function newSeed(): string {
-  return Math.random().toString(36).slice(2, 8).toUpperCase();
+  const values = new Uint32Array(2);
+  globalThis.crypto.getRandomValues(values);
+  return Array.from(values, (value) => value.toString(36).padStart(7, "0"))
+    .join("")
+    .slice(0, 10)
+    .toUpperCase();
 }
 
 export function dragonBase(patch: string): string {
@@ -33,27 +40,31 @@ export function dragonBase(patch: string): string {
 }
 
 export function plainText(html = ""): string {
-  if (typeof DOMParser === "undefined") return html.replace(/<[^>]*>/g, " ");
+  const spaced = html
+    .replace(/\{\{[^}]+\}\}/g, "")
+    .replace(/\[\[[^\]]+\]\]/g, "")
+    .replace(/<br\s*\/?>/gi, ". ")
+    .replace(/<li[^>]*>/gi, " • ")
+    .replace(/<\/(?:p|div|li|stats|passive|active|mainText)>/gi, ". ");
+  if (typeof DOMParser === "undefined") {
+    return spaced
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
   return (
     new DOMParser()
-      .parseFromString(html, "text/html")
+      .parseFromString(spaced, "text/html")
       .body.textContent?.replace(/\s+/g, " ")
+      .replace(/\s+([,.;:])/g, "$1")
+      .replace(/\(\s*\)/g, "")
+      .replace(/([.;:])\1+/g, "$1")
       .trim() || ""
   );
 }
 
 function count(text: string, pattern: RegExp): number {
   return text.match(pattern)?.length || 0;
-}
-
-function inferUsualRole(champion: DragonChampion): Role {
-  if (champion.tags.includes("Marksman")) return "Bot";
-  if (champion.tags.includes("Assassin") || champion.tags.includes("Mage")) return "Mid";
-  if (champion.tags.includes("Support")) return "Support";
-  if (champion.tags.includes("Tank")) {
-    return seededIndex(champion.id, 3) === 0 ? "Jungle" : "Top";
-  }
-  return seededIndex(champion.id, 2) ? "Top" : "Jungle";
 }
 
 const rateRole: Record<Role, RateRole> = {
@@ -64,9 +75,30 @@ const rateRole: Record<Role, RateRole> = {
   Support: "UTILITY",
 };
 
-export function selectTeam(
+export function championsForRole(
   champions: Record<string, DragonChampion>,
   rates: StaticData["championRates"],
+  role: Role,
+): DragonChampion[] {
+  const all = Object.values(champions);
+  const primaryPool = all.filter((champion) => {
+    const championRates = rates[champion.key];
+    if (!championRates) return false;
+    const rankedRoles = Object.entries(championRates).sort(
+      ([, first], [, second]) => (second?.playRate || 0) - (first?.playRate || 0),
+    );
+    return (rankedRoles[0]?.[1]?.playRate || 0) > 0 && rankedRoles[0]?.[0] === rateRole[role];
+  });
+  if (primaryPool.length) return primaryPool;
+  const measuredPool = all.filter(
+    (champion) => (rates[champion.key]?.[rateRole[role]]?.playRate || 0) > 0,
+  );
+  return measuredPool.length ? measuredPool : all;
+}
+
+export function selectTeam(
+  champions: Record<string, DragonChampion>,
+  _rates: StaticData["championRates"],
   seed: string,
 ): Record<Role, DragonChampion> | null {
   const all = Object.values(champions);
@@ -75,18 +107,8 @@ export function selectTeam(
   const team = {} as Record<Role, DragonChampion>;
 
   for (const role of ROLES) {
-    const measuredPool = all.filter((champion) => {
-      const championRates = rates[champion.key];
-      if (!championRates || used.has(champion.id)) return false;
-      const values = Object.values(championRates).map((entry) => entry?.playRate || 0);
-      const primary = Math.max(...values);
-      const target = championRates[rateRole[role]]?.playRate || 0;
-      return target > 0 && primary > 0 && target < primary * 0.35;
-    });
-    const fallbackPool = all.filter(
-      (champion) => inferUsualRole(champion) !== role && !used.has(champion.id),
-    );
-    const pool = measuredPool.length ? measuredPool : fallbackPool;
+    const rolePool = championsForRole(champions, _rates, role);
+    const pool = rolePool.filter((champion) => !used.has(champion.id));
     const champion = pool[seededIndex(`${seed}-${role}`, pool.length)];
     team[role] = champion;
     used.add(champion.id);
@@ -98,12 +120,16 @@ function roleRates(
   champion: DragonChampion,
   role: Role,
   rates: StaticData["championRates"],
-): { rolePlayRate: number; primaryPlayRate: number } {
+): { rolePlayRate: number; primaryPlayRate: number; primaryRole: Role } {
   const championRates = rates[champion.key] || {};
-  const values = Object.values(championRates).map((entry) => entry?.playRate || 0);
+  const rankedRoles = ROLES.map((candidateRole) => ({
+    role: candidateRole,
+    rate: championRates[rateRole[candidateRole]]?.playRate || 0,
+  })).sort((first, second) => second.rate - first.rate);
   return {
     rolePlayRate: championRates[rateRole[role]]?.playRate || 0,
-    primaryPlayRate: Math.max(0, ...values),
+    primaryPlayRate: rankedRoles[0]?.rate || 0,
+    primaryRole: rankedRoles[0]?.role || role,
   };
 }
 
@@ -214,6 +240,36 @@ function deriveItems(
   const bootId = boots[profile];
   if (catalog[bootId]) result.splice(1, 0, [bootId, catalog[bootId]]);
   return result;
+}
+
+function deriveStarterItems(
+  catalog: Record<string, DragonItem>,
+  role: Role,
+  profile: Profile,
+): GeneratedLoadout["starterItems"] {
+  const profileStarter: Record<Profile, string> = {
+    "On-hit hybrid": "1055",
+    "AP burst": "1056",
+    "Physical bruiser": "1054",
+    "AP bruiser": "1056",
+    "Haste utility": "1056",
+  };
+  const junglePet: Record<Profile, string> = {
+    "On-hit hybrid": "1102",
+    "AP burst": "1101",
+    "Physical bruiser": "1103",
+    "AP bruiser": "1103",
+    "Haste utility": "1102",
+  };
+  const starterId =
+    role === "Jungle" ? junglePet[profile] : role === "Support" ? "3865" : profileStarter[profile];
+  const purchases: GeneratedLoadout["starterItems"] = [];
+  if (catalog[starterId]) purchases.push({ id: starterId, item: catalog[starterId], quantity: 1 });
+  if (catalog["2003"]) {
+    const quantity = role === "Support" || starterId === "1056" ? 2 : 1;
+    purchases.push({ id: "2003", item: catalog["2003"], quantity });
+  }
+  return purchases;
 }
 
 function runeScore(rune: DragonRune, profile: Profile, role: Role, seed: string): number {
@@ -331,6 +387,8 @@ export function generateLoadout(
 ): GeneratedLoadout {
   const { profile, signals } = analyseKit(detail);
   const playRates = roleRates(champion, role, data.championRates);
+  const rankedRole = rateRole[role];
+  const championKey = champion.id.toLowerCase().replaceAll(/[^a-z0-9]/g, "");
   return {
     role,
     champion,
@@ -338,7 +396,10 @@ export function generateLoadout(
     profile,
     signals,
     ...playRates,
+    rankedStat: data.rankedStats[championKey]?.[rankedRole],
+    matchups: data.matchups[championKey]?.[rankedRole],
     abilityOrder: deriveAbilityOrder(detail, profile, seed),
+    starterItems: deriveStarterItems(data.items, role, profile),
     items: deriveItems(data.items, profile, `${seed}-${role}`),
     runes: deriveRunes(data.runeStyles, profile, role, `${seed}-${role}`),
     summoners: deriveSummoners(data.summoners, role, profile),
