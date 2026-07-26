@@ -1338,6 +1338,11 @@
     border-bottom: 1px solid var(--line);
   }
 
+  .matchups {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
   .utilities {
     grid-template-columns: 1fr 0.8fr;
   }
