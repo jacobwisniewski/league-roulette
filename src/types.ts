@@ -1,6 +1,6 @@
 export const ROLES = ["Top", "Jungle", "Mid", "Bot", "Support"] as const;
 export type Role = (typeof ROLES)[number];
-export type View = "landing" | "config" | "result";
+export type View = "landing" | "result";
 export type Profile =
   | "On-hit hybrid"
   | "AP burst"

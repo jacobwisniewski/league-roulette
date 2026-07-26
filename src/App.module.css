@@ -51,7 +51,6 @@
 }
 
 .kicker,
-.config header > span,
 .boardHeader span,
 .lane span,
 .items > span,
@@ -72,8 +71,7 @@
   letter-spacing: -0.05em;
 }
 
-.primaryButton,
-.generateButton {
+.primaryButton {
   min-height: 50px;
   display: inline-flex;
   align-items: center;
@@ -83,18 +81,33 @@
   color: var(--paper);
   background: var(--gold);
   border: 1px solid var(--gold);
-  border-radius: 5px;
+  border-radius: 2px;
+  clip-path: polygon(
+    6px 0,
+    calc(100% - 6px) 0,
+    100% 6px,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    6px 100%,
+    0 calc(100% - 6px),
+    0 6px
+  );
   font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.025em;
 }
 
 .landing .primaryButton {
   margin-top: 32px;
 }
 
-.primaryButton:hover,
-.generateButton:hover {
+.primaryButton:hover {
   background: color-mix(in oklch, var(--gold) 82%, var(--ink));
+}
+
+.primaryButton:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 
 .primaryButton span {
@@ -227,78 +240,6 @@
   }
 }
 
-.config {
-  width: min(820px, 100%);
-  padding: 34px 0 90px;
-}
-
-.config header {
-  margin: clamp(60px, 10vw, 120px) 0 40px;
-}
-
-.config header h1 {
-  margin: 10px 0;
-  font:
-    500 clamp(48px, 6vw, 72px) / 1 "Newsreader",
-    serif;
-  letter-spacing: -0.04em;
-}
-
-.form {
-  padding: 24px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.form label > span {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 0.09em;
-}
-
-.seedInput {
-  display: flex;
-}
-
-.form input {
-  min-width: 0;
-  width: 100%;
-  padding: 12px 14px;
-  color: var(--ink);
-  background: var(--surface-tint);
-  border: 1px solid var(--line-strong);
-  border-radius: 5px 0 0 5px;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.seedInput button {
-  width: 48px;
-  display: grid;
-  flex: 0 0 48px;
-  place-items: center;
-  color: var(--paper);
-  background: var(--gold);
-  border: 1px solid var(--gold);
-  border-radius: 0 5px 5px 0;
-}
-
-.generateButton {
-  width: 100%;
-  margin-top: 24px;
-}
-
-.generateButton:disabled {
-  cursor: wait;
-  opacity: 0.5;
-}
-
 .resultBar {
   min-height: 68px;
   display: grid;
@@ -324,7 +265,7 @@
   color: var(--paper);
   background: var(--gold);
   border: 0;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 11px;
   font-weight: 700;
 }
@@ -359,8 +300,8 @@
   margin-top: 28px;
   overflow: hidden;
   background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: 1px solid color-mix(in oklch, var(--gold) 26%, var(--line));
+  border-radius: 3px;
 }
 
 .boardHeader {
@@ -368,7 +309,7 @@
   display: flex;
   align-items: center;
   padding: 22px 26px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid color-mix(in oklch, var(--gold) 28%, var(--line));
 }
 
 .boardHeader h1 {
@@ -621,23 +562,6 @@
   background: var(--surface-tint);
   border-top: 1px solid var(--line);
   font-size: 9px;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  padding: 18px 0 40px;
-}
-
-.actions button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0;
-  background: none;
-  border: 0;
-  font-size: 12px;
-  font-weight: 700;
 }
 
 @media (max-width: 1080px) {

@@ -1,17 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { toBlob } from "html-to-image";
-import {
-  ArrowLeft,
-  Check,
-  Clipboard,
-  Copy,
-  Dices,
-  Download,
-  Info,
-  RefreshCw,
-  ScanSearch,
-} from "lucide-react";
+import { Check, Clipboard, Copy, Download, Info, RefreshCw, ScanSearch } from "lucide-react";
 import { Inspectable } from "./components/Inspectable";
 import {
   FALLBACK_PATCH,
@@ -172,7 +162,8 @@ function App() {
     setView("landing");
   }
 
-  function generate(): void {
+  function rollTeam(): void {
+    setSeed(newSeed());
     setView("result");
   }
 
@@ -232,8 +223,12 @@ function App() {
           <div className={styles.hero}>
             <div className={styles.kicker}>LEAGUE ROULETTE</div>
             <h1>Your next five.</h1>
-            <button className={styles.primaryButton} onClick={() => setView("config")}>
-              Roll a team <span>→</span>
+            <button
+              className={styles.primaryButton}
+              disabled={dataState !== "live"}
+              onClick={rollTeam}
+            >
+              {dataState === "loading" ? "Loading…" : "Roll a team"} <span>→</span>
             </button>
           </div>
           <div className={styles.roulette} aria-hidden="true">
@@ -266,54 +261,12 @@ function App() {
     );
   }
 
-  if (view === "config") {
-    return (
-      <main className={styles.shell}>
-        {nav}
-        <section className={styles.config}>
-          <button className={styles.back} onClick={goHome}>
-            <ArrowLeft size={15} /> Back
-          </button>
-          <header>
-            <span>ROULETTE SETUP</span>
-            <h1>Choose a seed.</h1>
-          </header>
-          <div className={styles.form}>
-            <label>
-              <span>TEAM SEED</span>
-              <div className={styles.seedInput}>
-                <input
-                  value={seed}
-                  maxLength={16}
-                  onChange={(event) =>
-                    setSeed(event.target.value.toUpperCase().replace(/[^A-Z0-9]/g, ""))
-                  }
-                />
-                <button onClick={() => setSeed(newSeed())} aria-label="Randomise seed">
-                  <RefreshCw size={16} />
-                </button>
-              </div>
-            </label>
-          </div>
-          <button
-            className={styles.generateButton}
-            disabled={dataState !== "live" || !seed}
-            onClick={generate}
-          >
-            <Dices size={22} />
-            {dataState === "loading" ? "Loading game data…" : "Generate team"}
-          </button>
-        </section>
-      </main>
-    );
-  }
-
   return (
     <main className={styles.shell}>
       {nav}
       <div className={styles.resultBar}>
-        <button className={styles.back} onClick={() => setView("config")}>
-          <ArrowLeft size={15} /> Change seed
+        <button className={styles.back} onClick={reroll}>
+          <RefreshCw size={15} /> New team
         </button>
         <div>
           <button className={styles.textButton} onClick={copyLink}>
@@ -486,12 +439,6 @@ function App() {
               <span>roulette.jacobwisniewski.dev</span>
             </footer>
           </section>
-
-          <div className={styles.actions} data-capture="exclude">
-            <button onClick={reroll}>
-              <RefreshCw size={16} /> Generate another set
-            </button>
-          </div>
         </>
       )}
     </main>
