@@ -100,12 +100,6 @@ async function syncRankedStats() {
   console.log("Synced automated ranked champion statistics.");
 }
 
-function linkOpponents(fragment) {
-  return [...fragment.matchAll(/<a[^>]*href="[^"]*\/vs\/([^/]+)\/build[^"]*"[^>]*>([^<]+)<\/a>/g)]
-    .map((match) => ({ id: match[1], name: match[2].trim() }))
-    .slice(0, 3);
-}
-
 function matchupWinRate(html, champion, opponent) {
   const marker = `/lol/${champion}/vs/${opponent}/build/`;
   let index = -1;
@@ -118,27 +112,38 @@ function matchupWinRate(html, champion, opponent) {
   return 0;
 }
 
-async function fetchMatchup(champion, role) {
+async function fetchMatchup(champion, role, championMeta) {
   const lane = laneMap[role];
-  const url = `https://lolalytics.com/lol/${champion.id.toLowerCase()}/counters/?lane=${lane}&tier=emerald_plus`;
+  const url = `https://lolalytics.com/lol/${champion.id.toLowerCase()}/counters/?lane=${lane}&vslane=${lane}&tier=emerald_plus`;
   const response = await fetch(url, { headers: { "user-agent": "League Roulette data sync" } });
   if (!response.ok) return null;
   const html = await response.text();
-  const strongFragment = html.match(
-    /is the strongest counter to [^.]*? champions of ([\s\S]*?)\. While/,
-  )?.[1];
-  const struggleFragment = html.match(
-    /is countered most by [^.]*? champions of ([\s\S]*?)\. Below/,
-  )?.[1];
-  if (!strongFragment || !struggleFragment) return null;
   const championId = champion.id.toLowerCase();
-  const withRates = ({ id, name }) => ({
+  const opponentIds = [
+    ...new Set(
+      [...html.matchAll(new RegExp(`/lol/${championId}/vs/([^/"]+)/build/`, "g"))].map(
+        (match) => match[1],
+      ),
+    ),
+  ];
+  const candidates = opponentIds
+    .map((id) => ({
+      id,
+      name: championMeta[id]?.name,
+      role: championMeta[id]?.role,
+      winRate: matchupWinRate(html, championId, id),
+    }))
+    .filter((opponent) => opponent.name && opponent.role === role && opponent.winRate)
+    .sort((first, second) => second.winRate - first.winRate);
+  const strongInto = candidates.slice(0, 3).map(({ id, name, winRate }) => ({
     id,
     name,
-    winRate: matchupWinRate(html, championId, id),
-  });
-  const strongInto = linkOpponents(strongFragment).map(withRates);
-  const strugglesInto = linkOpponents(struggleFragment).map(withRates);
+    winRate,
+  }));
+  const strugglesInto = candidates
+    .slice(-3)
+    .reverse()
+    .map(({ id, name, winRate }) => ({ id, name, winRate }));
   return strongInto.length && strugglesInto.length ? { strongInto, strugglesInto } : null;
 }
 
@@ -156,12 +161,18 @@ async function syncMatchups(rates) {
     );
     return { champion, role: entries[0]?.[0] };
   });
+  const championMeta = {};
+  for (const { champion, role } of queue) {
+    for (const alias of [champion.id.toLowerCase(), championKey(champion.name)]) {
+      championMeta[alias] = { name: champion.name, role };
+    }
+  }
   const data = {};
   for (let offset = 0; offset < queue.length; offset += 8) {
     const batch = queue.slice(offset, offset + 8);
     const results = await Promise.all(
       batch.map(({ champion, role }) =>
-        role ? fetchMatchup(champion, role) : Promise.resolve(null),
+        role ? fetchMatchup(champion, role, championMeta) : Promise.resolve(null),
       ),
     );
     results.forEach((matchup, index) => {
