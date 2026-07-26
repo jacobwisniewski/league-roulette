@@ -2,16 +2,21 @@
   "name": "league-roulette",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=22.13.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "sync:data": "node scripts/sync-data.mjs",
+    "build": "npm run sync:data && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler deploy"
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint --deny-warnings src",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run build",
+    "deploy": "npm run check && wrangler deploy"
   },
   "dependencies": {
+    "html-to-image": "^1.11.13",
     "lucide-react": "^0.468.0",
     "react": "19.2.6",
     "react-dom": "19.2.6"
@@ -21,9 +26,13 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
+    "oxfmt": "^0.60.0",
+    "oxlint": "^1.75.0",
     "typescript": "5.9.3",
     "vite": "8.0.13",
     "wrangler": "4.92.0"
   },
-  "type": "module"
+  "engines": {
+    "node": ">=22.13.0"
+  }
 }
