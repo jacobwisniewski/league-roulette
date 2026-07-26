@@ -435,8 +435,8 @@ export function generateLoadout(
   const rankedRole = rateRole[role];
   const championKey = champion.id.toLowerCase().replaceAll(/[^a-z0-9]/g, "");
   const observedBuild =
-    data.builds[championKey]?.[rankedRole] ||
-    data.builds[championKey]?.[rateRole[playRates.primaryRole]];
+    data.builds?.[championKey]?.[rankedRole] ||
+    data.builds?.[championKey]?.[rateRole[playRates.primaryRole]];
   const starterItems = observedBuild
     ? observedStarterItems(data.items, observedBuild.starterItemIds)
     : deriveStarterItems(data.items, role, profile);
