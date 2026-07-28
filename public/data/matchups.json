@@ -7,34 +7,34 @@
           {
             "id": "trundle",
             "name": "Trundle",
-            "winRate": 55.83
+            "winRate": 56.07
           },
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 55.66
+            "winRate": 55.8
           },
           {
             "id": "sion",
             "name": "Sion",
-            "winRate": 54.83
+            "winRate": 55.17
           }
         ],
         "strugglesInto": [
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 46.45
+            "winRate": 46.15
           },
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 48.53
+            "winRate": 48.47
           },
           {
-            "id": "heimerdinger",
-            "name": "Heimerdinger",
-            "winRate": 48.59
+            "id": "kled",
+            "name": "Kled",
+            "winRate": 48.65
           }
         ]
       }
@@ -45,34 +45,34 @@
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 58.48
+            "winRate": 58.03
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 56.84
+            "winRate": 56.54
           },
           {
             "id": "ryze",
             "name": "Ryze",
-            "winRate": 56.01
+            "winRate": 56.08
           }
         ],
         "strugglesInto": [
           {
+            "id": "akshan",
+            "name": "Akshan",
+            "winRate": 50.99
+          },
+          {
             "id": "annie",
             "name": "Annie",
-            "winRate": 50.72
+            "winRate": 51.01
           },
           {
             "id": "zed",
             "name": "Zed",
-            "winRate": 50.74
-          },
-          {
-            "id": "akshan",
-            "name": "Akshan",
-            "winRate": 50.93
+            "winRate": 51.01
           }
         ]
       }
@@ -83,34 +83,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 56.99
+            "winRate": 57.3
+          },
+          {
+            "id": "cassiopeia",
+            "name": "Cassiopeia",
+            "winRate": 56.3
           },
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 56.43
-          },
-          {
-            "id": "yone",
-            "name": "Yone",
-            "winRate": 56.26
+            "winRate": 56.13
           }
         ],
         "strugglesInto": [
           {
-            "id": "twistedfate",
-            "name": "Twisted Fate",
-            "winRate": 45.57
-          },
-          {
             "id": "lissandra",
             "name": "Lissandra",
-            "winRate": 46.32
+            "winRate": 46.13
           },
           {
-            "id": "taliyah",
-            "name": "Taliyah",
-            "winRate": 46.43
+            "id": "twistedfate",
+            "name": "Twisted Fate",
+            "winRate": 46.15
+          },
+          {
+            "id": "malzahar",
+            "name": "Malzahar",
+            "winRate": 47.52
           }
         ]
       }
@@ -119,36 +119,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "mel",
-            "name": "Mel",
-            "winRate": 56.17
-          },
-          {
             "id": "yone",
             "name": "Yone",
-            "winRate": 55.25
+            "winRate": 55.5
+          },
+          {
+            "id": "mel",
+            "name": "Mel",
+            "winRate": 55.35
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 54.62
+            "winRate": 54.59
           }
         ],
         "strugglesInto": [
           {
-            "id": "anivia",
-            "name": "Anivia",
-            "winRate": 47.14
-          },
-          {
             "id": "vex",
             "name": "Vex",
-            "winRate": 47.45
+            "winRate": 46.71
           },
           {
-            "id": "veigar",
-            "name": "Veigar",
-            "winRate": 48.47
+            "id": "anivia",
+            "name": "Anivia",
+            "winRate": 47.15
+          },
+          {
+            "id": "vladimir",
+            "name": "Vladimir",
+            "winRate": 48.3
           }
         ]
       }
@@ -159,34 +159,34 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 56.61
+            "winRate": 56.42
           },
           {
             "id": "nautilus",
             "name": "Nautilus",
-            "winRate": 53.32
+            "winRate": 53.69
           },
           {
-            "id": "maokai",
-            "name": "Maokai",
-            "winRate": 53.18
+            "id": "lux",
+            "name": "Lux",
+            "winRate": 53.09
           }
         ],
         "strugglesInto": [
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 46.44
+            "winRate": 46.78
           },
           {
             "id": "senna",
             "name": "Senna",
-            "winRate": 47.88
+            "winRate": 47.34
           },
           {
             "id": "seraphine",
             "name": "Seraphine",
-            "winRate": 48.49
+            "winRate": 48.43
           }
         ]
       }
@@ -197,34 +197,34 @@
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 55.01
-          },
-          {
-            "id": "sion",
-            "name": "Sion",
-            "winRate": 53.76
+            "winRate": 54.98
           },
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 53.22
+            "winRate": 53.97
+          },
+          {
+            "id": "sion",
+            "name": "Sion",
+            "winRate": 53.67
           }
         ],
         "strugglesInto": [
           {
             "id": "irelia",
             "name": "Irelia",
-            "winRate": 45.59
+            "winRate": 45.47
           },
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 46.25
+            "winRate": 46.67
           },
           {
             "id": "gangplank",
             "name": "Gangplank",
-            "winRate": 46.37
+            "winRate": 46.78
           }
         ]
       }
@@ -235,34 +235,34 @@
           {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 56.47
+            "winRate": 55.32
           },
           {
-            "id": "belveth",
-            "name": "Bel'Veth",
-            "winRate": 55.41
+            "id": "viego",
+            "name": "Viego",
+            "winRate": 55.32
           },
           {
-            "id": "rengar",
-            "name": "Rengar",
-            "winRate": 55.27
+            "id": "sejuani",
+            "name": "Sejuani",
+            "winRate": 55.14
           }
         ],
         "strugglesInto": [
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 44.44
-          },
-          {
-            "id": "karthus",
-            "name": "Karthus",
-            "winRate": 45.45
+            "winRate": 44.79
           },
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 47.02
+            "winRate": 45.79
+          },
+          {
+            "id": "reksai",
+            "name": "Rek'Sai",
+            "winRate": 47.58
           }
         ]
       }
@@ -271,36 +271,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "orianna",
-            "name": "Orianna",
-            "winRate": 56.41
-          },
-          {
             "id": "ryze",
             "name": "Ryze",
-            "winRate": 55.53
+            "winRate": 56.49
+          },
+          {
+            "id": "orianna",
+            "name": "Orianna",
+            "winRate": 55.75
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 55.04
+            "winRate": 55
           }
         ],
         "strugglesInto": [
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 45.92
-          },
-          {
-            "id": "ahri",
-            "name": "Ahri",
-            "winRate": 47.71
+            "winRate": 44.97
           },
           {
             "id": "zoe",
             "name": "Zoe",
-            "winRate": 48.63
+            "winRate": 48.4
+          },
+          {
+            "id": "ahri",
+            "name": "Ahri",
+            "winRate": 48.45
           }
         ]
       }
@@ -311,34 +311,34 @@
           {
             "id": "yone",
             "name": "Yone",
-            "winRate": 59.06
+            "winRate": 59.14
           },
           {
             "id": "taliyah",
             "name": "Taliyah",
-            "winRate": 57.14
+            "winRate": 57.85
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 56.91
+            "winRate": 56.88
           }
         ],
         "strugglesInto": [
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 47.2
+            "winRate": 47.03
           },
           {
             "id": "kassadin",
             "name": "Kassadin",
-            "winRate": 49.21
+            "winRate": 48.36
           },
           {
             "id": "viktor",
             "name": "Viktor",
-            "winRate": 49.22
+            "winRate": 49.2
           }
         ]
       }
@@ -347,36 +347,36 @@
       "BOTTOM": {
         "strongInto": [
           {
+            "id": "vayne",
+            "name": "Vayne",
+            "winRate": 55.67
+          },
+          {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 55.95
+            "winRate": 55.53
           },
           {
             "id": "kalista",
             "name": "Kalista",
-            "winRate": 55.81
-          },
-          {
-            "id": "vayne",
-            "name": "Vayne",
-            "winRate": 55.69
+            "winRate": 54.76
           }
         ],
         "strugglesInto": [
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 46.53
+            "winRate": 46.16
+          },
+          {
+            "id": "nilah",
+            "name": "Nilah",
+            "winRate": 47.51
           },
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 48.39
-          },
-          {
-            "id": "samira",
-            "name": "Samira",
-            "winRate": 49.06
+            "winRate": 48.79
           }
         ]
       }
@@ -387,34 +387,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 55.57
+            "winRate": 55.78
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 54.9
+            "winRate": 54.88
           },
           {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 54.6
+            "winRate": 54.8
           }
         ],
         "strugglesInto": [
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 48.71
+            "winRate": 48.89
           },
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 49.41
+            "winRate": 49.33
           },
           {
             "id": "tristana",
             "name": "Tristana",
-            "winRate": 49.89
+            "winRate": 50.12
           }
         ]
       }
@@ -425,34 +425,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 61.38
+            "winRate": 61.98
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 59
+            "winRate": 58.58
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 57.66
+            "winRate": 57.21
           }
         ],
         "strugglesInto": [
           {
-            "id": "kassadin",
-            "name": "Kassadin",
-            "winRate": 43.63
-          },
-          {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 43.75
+            "winRate": 44.23
+          },
+          {
+            "id": "kassadin",
+            "name": "Kassadin",
+            "winRate": 44.32
           },
           {
             "id": "fizz",
             "name": "Fizz",
-            "winRate": 45.1
+            "winRate": 45.2
           }
         ]
       }
@@ -463,34 +463,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 56.76
+            "winRate": 57.64
           },
           {
             "id": "ryze",
             "name": "Ryze",
-            "winRate": 54.52
+            "winRate": 54.46
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 54.39
+            "winRate": 54.19
           }
         ],
         "strugglesInto": [
           {
-            "id": "syndra",
-            "name": "Syndra",
-            "winRate": 47.66
-          },
-          {
-            "id": "katarina",
-            "name": "Katarina",
-            "winRate": 47.82
+            "id": "zoe",
+            "name": "Zoe",
+            "winRate": 47.62
           },
           {
             "id": "zed",
             "name": "Zed",
-            "winRate": 48.11
+            "winRate": 47.9
+          },
+          {
+            "id": "katarina",
+            "name": "Katarina",
+            "winRate": 48.03
           }
         ]
       }
@@ -501,34 +501,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 55.68
+            "winRate": 55.75
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 54.65
+            "winRate": 54.02
           },
           {
-            "id": "cassiopeia",
-            "name": "Cassiopeia",
-            "winRate": 54.39
+            "id": "orianna",
+            "name": "Orianna",
+            "winRate": 53.54
           }
         ],
         "strugglesInto": [
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 43.34
+            "winRate": 43.94
           },
           {
-            "id": "akali",
-            "name": "Akali",
-            "winRate": 45.43
+            "id": "ahri",
+            "name": "Ahri",
+            "winRate": 45.49
           },
           {
-            "id": "zoe",
-            "name": "Zoe",
-            "winRate": 45.52
+            "id": "vladimir",
+            "name": "Vladimir",
+            "winRate": 45.55
           }
         ]
       }
@@ -537,36 +537,36 @@
       "UTILITY": {
         "strongInto": [
           {
-            "id": "yuumi",
-            "name": "Yuumi",
-            "winRate": 53.57
-          },
-          {
             "id": "zyra",
             "name": "Zyra",
+            "winRate": 54.4
+          },
+          {
+            "id": "yuumi",
+            "name": "Yuumi",
             "winRate": 53.48
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 53.47
+            "winRate": 53.41
           }
         ],
         "strugglesInto": [
           {
             "id": "maokai",
             "name": "Maokai",
-            "winRate": 46.53
-          },
-          {
-            "id": "rell",
-            "name": "Rell",
-            "winRate": 47.25
+            "winRate": 46.9
           },
           {
             "id": "sona",
             "name": "Sona",
-            "winRate": 47.43
+            "winRate": 47.3
+          },
+          {
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 47.56
           }
         ]
       }
@@ -575,36 +575,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "volibear",
-            "name": "Volibear",
-            "winRate": 60.63
-          },
-          {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 59.86
+            "winRate": 60.41
           },
           {
-            "id": "gwen",
-            "name": "Gwen",
-            "winRate": 58.22
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 60.15
+          },
+          {
+            "id": "skarner",
+            "name": "Skarner",
+            "winRate": 58.06
           }
         ],
         "strugglesInto": [
           {
             "id": "fiddlesticks",
             "name": "Fiddlesticks",
-            "winRate": 48.53
+            "winRate": 48.84
           },
           {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 48.85
+            "winRate": 49
           },
           {
             "id": "amumu",
             "name": "Amumu",
-            "winRate": 49.36
+            "winRate": 50.09
           }
         ]
       }
@@ -615,34 +615,34 @@
           {
             "id": "lux",
             "name": "Lux",
-            "winRate": 57.02
+            "winRate": 57.17
           },
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 55.52
+            "winRate": 55.32
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 55.43
+            "winRate": 55.28
           }
         ],
         "strugglesInto": [
           {
-            "id": "rell",
-            "name": "Rell",
-            "winRate": 47
-          },
-          {
             "id": "braum",
             "name": "Braum",
-            "winRate": 47.53
+            "winRate": 47.68
           },
           {
             "id": "leona",
             "name": "Leona",
-            "winRate": 47.56
+            "winRate": 47.71
+          },
+          {
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 47.81
           }
         ]
       }
@@ -653,34 +653,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 56.11
+            "winRate": 56.47
           },
           {
             "id": "zyra",
             "name": "Zyra",
-            "winRate": 54.4
+            "winRate": 55.36
           },
           {
-            "id": "neeko",
-            "name": "Neeko",
-            "winRate": 54.39
+            "id": "alistar",
+            "name": "Alistar",
+            "winRate": 54.3
           }
         ],
         "strugglesInto": [
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 44.83
+            "winRate": 45.14
           },
           {
             "id": "velkoz",
             "name": "Vel'Koz",
-            "winRate": 46.3
+            "winRate": 46.78
           },
           {
             "id": "zilean",
             "name": "Zilean",
-            "winRate": 47.63
+            "winRate": 47.3
           }
         ]
       }
@@ -691,34 +691,34 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 56.23
-          },
-          {
-            "id": "zyra",
-            "name": "Zyra",
-            "winRate": 55.89
+            "winRate": 56.28
           },
           {
             "id": "lulu",
             "name": "Lulu",
-            "winRate": 55.74
+            "winRate": 55.67
+          },
+          {
+            "id": "zyra",
+            "name": "Zyra",
+            "winRate": 55.48
           }
         ],
         "strugglesInto": [
           {
             "id": "senna",
             "name": "Senna",
-            "winRate": 47.77
+            "winRate": 47.14
           },
           {
             "id": "rakan",
             "name": "Rakan",
-            "winRate": 47.99
+            "winRate": 48.61
           },
           {
-            "id": "zilean",
-            "name": "Zilean",
-            "winRate": 48.95
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 49.66
           }
         ]
       }
@@ -727,36 +727,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "rengar",
-            "name": "Rengar",
-            "winRate": 57.44
-          },
-          {
             "id": "diana",
             "name": "Diana",
-            "winRate": 57.36
+            "winRate": 56.6
+          },
+          {
+            "id": "rengar",
+            "name": "Rengar",
+            "winRate": 56.46
           },
           {
             "id": "leesin",
             "name": "Lee Sin",
-            "winRate": 56.4
+            "winRate": 56.21
           }
         ],
         "strugglesInto": [
           {
             "id": "wukong",
             "name": "Wukong",
-            "winRate": 50.55
+            "winRate": 50.49
           },
           {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 50.88
+            "winRate": 51.15
           },
           {
-            "id": "graves",
-            "name": "Graves",
-            "winRate": 51.39
+            "id": "reksai",
+            "name": "Rek'Sai",
+            "winRate": 51.52
           }
         ]
       }
@@ -765,36 +765,36 @@
       "BOTTOM": {
         "strongInto": [
           {
-            "id": "vayne",
-            "name": "Vayne",
-            "winRate": 54.78
-          },
-          {
             "id": "varus",
             "name": "Varus",
-            "winRate": 54.77
+            "winRate": 54.69
+          },
+          {
+            "id": "vayne",
+            "name": "Vayne",
+            "winRate": 54.54
           },
           {
             "id": "yunara",
             "name": "Yunara",
-            "winRate": 54.43
+            "winRate": 54.23
           }
         ],
         "strugglesInto": [
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 47.64
+            "winRate": 47.68
           },
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 48.34
+            "winRate": 48.63
           },
           {
             "id": "jinx",
             "name": "Jinx",
-            "winRate": 50.19
+            "winRate": 50.02
           }
         ]
       }
@@ -805,34 +805,34 @@
           {
             "id": "kennen",
             "name": "Kennen",
-            "winRate": 58.84
+            "winRate": 57.76
           },
           {
             "id": "garen",
             "name": "Garen",
-            "winRate": 55.91
+            "winRate": 55.64
           },
           {
-            "id": "quinn",
-            "name": "Quinn",
-            "winRate": 55.88
+            "id": "yorick",
+            "name": "Yorick",
+            "winRate": 54.65
           }
         ],
         "strugglesInto": [
           {
             "id": "jax",
             "name": "Jax",
-            "winRate": 46.31
+            "winRate": 46.26
           },
           {
             "id": "shen",
             "name": "Shen",
-            "winRate": 46.35
+            "winRate": 46.71
           },
           {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 46.73
+            "winRate": 47.52
           }
         ]
       }
@@ -843,34 +843,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 55.59
+            "winRate": 55.29
           },
           {
-            "id": "orianna",
-            "name": "Orianna",
-            "winRate": 54.17
+            "id": "azir",
+            "name": "Azir",
+            "winRate": 54.41
           },
           {
-            "id": "yasuo",
-            "name": "Yasuo",
-            "winRate": 53.86
+            "id": "yone",
+            "name": "Yone",
+            "winRate": 53.55
           }
         ],
         "strugglesInto": [
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 41.84
-          },
-          {
-            "id": "annie",
-            "name": "Annie",
-            "winRate": 44.44
+            "winRate": 41.67
           },
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 46.43
+            "winRate": 45.96
+          },
+          {
+            "id": "annie",
+            "name": "Annie",
+            "winRate": 46.08
           }
         ]
       }
@@ -879,36 +879,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "renekton",
-            "name": "Renekton",
-            "winRate": 55.46
+            "id": "jax",
+            "name": "Jax",
+            "winRate": 55.26
+          },
+          {
+            "id": "riven",
+            "name": "Riven",
+            "winRate": 55.2
           },
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 55.24
-          },
-          {
-            "id": "trundle",
-            "name": "Trundle",
-            "winRate": 54.74
+            "winRate": 54.85
           }
         ],
         "strugglesInto": [
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 46.58
+            "winRate": 47.05
           },
           {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 47.23
+            "winRate": 47.11
           },
           {
             "id": "shen",
             "name": "Shen",
-            "winRate": 48.14
+            "winRate": 48.76
           }
         ]
       }
@@ -917,36 +917,36 @@
       "BOTTOM": {
         "strongInto": [
           {
-            "id": "varus",
-            "name": "Varus",
-            "winRate": 53.44
-          },
-          {
-            "id": "yunara",
-            "name": "Yunara",
-            "winRate": 53.26
+            "id": "samira",
+            "name": "Samira",
+            "winRate": 54.01
           },
           {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 53.19
+            "winRate": 52.94
+          },
+          {
+            "id": "varus",
+            "name": "Varus",
+            "winRate": 52.87
           }
         ],
         "strugglesInto": [
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 46.15
-          },
-          {
-            "id": "jinx",
-            "name": "Jinx",
-            "winRate": 48.85
+            "winRate": 45.03
           },
           {
             "id": "zeri",
             "name": "Zeri",
-            "winRate": 48.98
+            "winRate": 48.19
+          },
+          {
+            "id": "kalista",
+            "name": "Kalista",
+            "winRate": 49.08
           }
         ]
       }
@@ -957,34 +957,34 @@
           {
             "id": "sion",
             "name": "Sion",
-            "winRate": 55.86
+            "winRate": 55.99
           },
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 55.41
+            "winRate": 55.5
           },
           {
-            "id": "ambessa",
-            "name": "Ambessa",
-            "winRate": 54.38
+            "id": "tryndamere",
+            "name": "Tryndamere",
+            "winRate": 54.61
           }
         ],
         "strugglesInto": [
           {
             "id": "quinn",
             "name": "Quinn",
-            "winRate": 46.35
+            "winRate": 47.12
           },
           {
-            "id": "teemo",
-            "name": "Teemo",
-            "winRate": 47.86
+            "id": "drmundo",
+            "name": "Dr. Mundo",
+            "winRate": 48.07
           },
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 47.93
+            "winRate": 48.22
           }
         ]
       }
@@ -993,36 +993,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "skarner",
-            "name": "Skarner",
-            "winRate": 54.48
+            "id": "nunu",
+            "name": "Nunu & Willump",
+            "winRate": 53.98
+          },
+          {
+            "id": "rammus",
+            "name": "Rammus",
+            "winRate": 53.95
           },
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 54.14
-          },
-          {
-            "id": "rengar",
-            "name": "Rengar",
-            "winRate": 53.8
+            "winRate": 53.73
           }
         ],
         "strugglesInto": [
           {
             "id": "shyvana",
             "name": "Shyvana",
-            "winRate": 46.47
+            "winRate": 47.37
           },
           {
             "id": "briar",
             "name": "Briar",
-            "winRate": 46.74
+            "winRate": 47.66
           },
           {
-            "id": "warwick",
-            "name": "Warwick",
-            "winRate": 47.47
+            "id": "ivern",
+            "name": "Ivern",
+            "winRate": 47.74
           }
         ]
       }
@@ -1033,34 +1033,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 56.51
-          },
-          {
-            "id": "kaisa",
-            "name": "Kai'Sa",
-            "winRate": 55.16
+            "winRate": 56.37
           },
           {
             "id": "corki",
             "name": "Corki",
-            "winRate": 54.56
+            "winRate": 55.1
+          },
+          {
+            "id": "kaisa",
+            "name": "Kai'Sa",
+            "winRate": 55.08
           }
         ],
         "strugglesInto": [
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 46.98
+            "winRate": 47.75
           },
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 49.04
+            "winRate": 48.57
           },
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 50.37
+            "winRate": 50.19
           }
         ]
       }
@@ -1071,34 +1071,34 @@
           {
             "id": "kennen",
             "name": "Kennen",
-            "winRate": 58.25
+            "winRate": 58.97
           },
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 58.12
+            "winRate": 58.49
           },
           {
             "id": "chogath",
             "name": "Cho'Gath",
-            "winRate": 57.25
+            "winRate": 57.14
           }
         ],
         "strugglesInto": [
           {
             "id": "kled",
             "name": "Kled",
-            "winRate": 46.61
+            "winRate": 46.2
           },
           {
             "id": "aatrox",
             "name": "Aatrox",
-            "winRate": 47.19
+            "winRate": 46.98
           },
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 47.22
+            "winRate": 47.12
           }
         ]
       }
@@ -1109,34 +1109,34 @@
           {
             "id": "skarner",
             "name": "Skarner",
-            "winRate": 58.12
+            "winRate": 56.65
           },
           {
-            "id": "gwen",
-            "name": "Gwen",
-            "winRate": 55.08
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 54.91
           },
           {
-            "id": "amumu",
-            "name": "Amumu",
-            "winRate": 54.73
+            "id": "sejuani",
+            "name": "Sejuani",
+            "winRate": 54.74
           }
         ],
         "strugglesInto": [
           {
-            "id": "reksai",
-            "name": "Rek'Sai",
-            "winRate": 48.37
+            "id": "khazix",
+            "name": "Kha'Zix",
+            "winRate": 48.6
           },
           {
             "id": "shaco",
             "name": "Shaco",
-            "winRate": 48.87
+            "winRate": 48.63
           },
           {
-            "id": "khazix",
-            "name": "Kha'Zix",
-            "winRate": 48.89
+            "id": "reksai",
+            "name": "Rek'Sai",
+            "winRate": 49.43
           }
         ]
       }
@@ -1145,36 +1145,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 56.55
+            "id": "skarner",
+            "name": "Skarner",
+            "winRate": 56.5
           },
           {
-            "id": "volibear",
-            "name": "Volibear",
-            "winRate": 56
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 56.25
           },
           {
             "id": "masteryi",
             "name": "Master Yi",
-            "winRate": 55.58
+            "winRate": 55
           }
         ],
         "strugglesInto": [
           {
-            "id": "nocturne",
-            "name": "Nocturne",
-            "winRate": 47.7
-          },
-          {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 47.7
+            "winRate": 47
           },
           {
-            "id": "belveth",
-            "name": "Bel'Veth",
-            "winRate": 48.37
+            "id": "nocturne",
+            "name": "Nocturne",
+            "winRate": 47.54
+          },
+          {
+            "id": "shaco",
+            "name": "Shaco",
+            "winRate": 47.64
           }
         ]
       }
@@ -1185,34 +1185,34 @@
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 60
+            "winRate": 60.57
           },
           {
             "id": "nunu",
             "name": "Nunu & Willump",
-            "winRate": 55.62
+            "winRate": 56.27
           },
           {
-            "id": "viego",
-            "name": "Viego",
-            "winRate": 55.29
+            "id": "kayn",
+            "name": "Kayn",
+            "winRate": 55.84
           }
         ],
         "strugglesInto": [
           {
             "id": "reksai",
             "name": "Rek'Sai",
-            "winRate": 46.23
+            "winRate": 47.41
           },
           {
-            "id": "skarner",
-            "name": "Skarner",
-            "winRate": 47.55
+            "id": "zac",
+            "name": "Zac",
+            "winRate": 48.8
           },
           {
             "id": "shyvana",
             "name": "Shyvana",
-            "winRate": 48.54
+            "winRate": 49.2
           }
         ]
       }
@@ -1223,34 +1223,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 53.93
+            "winRate": 53.72
           },
           {
             "id": "caitlyn",
             "name": "Caitlyn",
-            "winRate": 51.48
+            "winRate": 51.53
           },
           {
             "id": "yunara",
             "name": "Yunara",
-            "winRate": 49.66
+            "winRate": 49.86
           }
         ],
         "strugglesInto": [
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 44.94
+            "winRate": 45.66
           },
           {
             "id": "zeri",
             "name": "Zeri",
-            "winRate": 45.94
+            "winRate": 45.96
           },
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 45.98
+            "winRate": 46.78
           }
         ]
       }
@@ -1261,34 +1261,34 @@
           {
             "id": "skarner",
             "name": "Skarner",
-            "winRate": 61.5
+            "winRate": 60.95
           },
           {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 55.59
+            "id": "diana",
+            "name": "Diana",
+            "winRate": 55.76
           },
           {
-            "id": "belveth",
-            "name": "Bel'Veth",
-            "winRate": 55.32
+            "id": "nidalee",
+            "name": "Nidalee",
+            "winRate": 54.9
           }
         ],
         "strugglesInto": [
           {
-            "id": "udyr",
-            "name": "Udyr",
-            "winRate": 46.57
-          },
-          {
             "id": "reksai",
             "name": "Rek'Sai",
-            "winRate": 46.79
+            "winRate": 46.22
+          },
+          {
+            "id": "udyr",
+            "name": "Udyr",
+            "winRate": 47.49
           },
           {
             "id": "sejuani",
             "name": "Sejuani",
-            "winRate": 47.37
+            "winRate": 47.72
           }
         ]
       }
@@ -1299,34 +1299,34 @@
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 57.36
+            "winRate": 57.18
           },
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 55.59
+            "winRate": 55.49
           },
           {
-            "id": "drmundo",
-            "name": "Dr. Mundo",
-            "winRate": 54.96
+            "id": "kled",
+            "name": "Kled",
+            "winRate": 55.07
           }
         ],
         "strugglesInto": [
           {
             "id": "quinn",
             "name": "Quinn",
-            "winRate": 45.99
+            "winRate": 46.11
           },
           {
             "id": "urgot",
             "name": "Urgot",
-            "winRate": 47.76
+            "winRate": 47.87
           },
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 47.81
+            "winRate": 47.95
           }
         ]
       }
@@ -1337,25 +1337,20 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 62.11
+            "winRate": 62.08
           },
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 58.56
+            "winRate": 59.13
           },
           {
             "id": "cassiopeia",
             "name": "Cassiopeia",
-            "winRate": 57.55
+            "winRate": 57.18
           }
         ],
         "strugglesInto": [
-          {
-            "id": "akali",
-            "name": "Akali",
-            "winRate": 49.95
-          },
           {
             "id": "lissandra",
             "name": "Lissandra",
@@ -1364,7 +1359,12 @@
           {
             "id": "kassadin",
             "name": "Kassadin",
-            "winRate": 50.18
+            "winRate": 50.04
+          },
+          {
+            "id": "akali",
+            "name": "Akali",
+            "winRate": 50.14
           }
         ]
       }
@@ -1375,33 +1375,33 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 58.96
+            "winRate": 57.94
+          },
+          {
+            "id": "akali",
+            "name": "Akali",
+            "winRate": 55.53
           },
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 55.66
-          },
-          {
-            "id": "ryze",
-            "name": "Ryze",
-            "winRate": 55.46
+            "winRate": 55.48
           }
         ],
         "strugglesInto": [
           {
             "id": "hwei",
             "name": "Hwei",
-            "winRate": 46.57
+            "winRate": 47.22
           },
           {
             "id": "veigar",
             "name": "Veigar",
-            "winRate": 48.37
+            "winRate": 48.33
           },
           {
-            "id": "xerath",
-            "name": "Xerath",
+            "id": "ahri",
+            "name": "Ahri",
             "winRate": 48.55
           }
         ]
@@ -1413,34 +1413,34 @@
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 57.22
-          },
-          {
-            "id": "trundle",
-            "name": "Trundle",
-            "winRate": 56.54
+            "winRate": 56.22
           },
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 56.31
+            "winRate": 56.18
+          },
+          {
+            "id": "renekton",
+            "name": "Renekton",
+            "winRate": 55.74
           }
         ],
         "strugglesInto": [
           {
-            "id": "kayle",
-            "name": "Kayle",
-            "winRate": 48.56
-          },
-          {
             "id": "quinn",
             "name": "Quinn",
-            "winRate": 48.81
+            "winRate": 48.69
           },
           {
             "id": "kled",
             "name": "Kled",
-            "winRate": 48.99
+            "winRate": 48.84
+          },
+          {
+            "id": "chogath",
+            "name": "Cho'Gath",
+            "winRate": 48.86
           }
         ]
       }
@@ -1451,34 +1451,34 @@
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 58.48
+            "winRate": 58.96
           },
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 58.44
+            "winRate": 58.69
           },
           {
             "id": "jax",
             "name": "Jax",
-            "winRate": 58.01
+            "winRate": 58.24
           }
         ],
         "strugglesInto": [
           {
             "id": "kayle",
             "name": "Kayle",
-            "winRate": 46.75
+            "winRate": 46.61
           },
           {
             "id": "camille",
             "name": "Camille",
-            "winRate": 46.79
+            "winRate": 46.98
           },
           {
             "id": "tryndamere",
             "name": "Tryndamere",
-            "winRate": 48.23
+            "winRate": 48.48
           }
         ]
       }
@@ -1489,34 +1489,34 @@
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 54.65
+            "winRate": 54.87
           },
           {
             "id": "sett",
             "name": "Sett",
-            "winRate": 53.34
+            "winRate": 53.44
           },
           {
-            "id": "shen",
-            "name": "Shen",
-            "winRate": 53.32
+            "id": "jax",
+            "name": "Jax",
+            "winRate": 53.26
           }
         ],
         "strugglesInto": [
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 46.97
-          },
-          {
-            "id": "irelia",
-            "name": "Irelia",
-            "winRate": 47.13
+            "winRate": 46.68
           },
           {
             "id": "ornn",
             "name": "Ornn",
-            "winRate": 47.22
+            "winRate": 47.63
+          },
+          {
+            "id": "riven",
+            "name": "Riven",
+            "winRate": 47.63
           }
         ]
       }
@@ -1527,34 +1527,34 @@
           {
             "id": "trundle",
             "name": "Trundle",
-            "winRate": 56.9
+            "winRate": 56.72
           },
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 55.53
+            "winRate": 55.65
           },
           {
-            "id": "sett",
-            "name": "Sett",
-            "winRate": 55.39
+            "id": "kennen",
+            "name": "Kennen",
+            "winRate": 55.49
           }
         ],
         "strugglesInto": [
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 46.76
+            "winRate": 46.42
           },
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 47.34
+            "winRate": 47.65
           },
           {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 47.55
+            "winRate": 47.75
           }
         ]
       }
@@ -1565,34 +1565,34 @@
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 55.37
+            "winRate": 55.21
           },
           {
             "id": "skarner",
             "name": "Skarner",
-            "winRate": 54.67
+            "winRate": 54.44
           },
           {
-            "id": "karthus",
-            "name": "Karthus",
-            "winRate": 53.81
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 54.08
           }
         ],
         "strugglesInto": [
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 47.81
+            "winRate": 47.96
           },
           {
             "id": "fiddlesticks",
             "name": "Fiddlesticks",
-            "winRate": 48.48
+            "winRate": 47.99
           },
           {
             "id": "evelynn",
             "name": "Evelynn",
-            "winRate": 48.65
+            "winRate": 48.51
           }
         ]
       }
@@ -1603,34 +1603,34 @@
           {
             "id": "amumu",
             "name": "Amumu",
-            "winRate": 59.39
+            "winRate": 60
           },
           {
             "id": "lillia",
             "name": "Lillia",
-            "winRate": 58.33
+            "winRate": 58.52
           },
           {
-            "id": "sejuani",
-            "name": "Sejuani",
-            "winRate": 56.94
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 57.02
           }
         ],
         "strugglesInto": [
           {
             "id": "shyvana",
             "name": "Shyvana",
-            "winRate": 41.88
-          },
-          {
-            "id": "belveth",
-            "name": "Bel'Veth",
-            "winRate": 43.84
+            "winRate": 44.99
           },
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 44.44
+            "winRate": 45.32
+          },
+          {
+            "id": "nunu",
+            "name": "Nunu & Willump",
+            "winRate": 45.34
           }
         ]
       }
@@ -1639,36 +1639,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "fiddlesticks",
-            "name": "Fiddlesticks",
-            "winRate": 54.66
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 54.49
           },
           {
             "id": "rengar",
             "name": "Rengar",
-            "winRate": 54.36
+            "winRate": 54.39
           },
           {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 54.32
+            "id": "fiddlesticks",
+            "name": "Fiddlesticks",
+            "winRate": 53.73
           }
         ],
         "strugglesInto": [
           {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 48.51
-          },
-          {
-            "id": "nidalee",
-            "name": "Nidalee",
-            "winRate": 48.88
+            "winRate": 48.02
           },
           {
             "id": "lillia",
             "name": "Lillia",
-            "winRate": 49.1
+            "winRate": 48.48
+          },
+          {
+            "id": "shyvana",
+            "name": "Shyvana",
+            "winRate": 49.27
           }
         ]
       }
@@ -1677,36 +1677,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "trundle",
-            "name": "Trundle",
-            "winRate": 61.14
-          },
-          {
             "id": "zaahen",
             "name": "Zaahen",
-            "winRate": 58.9
+            "winRate": 59.64
           },
           {
-            "id": "darius",
-            "name": "Darius",
-            "winRate": 57.37
+            "id": "trundle",
+            "name": "Trundle",
+            "winRate": 59.17
+          },
+          {
+            "id": "rumble",
+            "name": "Rumble",
+            "winRate": 57.73
           }
         ],
         "strugglesInto": [
           {
             "id": "sion",
             "name": "Sion",
-            "winRate": 43.87
+            "winRate": 44.76
           },
           {
             "id": "garen",
             "name": "Garen",
-            "winRate": 46.6
+            "winRate": 46.13
           },
           {
-            "id": "gangplank",
-            "name": "Gangplank",
-            "winRate": 46.64
+            "id": "tryndamere",
+            "name": "Tryndamere",
+            "winRate": 46.96
           }
         ]
       }
@@ -1717,34 +1717,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.27
-          },
-          {
-            "id": "galio",
-            "name": "Galio",
-            "winRate": 57.02
+            "winRate": 57.25
           },
           {
             "id": "ryze",
             "name": "Ryze",
-            "winRate": 56.8
+            "winRate": 56.75
+          },
+          {
+            "id": "orianna",
+            "name": "Orianna",
+            "winRate": 56.55
           }
         ],
         "strugglesInto": [
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 46.92
+            "winRate": 47.28
           },
           {
             "id": "ahri",
             "name": "Ahri",
-            "winRate": 49.82
+            "winRate": 49.46
           },
           {
             "id": "zoe",
             "name": "Zoe",
-            "winRate": 49.84
+            "winRate": 50.21
           }
         ]
       }
@@ -1755,34 +1755,34 @@
           {
             "id": "renekton",
             "name": "Renekton",
-            "winRate": 59.13
-          },
-          {
-            "id": "nasus",
-            "name": "Nasus",
-            "winRate": 58.37
+            "winRate": 58.78
           },
           {
             "id": "jax",
             "name": "Jax",
-            "winRate": 57.91
+            "winRate": 58.38
+          },
+          {
+            "id": "nasus",
+            "name": "Nasus",
+            "winRate": 57.86
           }
         ],
         "strugglesInto": [
           {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 45.2
+            "winRate": 45.29
           },
           {
             "id": "kayle",
             "name": "Kayle",
-            "winRate": 45.74
+            "winRate": 46.13
           },
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 47.61
+            "winRate": 46.93
           }
         ]
       }
@@ -1793,34 +1793,34 @@
           {
             "id": "ambessa",
             "name": "Ambessa",
-            "winRate": 57.28
-          },
-          {
-            "id": "gnar",
-            "name": "Gnar",
-            "winRate": 55.61
+            "winRate": 57.59
           },
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 55.44
+            "winRate": 55.93
+          },
+          {
+            "id": "quinn",
+            "name": "Quinn",
+            "winRate": 55.53
           }
         ],
         "strugglesInto": [
           {
             "id": "jax",
             "name": "Jax",
-            "winRate": 45.73
+            "winRate": 45.25
           },
           {
-            "id": "sett",
-            "name": "Sett",
-            "winRate": 46.09
+            "id": "singed",
+            "name": "Singed",
+            "winRate": 45.51
           },
           {
             "id": "tryndamere",
             "name": "Tryndamere",
-            "winRate": 46.5
+            "winRate": 46.05
           }
         ]
       }
@@ -1829,36 +1829,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "karthus",
-            "name": "Karthus",
-            "winRate": 59.15
-          },
-          {
             "id": "amumu",
             "name": "Amumu",
-            "winRate": 58.18
+            "winRate": 59.62
           },
           {
-            "id": "zac",
-            "name": "Zac",
-            "winRate": 57.3
+            "id": "karthus",
+            "name": "Karthus",
+            "winRate": 58.2
+          },
+          {
+            "id": "reksai",
+            "name": "Rek'Sai",
+            "winRate": 56.94
           }
         ],
         "strugglesInto": [
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 46.74
-          },
-          {
-            "id": "rengar",
-            "name": "Rengar",
-            "winRate": 48.63
+            "winRate": 47.1
           },
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 49.54
+            "winRate": 49.61
+          },
+          {
+            "id": "nocturne",
+            "name": "Nocturne",
+            "winRate": 49.9
           }
         ]
       }
@@ -1869,34 +1869,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 57.5
+            "winRate": 57.78
           },
           {
             "id": "lux",
             "name": "Lux",
-            "winRate": 56.56
+            "winRate": 56.49
           },
           {
             "id": "pantheon",
             "name": "Pantheon",
-            "winRate": 55.66
+            "winRate": 55.7
           }
         ],
         "strugglesInto": [
           {
-            "id": "sona",
-            "name": "Sona",
-            "winRate": 48.69
-          },
-          {
             "id": "senna",
             "name": "Senna",
-            "winRate": 49.03
+            "winRate": 49.08
+          },
+          {
+            "id": "sona",
+            "name": "Sona",
+            "winRate": 49.45
           },
           {
             "id": "braum",
             "name": "Braum",
-            "winRate": 49.13
+            "winRate": 50
           }
         ]
       }
@@ -1907,34 +1907,34 @@
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 57.57
+            "winRate": 56.93
           },
           {
             "id": "sejuani",
             "name": "Sejuani",
-            "winRate": 54.97
+            "winRate": 54.73
           },
           {
-            "id": "rammus",
-            "name": "Rammus",
-            "winRate": 53.91
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 53.9
           }
         ],
         "strugglesInto": [
           {
-            "id": "gwen",
-            "name": "Gwen",
-            "winRate": 47.54
-          },
-          {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 48.55
+            "winRate": 47.98
+          },
+          {
+            "id": "gwen",
+            "name": "Gwen",
+            "winRate": 48.09
           },
           {
             "id": "reksai",
             "name": "Rek'Sai",
-            "winRate": 48.64
+            "winRate": 48.59
           }
         ]
       }
@@ -1945,29 +1945,29 @@
           {
             "id": "irelia",
             "name": "Irelia",
-            "winRate": 57.94
+            "winRate": 58.22
           },
           {
             "id": "trundle",
             "name": "Trundle",
-            "winRate": 56.6
+            "winRate": 57.04
           },
           {
             "id": "camille",
             "name": "Camille",
-            "winRate": 56.15
+            "winRate": 56.04
           }
         ],
         "strugglesInto": [
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 43.14
+            "winRate": 43.3
           },
           {
             "id": "illaoi",
             "name": "Illaoi",
-            "winRate": 45.97
+            "winRate": 45.8
           },
           {
             "id": "garen",
@@ -1981,36 +1981,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "rengar",
-            "name": "Rengar",
-            "winRate": 51.69
-          },
-          {
-            "id": "rammus",
-            "name": "Rammus",
-            "winRate": 51.22
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 53.92
           },
           {
             "id": "amumu",
             "name": "Amumu",
-            "winRate": 51.16
+            "winRate": 50.97
+          },
+          {
+            "id": "rengar",
+            "name": "Rengar",
+            "winRate": 50.95
           }
         ],
         "strugglesInto": [
           {
-            "id": "belveth",
-            "name": "Bel'Veth",
-            "winRate": 43.64
-          },
-          {
             "id": "evelynn",
             "name": "Evelynn",
-            "winRate": 43.91
+            "winRate": 42.42
           },
           {
-            "id": "nunu",
-            "name": "Nunu & Willump",
-            "winRate": 44.38
+            "id": "belveth",
+            "name": "Bel'Veth",
+            "winRate": 42.74
+          },
+          {
+            "id": "shyvana",
+            "name": "Shyvana",
+            "winRate": 43.67
           }
         ]
       }
@@ -2021,34 +2021,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 55.94
+            "winRate": 56.01
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 54.18
+            "winRate": 54.28
           },
           {
             "id": "caitlyn",
             "name": "Caitlyn",
-            "winRate": 53.54
+            "winRate": 53.52
           }
         ],
         "strugglesInto": [
           {
             "id": "tristana",
             "name": "Tristana",
-            "winRate": 48.66
-          },
-          {
-            "id": "kogmaw",
-            "name": "Kog'Maw",
-            "winRate": 49.18
+            "winRate": 48.72
           },
           {
             "id": "zeri",
             "name": "Zeri",
-            "winRate": 49.27
+            "winRate": 49.26
+          },
+          {
+            "id": "kogmaw",
+            "name": "Kog'Maw",
+            "winRate": 49.3
           }
         ]
       }
@@ -2057,36 +2057,36 @@
       "BOTTOM": {
         "strongInto": [
           {
-            "id": "samira",
-            "name": "Samira",
-            "winRate": 56.79
-          },
-          {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 56.59
+            "winRate": 56.48
           },
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 56.19
+            "winRate": 56.3
+          },
+          {
+            "id": "samira",
+            "name": "Samira",
+            "winRate": 56.3
           }
         ],
         "strugglesInto": [
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 50.11
-          },
-          {
-            "id": "ziggs",
-            "name": "Ziggs",
-            "winRate": 50.53
+            "winRate": 49.75
           },
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 50.83
+            "winRate": 50.55
+          },
+          {
+            "id": "ziggs",
+            "name": "Ziggs",
+            "winRate": 50.59
           }
         ]
       }
@@ -2097,34 +2097,34 @@
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 54.54
-          },
-          {
-            "id": "ziggs",
-            "name": "Ziggs",
-            "winRate": 52.97
+            "winRate": 54.43
           },
           {
             "id": "jhin",
             "name": "Jhin",
-            "winRate": 52.86
+            "winRate": 52.93
+          },
+          {
+            "id": "ziggs",
+            "name": "Ziggs",
+            "winRate": 52.71
           }
         ],
         "strugglesInto": [
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 42.71
-          },
-          {
-            "id": "kogmaw",
-            "name": "Kog'Maw",
-            "winRate": 46.19
+            "winRate": 42.57
           },
           {
             "id": "aphelios",
             "name": "Aphelios",
-            "winRate": 46.37
+            "winRate": 46.78
+          },
+          {
+            "id": "kogmaw",
+            "name": "Kog'Maw",
+            "winRate": 46.85
           }
         ]
       }
@@ -2135,34 +2135,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 55.5
+            "winRate": 55.15
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 54.14
+            "winRate": 54.7
           },
           {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 53.34
+            "winRate": 53.52
           }
         ],
         "strugglesInto": [
           {
             "id": "xayah",
             "name": "Xayah",
-            "winRate": 44.56
+            "winRate": 46.08
           },
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 46.2
+            "winRate": 46.15
           },
           {
             "id": "jinx",
             "name": "Jinx",
-            "winRate": 46.59
+            "winRate": 46.96
           }
         ]
       }
@@ -2173,34 +2173,34 @@
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 56.06
+            "winRate": 56.52
           },
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 56
+            "winRate": 56.47
           },
           {
             "id": "morgana",
             "name": "Morgana",
-            "winRate": 54.09
+            "winRate": 53.7
           }
         ],
         "strugglesInto": [
           {
-            "id": "rell",
-            "name": "Rell",
-            "winRate": 47.64
+            "id": "nautilus",
+            "name": "Nautilus",
+            "winRate": 48.07
           },
           {
             "id": "blitzcrank",
             "name": "Blitzcrank",
-            "winRate": 48.12
+            "winRate": 48.22
           },
           {
-            "id": "nautilus",
-            "name": "Nautilus",
-            "winRate": 48.44
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 48.38
           }
         ]
       }
@@ -2209,36 +2209,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "amumu",
-            "name": "Amumu",
-            "winRate": 58.76
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 57.27
           },
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 57.63
+            "winRate": 56.38
           },
           {
-            "id": "wukong",
-            "name": "Wukong",
-            "winRate": 54.19
+            "id": "amumu",
+            "name": "Amumu",
+            "winRate": 55.63
           }
         ],
         "strugglesInto": [
           {
+            "id": "skarner",
+            "name": "Skarner",
+            "winRate": 43.79
+          },
+          {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 42.86
+            "winRate": 44.16
           },
           {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 43.41
-          },
-          {
-            "id": "skarner",
-            "name": "Skarner",
-            "winRate": 44.53
+            "winRate": 44.17
           }
         ]
       }
@@ -2249,34 +2249,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 58.84
+            "winRate": 58.33
           },
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 58.73
+            "winRate": 58.11
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 55.99
+            "winRate": 55.94
           }
         ],
         "strugglesInto": [
           {
             "id": "zed",
             "name": "Zed",
-            "winRate": 48.34
+            "winRate": 48.4
           },
           {
             "id": "akshan",
             "name": "Akshan",
-            "winRate": 48.48
+            "winRate": 49.49
           },
           {
-            "id": "naafiri",
-            "name": "Naafiri",
-            "winRate": 50
+            "id": "hwei",
+            "name": "Hwei",
+            "winRate": 50.5
           }
         ]
       }
@@ -2285,36 +2285,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "mel",
-            "name": "Mel",
-            "winRate": 59.14
-          },
-          {
             "id": "taliyah",
             "name": "Taliyah",
-            "winRate": 58.28
+            "winRate": 58.95
+          },
+          {
+            "id": "mel",
+            "name": "Mel",
+            "winRate": 58.27
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 57.62
+            "winRate": 57.6
           }
         ],
         "strugglesInto": [
           {
             "id": "vladimir",
             "name": "Vladimir",
-            "winRate": 45.81
+            "winRate": 46.01
           },
           {
             "id": "galio",
             "name": "Galio",
-            "winRate": 48.97
+            "winRate": 48.76
           },
           {
             "id": "vex",
             "name": "Vex",
-            "winRate": 49.65
+            "winRate": 49.69
           }
         ]
       }
@@ -2325,34 +2325,34 @@
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 60.43
-          },
-          {
-            "id": "illaoi",
-            "name": "Illaoi",
-            "winRate": 58.91
+            "winRate": 59.72
           },
           {
             "id": "garen",
             "name": "Garen",
-            "winRate": 58.38
+            "winRate": 58.53
+          },
+          {
+            "id": "illaoi",
+            "name": "Illaoi",
+            "winRate": 58.09
           }
         ],
         "strugglesInto": [
           {
-            "id": "quinn",
-            "name": "Quinn",
-            "winRate": 47.44
-          },
-          {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 47.62
+            "winRate": 47.89
           },
           {
-            "id": "camille",
-            "name": "Camille",
-            "winRate": 49.54
+            "id": "irelia",
+            "name": "Irelia",
+            "winRate": 49.34
+          },
+          {
+            "id": "quinn",
+            "name": "Quinn",
+            "winRate": 49.62
           }
         ]
       }
@@ -2363,34 +2363,34 @@
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 56.68
+            "winRate": 56.4
+          },
+          {
+            "id": "gwen",
+            "name": "Gwen",
+            "winRate": 55.92
           },
           {
             "id": "skarner",
             "name": "Skarner",
-            "winRate": 55.8
-          },
-          {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 55.67
+            "winRate": 55.58
           }
         ],
         "strugglesInto": [
           {
             "id": "reksai",
             "name": "Rek'Sai",
-            "winRate": 49.32
+            "winRate": 49.55
           },
           {
-            "id": "shyvana",
-            "name": "Shyvana",
-            "winRate": 49.91
+            "id": "evelynn",
+            "name": "Evelynn",
+            "winRate": 49.98
           },
           {
             "id": "talon",
             "name": "Talon",
-            "winRate": 50.27
+            "winRate": 50.33
           }
         ]
       }
@@ -2399,36 +2399,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "ksante",
-            "name": "K'Sante",
-            "winRate": 57.75
+            "id": "trundle",
+            "name": "Trundle",
+            "winRate": 60.11
           },
           {
-            "id": "rumble",
-            "name": "Rumble",
-            "winRate": 57.46
+            "id": "ksante",
+            "name": "K'Sante",
+            "winRate": 57.37
           },
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 57
+            "winRate": 57.08
           }
         ],
         "strugglesInto": [
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 43.35
+            "winRate": 43.57
           },
           {
             "id": "nasus",
             "name": "Nasus",
-            "winRate": 43.92
+            "winRate": 44.75
           },
           {
             "id": "olaf",
             "name": "Olaf",
-            "winRate": 45.14
+            "winRate": 45.96
           }
         ]
       }
@@ -2439,34 +2439,34 @@
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 55.58
+            "winRate": 55.99
           },
           {
             "id": "ekko",
             "name": "Ekko",
-            "winRate": 54.58
+            "winRate": 54.75
           },
           {
             "id": "masteryi",
             "name": "Master Yi",
-            "winRate": 54.1
+            "winRate": 54.15
           }
         ],
         "strugglesInto": [
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 47.47
+            "winRate": 48.21
           },
           {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 48.17
+            "winRate": 48.41
           },
           {
-            "id": "rammus",
-            "name": "Rammus",
-            "winRate": 49.26
+            "id": "wukong",
+            "name": "Wukong",
+            "winRate": 48.93
           }
         ]
       }
@@ -2475,36 +2475,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "skarner",
-            "name": "Skarner",
-            "winRate": 56.19
+            "id": "gwen",
+            "name": "Gwen",
+            "winRate": 56.25
           },
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 55.73
+            "winRate": 55.77
           },
           {
             "id": "rengar",
             "name": "Rengar",
-            "winRate": 55.73
+            "winRate": 55.41
           }
         ],
         "strugglesInto": [
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 46.67
-          },
-          {
-            "id": "volibear",
-            "name": "Volibear",
-            "winRate": 46.7
+            "winRate": 46.68
           },
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 47.65
+            "winRate": 47.61
+          },
+          {
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 47.79
           }
         ]
       }
@@ -2513,36 +2513,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "trundle",
-            "name": "Trundle",
-            "winRate": 56.57
-          },
-          {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 56.2
+            "winRate": 56.32
+          },
+          {
+            "id": "trundle",
+            "name": "Trundle",
+            "winRate": 56.01
           },
           {
             "id": "olaf",
             "name": "Olaf",
-            "winRate": 55.89
+            "winRate": 55.1
           }
         ],
         "strugglesInto": [
           {
-            "id": "kayle",
-            "name": "Kayle",
-            "winRate": 46.5
+            "id": "singed",
+            "name": "Singed",
+            "winRate": 46.53
           },
           {
             "id": "kennen",
             "name": "Kennen",
-            "winRate": 47.15
+            "winRate": 46.58
           },
           {
-            "id": "fiora",
-            "name": "Fiora",
-            "winRate": 48.25
+            "id": "kayle",
+            "name": "Kayle",
+            "winRate": 46.86
           }
         ]
       }
@@ -2551,36 +2551,36 @@
       "BOTTOM": {
         "strongInto": [
           {
-            "id": "varus",
-            "name": "Varus",
-            "winRate": 57.38
-          },
-          {
             "id": "corki",
             "name": "Corki",
-            "winRate": 57.1
+            "winRate": 58.24
+          },
+          {
+            "id": "varus",
+            "name": "Varus",
+            "winRate": 57.26
           },
           {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 56.68
+            "winRate": 56.43
           }
         ],
         "strugglesInto": [
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 47.03
+            "winRate": 48.05
           },
           {
             "id": "xayah",
             "name": "Xayah",
-            "winRate": 51.18
+            "winRate": 50.07
           },
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 51.34
+            "winRate": 50.47
           }
         ]
       }
@@ -2589,36 +2589,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "drmundo",
-            "name": "Dr. Mundo",
-            "winRate": 53.37
-          },
-          {
             "id": "nasus",
             "name": "Nasus",
-            "winRate": 53.31
+            "winRate": 53.73
+          },
+          {
+            "id": "drmundo",
+            "name": "Dr. Mundo",
+            "winRate": 53.11
           },
           {
             "id": "gragas",
             "name": "Gragas",
-            "winRate": 52.51
+            "winRate": 53.06
           }
         ],
         "strugglesInto": [
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 40.74
+            "winRate": 42.14
           },
           {
             "id": "kayle",
             "name": "Kayle",
-            "winRate": 42.25
+            "winRate": 42.79
           },
           {
-            "id": "shen",
-            "name": "Shen",
-            "winRate": 44.64
+            "id": "garen",
+            "name": "Garen",
+            "winRate": 44.69
           }
         ]
       }
@@ -2627,36 +2627,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "azir",
-            "name": "Azir",
-            "winRate": 58.38
-          },
-          {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.85
+            "winRate": 57.59
+          },
+          {
+            "id": "azir",
+            "name": "Azir",
+            "winRate": 57.3
           },
           {
             "id": "yone",
             "name": "Yone",
-            "winRate": 55.78
+            "winRate": 55.98
           }
         ],
         "strugglesInto": [
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 43.65
+            "winRate": 44.27
           },
           {
             "id": "vex",
             "name": "Vex",
-            "winRate": 46.32
+            "winRate": 46.18
           },
           {
             "id": "malzahar",
             "name": "Malzahar",
-            "winRate": 46.56
+            "winRate": 46.25
           }
         ]
       }
@@ -2667,34 +2667,34 @@
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 53.83
+            "winRate": 53.43
           },
           {
             "id": "sejuani",
             "name": "Sejuani",
-            "winRate": 53.28
+            "winRate": 52.89
           },
           {
             "id": "nunu",
             "name": "Nunu & Willump",
-            "winRate": 52.95
+            "winRate": 52.85
           }
         ],
         "strugglesInto": [
           {
             "id": "reksai",
             "name": "Rek'Sai",
-            "winRate": 47.49
+            "winRate": 47.01
+          },
+          {
+            "id": "belveth",
+            "name": "Bel'Veth",
+            "winRate": 47.62
           },
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 47.75
-          },
-          {
-            "id": "briar",
-            "name": "Briar",
-            "winRate": 48.42
+            "winRate": 47.78
           }
         ]
       }
@@ -2705,34 +2705,34 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 57
+            "winRate": 56.97
           },
           {
             "id": "blitzcrank",
             "name": "Blitzcrank",
-            "winRate": 56.39
+            "winRate": 56.13
           },
           {
             "id": "nautilus",
             "name": "Nautilus",
-            "winRate": 56.12
+            "winRate": 56
           }
         ],
         "strugglesInto": [
           {
             "id": "zilean",
             "name": "Zilean",
-            "winRate": 49.11
+            "winRate": 49.96
           },
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 49.56
+            "winRate": 50.15
           },
           {
-            "id": "janna",
-            "name": "Janna",
-            "winRate": 50.13
+            "id": "braum",
+            "name": "Braum",
+            "winRate": 50.41
           }
         ]
       }
@@ -2743,34 +2743,34 @@
           {
             "id": "skarner",
             "name": "Skarner",
-            "winRate": 59.73
+            "winRate": 60.23
           },
           {
             "id": "zac",
             "name": "Zac",
-            "winRate": 58.34
+            "winRate": 58.21
           },
           {
-            "id": "rammus",
-            "name": "Rammus",
-            "winRate": 57.41
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 56.88
           }
         ],
         "strugglesInto": [
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 47.52
+            "winRate": 47.88
           },
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 47.72
+            "winRate": 48.03
           },
           {
             "id": "talon",
             "name": "Talon",
-            "winRate": 49.33
+            "winRate": 49.79
           }
         ]
       }
@@ -2779,36 +2779,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "mel",
-            "name": "Mel",
-            "winRate": 57.62
-          },
-          {
             "id": "akali",
             "name": "Akali",
-            "winRate": 57.32
+            "winRate": 57.33
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 57.31
+            "winRate": 57.29
+          },
+          {
+            "id": "mel",
+            "name": "Mel",
+            "winRate": 57.1
           }
         ],
         "strugglesInto": [
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 47.88
+            "winRate": 48
           },
           {
             "id": "hwei",
             "name": "Hwei",
-            "winRate": 49.2
+            "winRate": 49.07
           },
           {
             "id": "viktor",
             "name": "Viktor",
-            "winRate": 49.31
+            "winRate": 49.24
           }
         ]
       }
@@ -2819,34 +2819,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 56.16
+            "winRate": 56.07
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 53.68
+            "winRate": 53.94
           },
           {
-            "id": "kaisa",
-            "name": "Kai'Sa",
-            "winRate": 52.68
+            "id": "sivir",
+            "name": "Sivir",
+            "winRate": 52.74
           }
         ],
         "strugglesInto": [
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 49.05
+            "winRate": 48.44
           },
           {
             "id": "draven",
             "name": "Draven",
-            "winRate": 49.13
+            "winRate": 49.04
           },
           {
             "id": "jinx",
             "name": "Jinx",
-            "winRate": 49.42
+            "winRate": 49.63
           }
         ]
       }
@@ -2857,34 +2857,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 58.19
+            "winRate": 58.88
           },
           {
             "id": "morgana",
             "name": "Morgana",
-            "winRate": 55.85
+            "winRate": 55.95
           },
           {
             "id": "pantheon",
             "name": "Pantheon",
-            "winRate": 54.58
+            "winRate": 54.68
           }
         ],
         "strugglesInto": [
           {
             "id": "braum",
             "name": "Braum",
-            "winRate": 47.08
+            "winRate": 47.17
           },
           {
             "id": "janna",
             "name": "Janna",
-            "winRate": 48.03
+            "winRate": 48.08
           },
           {
             "id": "thresh",
             "name": "Thresh",
-            "winRate": 48.47
+            "winRate": 48.5
           }
         ]
       }
@@ -2895,34 +2895,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 56.04
+            "winRate": 56.29
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 54.33
+            "winRate": 54.08
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 53.95
+            "winRate": 53.98
           }
         ],
         "strugglesInto": [
           {
-            "id": "rell",
-            "name": "Rell",
-            "winRate": 47.01
-          },
-          {
             "id": "sona",
             "name": "Sona",
-            "winRate": 47.22
+            "winRate": 47.3
+          },
+          {
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 47.69
           },
           {
             "id": "janna",
             "name": "Janna",
-            "winRate": 47.78
+            "winRate": 47.79
           }
         ]
       }
@@ -2931,36 +2931,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "irelia",
-            "name": "Irelia",
-            "winRate": 57.95
-          },
-          {
             "id": "tryndamere",
             "name": "Tryndamere",
-            "winRate": 57.69
+            "winRate": 57.24
           },
           {
-            "id": "gnar",
-            "name": "Gnar",
-            "winRate": 56.19
+            "id": "irelia",
+            "name": "Irelia",
+            "winRate": 57.15
+          },
+          {
+            "id": "trundle",
+            "name": "Trundle",
+            "winRate": 56.62
           }
         ],
         "strugglesInto": [
           {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 45.45
-          },
-          {
-            "id": "drmundo",
-            "name": "Dr. Mundo",
-            "winRate": 45.76
+            "winRate": 45.27
           },
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 45.81
+            "winRate": 45.66
+          },
+          {
+            "id": "drmundo",
+            "name": "Dr. Mundo",
+            "winRate": 45.69
           }
         ]
       }
@@ -2971,34 +2971,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 59.36
+            "winRate": 59.5
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 58.66
+            "winRate": 58.6
           },
           {
             "id": "leblanc",
             "name": "LeBlanc",
-            "winRate": 58.02
+            "winRate": 58.14
           }
         ],
         "strugglesInto": [
           {
             "id": "taliyah",
             "name": "Taliyah",
-            "winRate": 48.35
+            "winRate": 48.28
           },
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 49.44
+            "winRate": 49.47
           },
           {
             "id": "ahri",
             "name": "Ahri",
-            "winRate": 49.8
+            "winRate": 49.82
           }
         ]
       }
@@ -3007,36 +3007,36 @@
       "UTILITY": {
         "strongInto": [
           {
+            "id": "lux",
+            "name": "Lux",
+            "winRate": 56.08
+          },
+          {
             "id": "bard",
             "name": "Bard",
-            "winRate": 56.02
+            "winRate": 55.78
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 55.79
-          },
-          {
-            "id": "rakan",
-            "name": "Rakan",
-            "winRate": 55.36
+            "winRate": 55.63
           }
         ],
         "strugglesInto": [
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 43.86
-          },
-          {
-            "id": "morgana",
-            "name": "Morgana",
-            "winRate": 48.25
+            "winRate": 43.12
           },
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 48.93
+            "winRate": 49
+          },
+          {
+            "id": "morgana",
+            "name": "Morgana",
+            "winRate": 49.71
           }
         ]
       }
@@ -3047,34 +3047,34 @@
           {
             "id": "karthus",
             "name": "Karthus",
-            "winRate": 57.68
-          },
-          {
-            "id": "volibear",
-            "name": "Volibear",
-            "winRate": 56.87
+            "winRate": 57.18
           },
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 56.76
+            "winRate": 56.73
+          },
+          {
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 56.65
           }
         ],
         "strugglesInto": [
           {
             "id": "wukong",
             "name": "Wukong",
-            "winRate": 48.31
+            "winRate": 48.41
+          },
+          {
+            "id": "udyr",
+            "name": "Udyr",
+            "winRate": 48.53
           },
           {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 48.88
-          },
-          {
-            "id": "elise",
-            "name": "Elise",
-            "winRate": 48.93
+            "winRate": 48.99
           }
         ]
       }
@@ -3085,34 +3085,34 @@
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 52.47
+            "winRate": 52.71
           },
           {
             "id": "ahri",
             "name": "Ahri",
-            "winRate": 51.97
+            "winRate": 51.76
           },
           {
             "id": "anivia",
             "name": "Anivia",
-            "winRate": 51.67
+            "winRate": 51.16
           }
         ],
         "strugglesInto": [
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 40.6
+            "winRate": 41.09
           },
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 43.13
+            "winRate": 43.18
           },
           {
             "id": "syndra",
             "name": "Syndra",
-            "winRate": 43.14
+            "winRate": 43.55
           }
         ]
       }
@@ -3121,36 +3121,36 @@
       "UTILITY": {
         "strongInto": [
           {
-            "id": "swain",
-            "name": "Swain",
-            "winRate": 55.75
-          },
-          {
             "id": "brand",
             "name": "Brand",
-            "winRate": 55.28
+            "winRate": 55.87
           },
           {
-            "id": "neeko",
-            "name": "Neeko",
-            "winRate": 55.27
+            "id": "swain",
+            "name": "Swain",
+            "winRate": 55.42
+          },
+          {
+            "id": "pantheon",
+            "name": "Pantheon",
+            "winRate": 54.9
           }
         ],
         "strugglesInto": [
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 46.4
+            "winRate": 47.17
           },
           {
             "id": "blitzcrank",
             "name": "Blitzcrank",
-            "winRate": 48.62
+            "winRate": 48.44
           },
           {
             "id": "janna",
             "name": "Janna",
-            "winRate": 48.78
+            "winRate": 49.06
           }
         ]
       }
@@ -3161,34 +3161,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 55.91
+            "winRate": 55.71
+          },
+          {
+            "id": "vayne",
+            "name": "Vayne",
+            "winRate": 55
           },
           {
             "id": "kaisa",
             "name": "Kai'Sa",
             "winRate": 54.68
-          },
-          {
-            "id": "vayne",
-            "name": "Vayne",
-            "winRate": 54.48
           }
         ],
         "strugglesInto": [
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 47.66
+            "winRate": 47.87
           },
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 48.41
+            "winRate": 48.53
           },
           {
             "id": "zeri",
             "name": "Zeri",
-            "winRate": 49.57
+            "winRate": 49.3
           }
         ]
       }
@@ -3199,34 +3199,34 @@
           {
             "id": "illaoi",
             "name": "Illaoi",
-            "winRate": 59.98
+            "winRate": 59.49
           },
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 58.45
+            "winRate": 58.64
           },
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 58.36
+            "winRate": 58.15
           }
         ],
         "strugglesInto": [
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 49.56
-          },
-          {
-            "id": "quinn",
-            "name": "Quinn",
-            "winRate": 50.22
+            "winRate": 49.92
           },
           {
             "id": "olaf",
             "name": "Olaf",
-            "winRate": 50.65
+            "winRate": 50.47
+          },
+          {
+            "id": "quinn",
+            "name": "Quinn",
+            "winRate": 50.57
           }
         ]
       }
@@ -3237,34 +3237,34 @@
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 56.73
-          },
-          {
-            "id": "maokai",
-            "name": "Maokai",
-            "winRate": 56.6
+            "winRate": 56.85
           },
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 55.66
+            "winRate": 56.25
+          },
+          {
+            "id": "maokai",
+            "name": "Maokai",
+            "winRate": 55.59
           }
         ],
         "strugglesInto": [
           {
-            "id": "rell",
-            "name": "Rell",
-            "winRate": 48.13
-          },
-          {
             "id": "taric",
             "name": "Taric",
-            "winRate": 48.38
+            "winRate": 48.05
           },
           {
             "id": "janna",
             "name": "Janna",
-            "winRate": 48.48
+            "winRate": 48.58
+          },
+          {
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 48.77
           }
         ]
       }
@@ -3280,29 +3280,29 @@
           {
             "id": "cassiopeia",
             "name": "Cassiopeia",
-            "winRate": 61.73
+            "winRate": 62.09
           },
           {
             "id": "leblanc",
             "name": "LeBlanc",
-            "winRate": 61.2
+            "winRate": 60.34
           }
         ],
         "strugglesInto": [
           {
-            "id": "vladimir",
-            "name": "Vladimir",
-            "winRate": 47.92
-          },
-          {
             "id": "lissandra",
             "name": "Lissandra",
-            "winRate": 48.54
+            "winRate": 47.93
           },
           {
-            "id": "fizz",
-            "name": "Fizz",
-            "winRate": 49.73
+            "id": "vladimir",
+            "name": "Vladimir",
+            "winRate": 48.81
+          },
+          {
+            "id": "aurora",
+            "name": "Aurora",
+            "winRate": 49.22
           }
         ]
       }
@@ -3313,34 +3313,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 57.17
+            "winRate": 57.58
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 56.39
+            "winRate": 56
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 55.05
+            "winRate": 55.43
           }
         ],
         "strugglesInto": [
           {
-            "id": "zilean",
-            "name": "Zilean",
-            "winRate": 48.58
-          },
-          {
             "id": "thresh",
             "name": "Thresh",
-            "winRate": 49.17
+            "winRate": 49.19
           },
           {
-            "id": "rell",
-            "name": "Rell",
-            "winRate": 49.38
+            "id": "sona",
+            "name": "Sona",
+            "winRate": 49.51
+          },
+          {
+            "id": "zilean",
+            "name": "Zilean",
+            "winRate": 49.67
           }
         ]
       }
@@ -3351,34 +3351,34 @@
           {
             "id": "kennen",
             "name": "Kennen",
-            "winRate": 57.51
-          },
-          {
-            "id": "heimerdinger",
-            "name": "Heimerdinger",
-            "winRate": 55.42
+            "winRate": 57.21
           },
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 55.26
+            "winRate": 55.52
+          },
+          {
+            "id": "tryndamere",
+            "name": "Tryndamere",
+            "winRate": 55.02
           }
         ],
         "strugglesInto": [
           {
             "id": "illaoi",
             "name": "Illaoi",
-            "winRate": 46.4
+            "winRate": 47.22
           },
           {
             "id": "shen",
             "name": "Shen",
-            "winRate": 47.35
+            "winRate": 47.68
           },
           {
             "id": "garen",
             "name": "Garen",
-            "winRate": 48.04
+            "winRate": 47.97
           }
         ]
       }
@@ -3389,34 +3389,34 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 58.53
-          },
-          {
-            "id": "lux",
-            "name": "Lux",
-            "winRate": 55.49
+            "winRate": 58.51
           },
           {
             "id": "zyra",
             "name": "Zyra",
-            "winRate": 55.23
+            "winRate": 55.49
+          },
+          {
+            "id": "lux",
+            "name": "Lux",
+            "winRate": 55.34
           }
         ],
         "strugglesInto": [
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 45.35
+            "winRate": 45.36
           },
           {
             "id": "rell",
             "name": "Rell",
-            "winRate": 47.13
+            "winRate": 47.22
           },
           {
             "id": "renata",
             "name": "Renata Glasc",
-            "winRate": 47.48
+            "winRate": 47.73
           }
         ]
       }
@@ -3425,36 +3425,36 @@
       "UTILITY": {
         "strongInto": [
           {
+            "id": "taric",
+            "name": "Taric",
+            "winRate": 53.03
+          },
+          {
             "id": "swain",
             "name": "Swain",
-            "winRate": 53.14
+            "winRate": 52.37
           },
           {
-            "id": "lux",
-            "name": "Lux",
-            "winRate": 52.36
-          },
-          {
-            "id": "blitzcrank",
-            "name": "Blitzcrank",
-            "winRate": 52.1
+            "id": "pyke",
+            "name": "Pyke",
+            "winRate": 51.9
           }
         ],
         "strugglesInto": [
           {
             "id": "zilean",
             "name": "Zilean",
-            "winRate": 43.87
+            "winRate": 43.66
+          },
+          {
+            "id": "renata",
+            "name": "Renata Glasc",
+            "winRate": 43.67
           },
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 44.35
-          },
-          {
-            "id": "janna",
-            "name": "Janna",
-            "winRate": 45.23
+            "winRate": 45.58
           }
         ]
       }
@@ -3465,34 +3465,34 @@
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 58.54
+            "winRate": 57.89
           },
           {
             "id": "karthus",
             "name": "Karthus",
-            "winRate": 57.18
+            "winRate": 57.73
           },
           {
             "id": "sejuani",
             "name": "Sejuani",
-            "winRate": 56
+            "winRate": 56.71
           }
         ],
         "strugglesInto": [
           {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 45.85
+            "winRate": 46.34
+          },
+          {
+            "id": "nunu",
+            "name": "Nunu & Willump",
+            "winRate": 47.71
           },
           {
             "id": "shyvana",
             "name": "Shyvana",
-            "winRate": 47.75
-          },
-          {
-            "id": "fiddlesticks",
-            "name": "Fiddlesticks",
-            "winRate": 48.31
+            "winRate": 48.3
           }
         ]
       }
@@ -3503,34 +3503,34 @@
           {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 59.92
+            "winRate": 59.97
           },
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 59.14
+            "winRate": 58.98
           },
           {
-            "id": "ezreal",
-            "name": "Ezreal",
-            "winRate": 58.86
+            "id": "varus",
+            "name": "Varus",
+            "winRate": 58.56
           }
         ],
         "strugglesInto": [
           {
             "id": "xayah",
             "name": "Xayah",
-            "winRate": 46.41
+            "winRate": 45.06
           },
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 51.1
+            "winRate": 50.76
           },
           {
-            "id": "smolder",
-            "name": "Smolder",
-            "winRate": 51.44
+            "id": "sivir",
+            "name": "Sivir",
+            "winRate": 51.16
           }
         ]
       }
@@ -3541,34 +3541,34 @@
           {
             "id": "amumu",
             "name": "Amumu",
-            "winRate": 57.33
-          },
-          {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 56.7
+            "winRate": 57.11
           },
           {
             "id": "elise",
             "name": "Elise",
-            "winRate": 56.51
+            "winRate": 56.88
+          },
+          {
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 56.82
           }
         ],
         "strugglesInto": [
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 48
+            "winRate": 48.93
           },
           {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 48.83
+            "winRate": 49.15
           },
           {
-            "id": "reksai",
-            "name": "Rek'Sai",
-            "winRate": 50.56
+            "id": "udyr",
+            "name": "Udyr",
+            "winRate": 50.68
           }
         ]
       }
@@ -3579,34 +3579,34 @@
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 58.21
-          },
-          {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 57.22
+            "winRate": 58.22
           },
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 56.39
+            "winRate": 57.23
+          },
+          {
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 56.94
           }
         ],
         "strugglesInto": [
           {
             "id": "evelynn",
             "name": "Evelynn",
-            "winRate": 47.33
+            "winRate": 46.94
           },
           {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 48.35
+            "winRate": 48.28
           },
           {
-            "id": "zac",
-            "name": "Zac",
-            "winRate": 48.51
+            "id": "jarvaniv",
+            "name": "Jarvan IV",
+            "winRate": 48.35
           }
         ]
       }
@@ -3617,34 +3617,34 @@
           {
             "id": "teemo",
             "name": "Teemo",
-            "winRate": 57.65
-          },
-          {
-            "id": "kennen",
-            "name": "Kennen",
-            "winRate": 56.66
+            "winRate": 58.38
           },
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 55.89
+            "winRate": 56.29
+          },
+          {
+            "id": "nasus",
+            "name": "Nasus",
+            "winRate": 56.02
           }
         ],
         "strugglesInto": [
           {
             "id": "kled",
             "name": "Kled",
-            "winRate": 46.13
-          },
-          {
-            "id": "tryndamere",
-            "name": "Tryndamere",
-            "winRate": 48.09
+            "winRate": 47.15
           },
           {
             "id": "kayle",
             "name": "Kayle",
-            "winRate": 48.66
+            "winRate": 48.1
+          },
+          {
+            "id": "tryndamere",
+            "name": "Tryndamere",
+            "winRate": 48.49
           }
         ]
       }
@@ -3655,34 +3655,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.78
+            "winRate": 57.56
           },
           {
             "id": "taliyah",
             "name": "Taliyah",
-            "winRate": 53.55
+            "winRate": 53.36
           },
           {
             "id": "lissandra",
             "name": "Lissandra",
-            "winRate": 51.06
+            "winRate": 51.02
           }
         ],
         "strugglesInto": [
           {
             "id": "kassadin",
             "name": "Kassadin",
-            "winRate": 45.34
+            "winRate": 45.83
           },
           {
             "id": "syndra",
             "name": "Syndra",
-            "winRate": 45.93
+            "winRate": 46.18
           },
           {
-            "id": "zoe",
-            "name": "Zoe",
-            "winRate": 46.31
+            "id": "sylas",
+            "name": "Sylas",
+            "winRate": 46.48
           }
         ]
       }
@@ -3693,34 +3693,34 @@
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 57.1
-          },
-          {
-            "id": "sion",
-            "name": "Sion",
-            "winRate": 55.62
+            "winRate": 57.55
           },
           {
             "id": "renekton",
             "name": "Renekton",
-            "winRate": 55.15
+            "winRate": 55.29
+          },
+          {
+            "id": "teemo",
+            "name": "Teemo",
+            "winRate": 54.99
           }
         ],
         "strugglesInto": [
           {
             "id": "fiora",
             "name": "Fiora",
-            "winRate": 48.13
-          },
-          {
-            "id": "olaf",
-            "name": "Olaf",
-            "winRate": 48.95
+            "winRate": 48.23
           },
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 49.47
+            "winRate": 49.25
+          },
+          {
+            "id": "shen",
+            "name": "Shen",
+            "winRate": 49.54
           }
         ]
       }
@@ -3729,36 +3729,36 @@
       "UTILITY": {
         "strongInto": [
           {
-            "id": "neeko",
-            "name": "Neeko",
-            "winRate": 55.29
-          },
-          {
             "id": "swain",
             "name": "Swain",
-            "winRate": 54.71
+            "winRate": 54.93
+          },
+          {
+            "id": "neeko",
+            "name": "Neeko",
+            "winRate": 54.79
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 54.54
+            "winRate": 54.55
           }
         ],
         "strugglesInto": [
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 41.53
+            "winRate": 43.73
           },
           {
             "id": "rell",
             "name": "Rell",
-            "winRate": 47.41
+            "winRate": 47.54
           },
           {
-            "id": "janna",
-            "name": "Janna",
-            "winRate": 48.11
+            "id": "renata",
+            "name": "Renata Glasc",
+            "winRate": 47.78
           }
         ]
       }
@@ -3769,34 +3769,34 @@
           {
             "id": "zyra",
             "name": "Zyra",
-            "winRate": 57.95
+            "winRate": 58.13
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 57.68
+            "winRate": 56.92
           },
           {
-            "id": "alistar",
-            "name": "Alistar",
-            "winRate": 56.2
+            "id": "brand",
+            "name": "Brand",
+            "winRate": 56.08
           }
         ],
         "strugglesInto": [
           {
             "id": "soraka",
             "name": "Soraka",
-            "winRate": 46.79
+            "winRate": 48.23
           },
           {
             "id": "janna",
             "name": "Janna",
-            "winRate": 49.04
+            "winRate": 49.05
           },
           {
             "id": "nami",
             "name": "Nami",
-            "winRate": 50.63
+            "winRate": 50.65
           }
         ]
       }
@@ -3807,34 +3807,34 @@
           {
             "id": "zyra",
             "name": "Zyra",
-            "winRate": 55.79
+            "winRate": 55.6
           },
           {
             "id": "lux",
             "name": "Lux",
-            "winRate": 55.09
+            "winRate": 55.47
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 54.95
+            "winRate": 54.74
           }
         ],
         "strugglesInto": [
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 47.9
-          },
-          {
-            "id": "renata",
-            "name": "Renata Glasc",
-            "winRate": 49.03
+            "winRate": 48.14
           },
           {
             "id": "leona",
             "name": "Leona",
-            "winRate": 49.05
+            "winRate": 48.8
+          },
+          {
+            "id": "maokai",
+            "name": "Maokai",
+            "winRate": 48.91
           }
         ]
       }
@@ -3843,19 +3843,19 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "mel",
-            "name": "Mel",
-            "winRate": 57.17
-          },
-          {
             "id": "azir",
             "name": "Azir",
-            "winRate": 56.82
+            "winRate": 57.52
+          },
+          {
+            "id": "mel",
+            "name": "Mel",
+            "winRate": 57.39
           },
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 56.72
+            "winRate": 56
           }
         ],
         "strugglesInto": [
@@ -3867,12 +3867,12 @@
           {
             "id": "vex",
             "name": "Vex",
-            "winRate": 46.35
+            "winRate": 46.62
           },
           {
             "id": "twistedfate",
             "name": "Twisted Fate",
-            "winRate": 47.99
+            "winRate": 47.64
           }
         ]
       }
@@ -3881,36 +3881,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "jax",
-            "name": "Jax",
-            "winRate": 58.05
+            "id": "trundle",
+            "name": "Trundle",
+            "winRate": 58.33
           },
           {
             "id": "shen",
             "name": "Shen",
-            "winRate": 57.54
+            "winRate": 57.97
           },
           {
-            "id": "ksante",
-            "name": "K'Sante",
-            "winRate": 57.46
+            "id": "jax",
+            "name": "Jax",
+            "winRate": 57.71
           }
         ],
         "strugglesInto": [
           {
-            "id": "camille",
-            "name": "Camille",
-            "winRate": 46.6
+            "id": "gragas",
+            "name": "Gragas",
+            "winRate": 47
           },
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 46.94
+            "winRate": 47.5
           },
           {
-            "id": "gragas",
-            "name": "Gragas",
-            "winRate": 47.13
+            "id": "zaahen",
+            "name": "Zaahen",
+            "winRate": 48.02
           }
         ]
       }
@@ -3921,34 +3921,34 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 56.01
+            "winRate": 56.14
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 55.71
+            "winRate": 55.9
           },
           {
             "id": "tahmkench",
             "name": "Tahm Kench",
-            "winRate": 55.17
+            "winRate": 54.65
           }
         ],
         "strugglesInto": [
           {
-            "id": "senna",
-            "name": "Senna",
-            "winRate": 47.22
-          },
-          {
-            "id": "sona",
-            "name": "Sona",
-            "winRate": 47.95
-          },
-          {
             "id": "zyra",
             "name": "Zyra",
-            "winRate": 48.54
+            "winRate": 47.56
+          },
+          {
+            "id": "senna",
+            "name": "Senna",
+            "winRate": 47.59
+          },
+          {
+            "id": "zilean",
+            "name": "Zilean",
+            "winRate": 48.75
           }
         ]
       }
@@ -3959,34 +3959,34 @@
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 57.68
-          },
-          {
-            "id": "viego",
-            "name": "Viego",
-            "winRate": 57.2
+            "winRate": 57.29
           },
           {
             "id": "masteryi",
             "name": "Master Yi",
-            "winRate": 57.04
+            "winRate": 56.91
+          },
+          {
+            "id": "viego",
+            "name": "Viego",
+            "winRate": 56.61
           }
         ],
         "strugglesInto": [
           {
-            "id": "sejuani",
-            "name": "Sejuani",
-            "winRate": 47.65
-          },
-          {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 47.86
+            "winRate": 47.13
           },
           {
-            "id": "lillia",
-            "name": "Lillia",
-            "winRate": 47.96
+            "id": "sejuani",
+            "name": "Sejuani",
+            "winRate": 48.13
+          },
+          {
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 48.3
           }
         ]
       }
@@ -3995,36 +3995,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "volibear",
-            "name": "Volibear",
-            "winRate": 60.47
+            "id": "amumu",
+            "name": "Amumu",
+            "winRate": 56.52
           },
           {
             "id": "evelynn",
             "name": "Evelynn",
-            "winRate": 57.14
+            "winRate": 56.31
           },
           {
-            "id": "amumu",
-            "name": "Amumu",
-            "winRate": 56.28
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 55.26
           }
         ],
         "strugglesInto": [
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 46
+            "winRate": 45.25
           },
           {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 48.15
+            "winRate": 47.94
           },
           {
             "id": "nidalee",
             "name": "Nidalee",
-            "winRate": 48.36
+            "winRate": 49.14
           }
         ]
       }
@@ -4035,16 +4035,16 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 56.96
+            "winRate": 57.06
           },
           {
-            "id": "blitzcrank",
-            "name": "Blitzcrank",
-            "winRate": 56.17
+            "id": "neeko",
+            "name": "Neeko",
+            "winRate": 56.21
           },
           {
-            "id": "lux",
-            "name": "Lux",
+            "id": "nautilus",
+            "name": "Nautilus",
             "winRate": 56.02
           }
         ],
@@ -4052,17 +4052,17 @@
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 47.88
+            "winRate": 47.86
           },
           {
             "id": "zilean",
             "name": "Zilean",
-            "winRate": 48.34
+            "winRate": 47.9
           },
           {
-            "id": "velkoz",
-            "name": "Vel'Koz",
-            "winRate": 49.58
+            "id": "senna",
+            "name": "Senna",
+            "winRate": 50.3
           }
         ]
       }
@@ -4073,34 +4073,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 60.26
+            "winRate": 58.67
           },
           {
             "id": "tahmkench",
             "name": "Tahm Kench",
-            "winRate": 57.83
+            "winRate": 57.2
           },
           {
             "id": "pantheon",
             "name": "Pantheon",
-            "winRate": 55.59
+            "winRate": 56.53
           }
         ],
         "strugglesInto": [
           {
-            "id": "sona",
-            "name": "Sona",
-            "winRate": 45.68
-          },
-          {
             "id": "seraphine",
             "name": "Seraphine",
-            "winRate": 47.33
+            "winRate": 46.96
           },
           {
-            "id": "velkoz",
-            "name": "Vel'Koz",
-            "winRate": 47.4
+            "id": "taric",
+            "name": "Taric",
+            "winRate": 47.24
+          },
+          {
+            "id": "zyra",
+            "name": "Zyra",
+            "winRate": 47.33
           }
         ]
       }
@@ -4111,34 +4111,34 @@
           {
             "id": "ambessa",
             "name": "Ambessa",
-            "winRate": 55.37
+            "winRate": 55.13
           },
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 55.3
+            "winRate": 55.02
           },
           {
             "id": "riven",
             "name": "Riven",
-            "winRate": 54.54
+            "winRate": 54.55
           }
         ],
         "strugglesInto": [
           {
             "id": "illaoi",
             "name": "Illaoi",
-            "winRate": 45.62
-          },
-          {
-            "id": "gangplank",
-            "name": "Gangplank",
-            "winRate": 46.14
+            "winRate": 46.01
           },
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 46.58
+            "winRate": 46.39
+          },
+          {
+            "id": "gangplank",
+            "name": "Gangplank",
+            "winRate": 46.42
           }
         ]
       }
@@ -4149,34 +4149,34 @@
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 53.96
+            "winRate": 54.08
           },
           {
             "id": "khazix",
             "name": "Kha'Zix",
-            "winRate": 53.66
+            "winRate": 53.82
           },
           {
             "id": "elise",
             "name": "Elise",
-            "winRate": 53.38
+            "winRate": 53.5
           }
         ],
         "strugglesInto": [
           {
             "id": "warwick",
             "name": "Warwick",
-            "winRate": 45.6
-          },
-          {
-            "id": "reksai",
-            "name": "Rek'Sai",
-            "winRate": 46
+            "winRate": 45.63
           },
           {
             "id": "wukong",
             "name": "Wukong",
-            "winRate": 46.03
+            "winRate": 46.29
+          },
+          {
+            "id": "reksai",
+            "name": "Rek'Sai",
+            "winRate": 46.33
           }
         ]
       }
@@ -4185,36 +4185,36 @@
       "TOP": {
         "strongInto": [
           {
-            "id": "ksante",
-            "name": "K'Sante",
-            "winRate": 57.63
-          },
-          {
             "id": "sion",
             "name": "Sion",
-            "winRate": 56.77
+            "winRate": 57.13
+          },
+          {
+            "id": "ksante",
+            "name": "K'Sante",
+            "winRate": 57.09
           },
           {
             "id": "trundle",
             "name": "Trundle",
-            "winRate": 55.46
+            "winRate": 56.84
           }
         ],
         "strugglesInto": [
           {
             "id": "quinn",
             "name": "Quinn",
-            "winRate": 44.34
+            "winRate": 45.43
           },
           {
             "id": "illaoi",
             "name": "Illaoi",
-            "winRate": 47.55
+            "winRate": 47.34
           },
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 47.84
+            "winRate": 47.81
           }
         ]
       }
@@ -4225,34 +4225,34 @@
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 54.63
-          },
-          {
-            "id": "quinn",
-            "name": "Quinn",
-            "winRate": 54
+            "winRate": 54.06
           },
           {
             "id": "nasus",
             "name": "Nasus",
-            "winRate": 53.48
+            "winRate": 53.46
+          },
+          {
+            "id": "quinn",
+            "name": "Quinn",
+            "winRate": 52.41
           }
         ],
         "strugglesInto": [
           {
+            "id": "heimerdinger",
+            "name": "Heimerdinger",
+            "winRate": 44.84
+          },
+          {
+            "id": "sett",
+            "name": "Sett",
+            "winRate": 45.54
+          },
+          {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 45.28
-          },
-          {
-            "id": "shen",
-            "name": "Shen",
-            "winRate": 45.47
-          },
-          {
-            "id": "singed",
-            "name": "Singed",
-            "winRate": 45.79
+            "winRate": 45.56
           }
         ]
       }
@@ -4263,34 +4263,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.73
+            "winRate": 56.91
           },
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 54.08
+            "winRate": 54.07
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 53.72
+            "winRate": 53.19
           }
         ],
         "strugglesInto": [
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 43.09
+            "winRate": 44.14
           },
           {
             "id": "annie",
             "name": "Annie",
-            "winRate": 45.02
+            "winRate": 46.03
           },
           {
             "id": "hwei",
             "name": "Hwei",
-            "winRate": 45.95
+            "winRate": 46.13
           }
         ]
       }
@@ -4301,34 +4301,34 @@
           {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 56.36
+            "winRate": 56.42
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 56.19
+            "winRate": 56.25
           },
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 55.38
+            "winRate": 54.97
           }
         ],
         "strugglesInto": [
           {
             "id": "xayah",
             "name": "Xayah",
-            "winRate": 47.57
+            "winRate": 47.38
           },
           {
             "id": "jinx",
             "name": "Jinx",
-            "winRate": 48.28
+            "winRate": 48.46
           },
           {
-            "id": "nilah",
-            "name": "Nilah",
-            "winRate": 49.14
+            "id": "smolder",
+            "name": "Smolder",
+            "winRate": 49.36
           }
         ]
       }
@@ -4339,34 +4339,34 @@
           {
             "id": "karthus",
             "name": "Karthus",
-            "winRate": 60.68
+            "winRate": 58.3
           },
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 58.62
+            "winRate": 57.87
           },
           {
-            "id": "fiddlesticks",
-            "name": "Fiddlesticks",
-            "winRate": 56.54
+            "id": "jayce",
+            "name": "Jayce",
+            "winRate": 57.49
           }
         ],
         "strugglesInto": [
           {
-            "id": "ivern",
-            "name": "Ivern",
-            "winRate": 45.45
-          },
-          {
             "id": "reksai",
             "name": "Rek'Sai",
-            "winRate": 47.6
+            "winRate": 46.47
+          },
+          {
+            "id": "ivern",
+            "name": "Ivern",
+            "winRate": 46.56
           },
           {
             "id": "lillia",
             "name": "Lillia",
-            "winRate": 48.7
+            "winRate": 48.15
           }
         ]
       }
@@ -4377,34 +4377,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 57.97
-          },
-          {
-            "id": "brand",
-            "name": "Brand",
-            "winRate": 56.85
+            "winRate": 57.93
           },
           {
             "id": "alistar",
             "name": "Alistar",
-            "winRate": 56.15
+            "winRate": 56.41
+          },
+          {
+            "id": "neeko",
+            "name": "Neeko",
+            "winRate": 56.29
           }
         ],
         "strugglesInto": [
           {
             "id": "pyke",
             "name": "Pyke",
-            "winRate": 49.9
-          },
-          {
-            "id": "zilean",
-            "name": "Zilean",
-            "winRate": 50.73
+            "winRate": 49.87
           },
           {
             "id": "blitzcrank",
             "name": "Blitzcrank",
-            "winRate": 50.76
+            "winRate": 50.79
+          },
+          {
+            "id": "zilean",
+            "name": "Zilean",
+            "winRate": 50.81
           }
         ]
       }
@@ -4415,34 +4415,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 56.58
+            "winRate": 56.77
           },
           {
             "id": "renata",
             "name": "Renata Glasc",
-            "winRate": 56.21
+            "winRate": 56.7
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 55.46
+            "winRate": 55.89
           }
         ],
         "strugglesInto": [
           {
             "id": "zilean",
             "name": "Zilean",
-            "winRate": 49.54
+            "winRate": 49.35
           },
           {
             "id": "milio",
             "name": "Milio",
-            "winRate": 50.13
+            "winRate": 50.19
           },
           {
-            "id": "pyke",
-            "name": "Pyke",
-            "winRate": 50.37
+            "id": "sona",
+            "name": "Sona",
+            "winRate": 50.25
           }
         ]
       }
@@ -4453,34 +4453,34 @@
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 58.39
+            "winRate": 58.58
           },
           {
             "id": "irelia",
             "name": "Irelia",
-            "winRate": 57.34
+            "winRate": 57.23
           },
           {
             "id": "chogath",
             "name": "Cho'Gath",
-            "winRate": 56.69
+            "winRate": 56.29
           }
         ],
         "strugglesInto": [
           {
             "id": "kayle",
             "name": "Kayle",
-            "winRate": 46.28
+            "winRate": 46.71
           },
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 47.84
+            "winRate": 48.12
           },
           {
             "id": "gragas",
             "name": "Gragas",
-            "winRate": 47.91
+            "winRate": 48.34
           }
         ]
       }
@@ -4491,34 +4491,34 @@
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 56.83
+            "winRate": 57.54
+          },
+          {
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 57.04
           },
           {
             "id": "masteryi",
             "name": "Master Yi",
-            "winRate": 56.11
-          },
-          {
-            "id": "amumu",
-            "name": "Amumu",
-            "winRate": 55.44
+            "winRate": 56.02
           }
         ],
         "strugglesInto": [
           {
             "id": "talon",
             "name": "Talon",
-            "winRate": 48.55
-          },
-          {
-            "id": "nidalee",
-            "name": "Nidalee",
-            "winRate": 49.15
+            "winRate": 48.75
           },
           {
             "id": "karthus",
             "name": "Karthus",
-            "winRate": 49.24
+            "winRate": 49.23
+          },
+          {
+            "id": "hecarim",
+            "name": "Hecarim",
+            "winRate": 49.51
           }
         ]
       }
@@ -4529,34 +4529,34 @@
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 58.69
+            "winRate": 58.6
           },
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 57.87
+            "winRate": 57.73
           },
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 57.37
+            "winRate": 57.06
           }
         ],
         "strugglesInto": [
           {
             "id": "quinn",
             "name": "Quinn",
-            "winRate": 46.35
+            "winRate": 44.47
           },
           {
             "id": "mordekaiser",
             "name": "Mordekaiser",
-            "winRate": 47.7
+            "winRate": 47.88
           },
           {
-            "id": "singed",
-            "name": "Singed",
-            "winRate": 49.09
+            "id": "sett",
+            "name": "Sett",
+            "winRate": 49.27
           }
         ]
       }
@@ -4567,34 +4567,34 @@
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 60.64
+            "winRate": 58.13
           },
           {
-            "id": "diana",
-            "name": "Diana",
-            "winRate": 57.32
+            "id": "karthus",
+            "name": "Karthus",
+            "winRate": 57.95
           },
           {
             "id": "zac",
             "name": "Zac",
-            "winRate": 56.85
+            "winRate": 57.1
           }
         ],
         "strugglesInto": [
           {
+            "id": "udyr",
+            "name": "Udyr",
+            "winRate": 49.11
+          },
+          {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 48.5
+            "winRate": 49.21
           },
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 49.58
-          },
-          {
-            "id": "talon",
-            "name": "Talon",
-            "winRate": 49.89
+            "winRate": 49.91
           }
         ]
       }
@@ -4605,34 +4605,34 @@
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 61.71
+            "winRate": 60.03
           },
           {
             "id": "jax",
             "name": "Jax",
-            "winRate": 59.1
+            "winRate": 58.63
           },
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 58.5
+            "winRate": 58.17
           }
         ],
         "strugglesInto": [
           {
             "id": "gangplank",
             "name": "Gangplank",
-            "winRate": 47.26
+            "winRate": 47.17
           },
           {
-            "id": "quinn",
-            "name": "Quinn",
-            "winRate": 47.39
+            "id": "olaf",
+            "name": "Olaf",
+            "winRate": 47.64
           },
           {
             "id": "urgot",
             "name": "Urgot",
-            "winRate": 48.12
+            "winRate": 48.17
           }
         ]
       }
@@ -4646,31 +4646,31 @@
             "winRate": 57.91
           },
           {
-            "id": "rumble",
-            "name": "Rumble",
-            "winRate": 55.9
-          },
-          {
             "id": "teemo",
             "name": "Teemo",
-            "winRate": 55.73
+            "winRate": 55.93
+          },
+          {
+            "id": "rumble",
+            "name": "Rumble",
+            "winRate": 55.77
           }
         ],
         "strugglesInto": [
           {
             "id": "zaahen",
             "name": "Zaahen",
-            "winRate": 46.03
-          },
-          {
-            "id": "irelia",
-            "name": "Irelia",
-            "winRate": 46.82
+            "winRate": 45.96
           },
           {
             "id": "riven",
             "name": "Riven",
-            "winRate": 47.06
+            "winRate": 46.69
+          },
+          {
+            "id": "irelia",
+            "name": "Irelia",
+            "winRate": 46.95
           }
         ]
       }
@@ -4681,34 +4681,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 58.08
+            "winRate": 58.13
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 55.8
+            "winRate": 55.55
           },
           {
             "id": "caitlyn",
             "name": "Caitlyn",
-            "winRate": 53.83
+            "winRate": 53.63
           }
         ],
         "strugglesInto": [
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 45.67
+            "winRate": 45.42
           },
           {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 47.39
+            "winRate": 47.63
           },
           {
-            "id": "vayne",
-            "name": "Vayne",
-            "winRate": 48.64
+            "id": "zeri",
+            "name": "Zeri",
+            "winRate": 48.4
           }
         ]
       }
@@ -4719,34 +4719,34 @@
           {
             "id": "karthus",
             "name": "Karthus",
-            "winRate": 62.42
+            "winRate": 62.65
           },
           {
             "id": "evelynn",
             "name": "Evelynn",
-            "winRate": 55.12
+            "winRate": 54.01
           },
           {
-            "id": "leesin",
-            "name": "Lee Sin",
-            "winRate": 53.84
+            "id": "amumu",
+            "name": "Amumu",
+            "winRate": 53.89
           }
         ],
         "strugglesInto": [
           {
             "id": "lillia",
             "name": "Lillia",
-            "winRate": 41.76
+            "winRate": 41.48
           },
           {
             "id": "fiddlesticks",
             "name": "Fiddlesticks",
-            "winRate": 41.82
+            "winRate": 42.26
           },
           {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 43.84
+            "winRate": 44.61
           }
         ]
       }
@@ -4757,34 +4757,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 57.34
+            "winRate": 57.35
           },
           {
             "id": "vayne",
             "name": "Vayne",
-            "winRate": 56.17
+            "winRate": 56.03
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 55.72
+            "winRate": 55.61
           }
         ],
         "strugglesInto": [
           {
             "id": "twitch",
             "name": "Twitch",
-            "winRate": 50.61
+            "winRate": 50.04
           },
           {
-            "id": "corki",
-            "name": "Corki",
-            "winRate": 50.74
+            "id": "jinx",
+            "name": "Jinx",
+            "winRate": 51.19
           },
           {
-            "id": "aphelios",
-            "name": "Aphelios",
-            "winRate": 50.89
+            "id": "zeri",
+            "name": "Zeri",
+            "winRate": 51.57
           }
         ]
       }
@@ -4795,34 +4795,34 @@
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 57.8
+            "winRate": 58.02
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 57.5
+            "winRate": 57.61
           },
           {
-            "id": "renata",
-            "name": "Renata Glasc",
-            "winRate": 57.33
+            "id": "lux",
+            "name": "Lux",
+            "winRate": 56.91
           }
         ],
         "strugglesInto": [
           {
-            "id": "senna",
-            "name": "Senna",
-            "winRate": 49.19
-          },
-          {
             "id": "blitzcrank",
             "name": "Blitzcrank",
-            "winRate": 49.49
+            "winRate": 49.02
+          },
+          {
+            "id": "senna",
+            "name": "Senna",
+            "winRate": 49.61
           },
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 50.15
+            "winRate": 49.81
           }
         ]
       }
@@ -4833,34 +4833,34 @@
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 59.08
+            "winRate": 58.61
           },
           {
-            "id": "poppy",
-            "name": "Poppy",
-            "winRate": 56.96
+            "id": "renata",
+            "name": "Renata Glasc",
+            "winRate": 56.36
           },
           {
             "id": "tahmkench",
             "name": "Tahm Kench",
-            "winRate": 55.98
+            "winRate": 55.81
           }
         ],
         "strugglesInto": [
           {
             "id": "sona",
             "name": "Sona",
-            "winRate": 49.02
+            "winRate": 49.17
           },
           {
             "id": "nami",
             "name": "Nami",
-            "winRate": 49.14
+            "winRate": 49.21
           },
           {
             "id": "blitzcrank",
             "name": "Blitzcrank",
-            "winRate": 50.03
+            "winRate": 49.78
           }
         ]
       }
@@ -4871,34 +4871,34 @@
           {
             "id": "tahmkench",
             "name": "Tahm Kench",
-            "winRate": 54.29
+            "winRate": 53.99
           },
           {
             "id": "nautilus",
             "name": "Nautilus",
-            "winRate": 53.87
+            "winRate": 53.78
           },
           {
             "id": "maokai",
             "name": "Maokai",
-            "winRate": 53.78
+            "winRate": 53.62
           }
         ],
         "strugglesInto": [
           {
             "id": "renata",
             "name": "Renata Glasc",
-            "winRate": 42.74
-          },
-          {
-            "id": "soraka",
-            "name": "Soraka",
-            "winRate": 45.29
+            "winRate": 45.02
           },
           {
             "id": "lulu",
             "name": "Lulu",
-            "winRate": 45.72
+            "winRate": 45.32
+          },
+          {
+            "id": "soraka",
+            "name": "Soraka",
+            "winRate": 46.01
           }
         ]
       }
@@ -4909,34 +4909,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.5
-          },
-          {
-            "id": "azir",
-            "name": "Azir",
-            "winRate": 56.25
+            "winRate": 57.61
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 56.14
+            "winRate": 56.26
+          },
+          {
+            "id": "azir",
+            "name": "Azir",
+            "winRate": 56.01
           }
         ],
         "strugglesInto": [
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 47.6
+            "winRate": 48.65
           },
           {
             "id": "galio",
             "name": "Galio",
-            "winRate": 49.01
+            "winRate": 49.33
           },
           {
             "id": "vex",
             "name": "Vex",
-            "winRate": 49.06
+            "winRate": 49.36
           }
         ]
       }
@@ -4947,34 +4947,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 61.24
+            "winRate": 61
+          },
+          {
+            "id": "ryze",
+            "name": "Ryze",
+            "winRate": 56.59
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 56.71
-          },
-          {
-            "id": "yone",
-            "name": "Yone",
-            "winRate": 56.64
+            "winRate": 56.44
           }
         ],
         "strugglesInto": [
           {
             "id": "fizz",
             "name": "Fizz",
-            "winRate": 47.26
+            "winRate": 47.11
           },
           {
             "id": "katarina",
             "name": "Katarina",
-            "winRate": 48.79
+            "winRate": 48.88
           },
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 49.41
+            "winRate": 49.04
           }
         ]
       }
@@ -4985,34 +4985,34 @@
           {
             "id": "lux",
             "name": "Lux",
-            "winRate": 56.18
+            "winRate": 56.88
           },
           {
             "id": "pantheon",
             "name": "Pantheon",
-            "winRate": 55.96
+            "winRate": 56.51
           },
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 55.76
+            "winRate": 55.4
           }
         ],
         "strugglesInto": [
           {
             "id": "renata",
             "name": "Renata Glasc",
-            "winRate": 46.09
-          },
-          {
-            "id": "taric",
-            "name": "Taric",
-            "winRate": 47.72
+            "winRate": 47.19
           },
           {
             "id": "rell",
             "name": "Rell",
-            "winRate": 47.74
+            "winRate": 48
+          },
+          {
+            "id": "soraka",
+            "name": "Soraka",
+            "winRate": 48.69
           }
         ]
       }
@@ -5023,34 +5023,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.71
+            "winRate": 57.29
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 57.28
+            "winRate": 56.86
           },
           {
-            "id": "azir",
-            "name": "Azir",
-            "winRate": 56.8
+            "id": "ryze",
+            "name": "Ryze",
+            "winRate": 56.41
           }
         ],
         "strugglesInto": [
           {
             "id": "katarina",
             "name": "Katarina",
-            "winRate": 42.49
+            "winRate": 41.78
           },
           {
             "id": "zed",
             "name": "Zed",
-            "winRate": 42.84
+            "winRate": 43.29
           },
           {
-            "id": "xerath",
-            "name": "Xerath",
-            "winRate": 44.1
+            "id": "annie",
+            "name": "Annie",
+            "winRate": 44.48
           }
         ]
       }
@@ -5061,34 +5061,34 @@
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 55.27
+            "winRate": 55.42
           },
           {
             "id": "shaco",
             "name": "Shaco",
-            "winRate": 55.23
+            "winRate": 55.07
           },
           {
             "id": "zac",
             "name": "Zac",
-            "winRate": 55.05
+            "winRate": 54.45
           }
         ],
         "strugglesInto": [
           {
-            "id": "fiddlesticks",
-            "name": "Fiddlesticks",
-            "winRate": 48.43
+            "id": "sejuani",
+            "name": "Sejuani",
+            "winRate": 48.48
           },
           {
-            "id": "rammus",
-            "name": "Rammus",
-            "winRate": 48.55
+            "id": "reksai",
+            "name": "Rek'Sai",
+            "winRate": 49.19
           },
           {
-            "id": "rengar",
-            "name": "Rengar",
-            "winRate": 49.04
+            "id": "warwick",
+            "name": "Warwick",
+            "winRate": 49.26
           }
         ]
       }
@@ -5097,36 +5097,36 @@
       "UTILITY": {
         "strongInto": [
           {
-            "id": "pantheon",
-            "name": "Pantheon",
-            "winRate": 61.32
-          },
-          {
             "id": "maokai",
             "name": "Maokai",
-            "winRate": 60
+            "winRate": 60.21
           },
           {
-            "id": "brand",
-            "name": "Brand",
-            "winRate": 58.86
+            "id": "pantheon",
+            "name": "Pantheon",
+            "winRate": 59.49
+          },
+          {
+            "id": "zyra",
+            "name": "Zyra",
+            "winRate": 59.32
           }
         ],
         "strugglesInto": [
           {
-            "id": "poppy",
-            "name": "Poppy",
-            "winRate": 47.21
-          },
-          {
             "id": "janna",
             "name": "Janna",
-            "winRate": 48.38
+            "winRate": 49.02
+          },
+          {
+            "id": "poppy",
+            "name": "Poppy",
+            "winRate": 49.67
           },
           {
             "id": "sona",
             "name": "Sona",
-            "winRate": 50.11
+            "winRate": 50
           }
         ]
       }
@@ -5137,34 +5137,34 @@
           {
             "id": "trundle",
             "name": "Trundle",
-            "winRate": 60.4
+            "winRate": 57.86
           },
           {
             "id": "tryndamere",
             "name": "Tryndamere",
-            "winRate": 58.06
+            "winRate": 57.64
           },
           {
             "id": "illaoi",
             "name": "Illaoi",
-            "winRate": 57.5
+            "winRate": 57.52
           }
         ],
         "strugglesInto": [
           {
             "id": "olaf",
             "name": "Olaf",
-            "winRate": 47.03
+            "winRate": 46.66
           },
           {
             "id": "ornn",
             "name": "Ornn",
-            "winRate": 48.06
+            "winRate": 48.11
           },
           {
             "id": "sion",
             "name": "Sion",
-            "winRate": 48.35
+            "winRate": 48.62
           }
         ]
       }
@@ -5175,34 +5175,34 @@
           {
             "id": "yuumi",
             "name": "Yuumi",
-            "winRate": 55.95
+            "winRate": 56.21
           },
           {
-            "id": "bard",
-            "name": "Bard",
-            "winRate": 54.74
+            "id": "karma",
+            "name": "Karma",
+            "winRate": 54.62
           },
           {
-            "id": "swain",
-            "name": "Swain",
-            "winRate": 54.69
+            "id": "lulu",
+            "name": "Lulu",
+            "winRate": 54.56
           }
         ],
         "strugglesInto": [
           {
             "id": "braum",
             "name": "Braum",
-            "winRate": 50.56
+            "winRate": 50.59
           },
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 50.82
+            "winRate": 50.8
           },
           {
-            "id": "zilean",
-            "name": "Zilean",
-            "winRate": 51.04
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 51.06
           }
         ]
       }
@@ -5213,34 +5213,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 56.64
+            "winRate": 57.67
           },
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 55.91
+            "winRate": 56.23
           },
           {
-            "id": "yunara",
-            "name": "Yunara",
-            "winRate": 54.98
+            "id": "kalista",
+            "name": "Kalista",
+            "winRate": 55.64
           }
         ],
         "strugglesInto": [
           {
-            "id": "ziggs",
-            "name": "Ziggs",
-            "winRate": 50.19
-          },
-          {
             "id": "kogmaw",
             "name": "Kog'Maw",
-            "winRate": 50.3
+            "winRate": 50.07
+          },
+          {
+            "id": "ziggs",
+            "name": "Ziggs",
+            "winRate": 50.24
           },
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 50.62
+            "winRate": 50.58
           }
         ]
       }
@@ -5251,34 +5251,34 @@
           {
             "id": "ksante",
             "name": "K'Sante",
-            "winRate": 55
+            "winRate": 55.72
           },
           {
-            "id": "olaf",
-            "name": "Olaf",
-            "winRate": 54.89
+            "id": "sion",
+            "name": "Sion",
+            "winRate": 55.09
           },
           {
             "id": "ambessa",
             "name": "Ambessa",
-            "winRate": 54.43
+            "winRate": 54.95
           }
         ],
         "strugglesInto": [
           {
-            "id": "teemo",
-            "name": "Teemo",
-            "winRate": 43.58
-          },
-          {
-            "id": "heimerdinger",
-            "name": "Heimerdinger",
-            "winRate": 45.56
-          },
-          {
             "id": "kennen",
             "name": "Kennen",
-            "winRate": 45.89
+            "winRate": 43.27
+          },
+          {
+            "id": "quinn",
+            "name": "Quinn",
+            "winRate": 45.79
+          },
+          {
+            "id": "mordekaiser",
+            "name": "Mordekaiser",
+            "winRate": 46.03
           }
         ]
       }
@@ -5289,34 +5289,34 @@
           {
             "id": "yorick",
             "name": "Yorick",
-            "winRate": 57
+            "winRate": 56.94
           },
           {
             "id": "garen",
             "name": "Garen",
-            "winRate": 56.96
+            "winRate": 56.53
           },
           {
-            "id": "olaf",
-            "name": "Olaf",
-            "winRate": 56.21
+            "id": "irelia",
+            "name": "Irelia",
+            "winRate": 56.46
           }
         ],
         "strugglesInto": [
           {
             "id": "malphite",
             "name": "Malphite",
-            "winRate": 45.66
+            "winRate": 45.9
+          },
+          {
+            "id": "urgot",
+            "name": "Urgot",
+            "winRate": 47.23
           },
           {
             "id": "quinn",
             "name": "Quinn",
-            "winRate": 46.47
-          },
-          {
-            "id": "teemo",
-            "name": "Teemo",
-            "winRate": 47.09
+            "winRate": 47.29
           }
         ]
       }
@@ -5327,34 +5327,34 @@
           {
             "id": "akali",
             "name": "Akali",
-            "winRate": 57.69
-          },
-          {
-            "id": "azir",
-            "name": "Azir",
-            "winRate": 56.95
+            "winRate": 57.34
           },
           {
             "id": "ryze",
             "name": "Ryze",
-            "winRate": 56.74
+            "winRate": 57.12
+          },
+          {
+            "id": "azir",
+            "name": "Azir",
+            "winRate": 57.1
           }
         ],
         "strugglesInto": [
           {
-            "id": "annie",
-            "name": "Annie",
-            "winRate": 49.71
+            "id": "ahri",
+            "name": "Ahri",
+            "winRate": 50.01
           },
           {
-            "id": "fizz",
-            "name": "Fizz",
-            "winRate": 50.34
+            "id": "annie",
+            "name": "Annie",
+            "winRate": 50.04
           },
           {
             "id": "katarina",
             "name": "Katarina",
-            "winRate": 50.35
+            "winRate": 50.42
           }
         ]
       }
@@ -5365,34 +5365,34 @@
           {
             "id": "sivir",
             "name": "Sivir",
-            "winRate": 57.14
+            "winRate": 57.5
           },
           {
             "id": "kalista",
             "name": "Kalista",
-            "winRate": 56.78
+            "winRate": 57.19
           },
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 56.55
+            "winRate": 56.75
           }
         ],
         "strugglesInto": [
           {
             "id": "nilah",
             "name": "Nilah",
-            "winRate": 44.55
+            "winRate": 44.85
           },
           {
             "id": "xayah",
             "name": "Xayah",
-            "winRate": 49.35
+            "winRate": 49.15
           },
           {
-            "id": "kogmaw",
-            "name": "Kog'Maw",
-            "winRate": 50.68
+            "id": "samira",
+            "name": "Samira",
+            "winRate": 50.7
           }
         ]
       }
@@ -5403,34 +5403,34 @@
           {
             "id": "karthus",
             "name": "Karthus",
-            "winRate": 58.68
-          },
-          {
-            "id": "skarner",
-            "name": "Skarner",
             "winRate": 58.08
           },
           {
             "id": "vi",
             "name": "Vi",
-            "winRate": 57.58
+            "winRate": 57.84
+          },
+          {
+            "id": "skarner",
+            "name": "Skarner",
+            "winRate": 57.27
           }
         ],
         "strugglesInto": [
           {
-            "id": "warwick",
-            "name": "Warwick",
-            "winRate": 49.85
+            "id": "ivern",
+            "name": "Ivern",
+            "winRate": 49.06
           },
           {
-            "id": "zac",
-            "name": "Zac",
-            "winRate": 50.15
+            "id": "warwick",
+            "name": "Warwick",
+            "winRate": 49.07
           },
           {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 50.35
+            "winRate": 49.3
           }
         ]
       }
@@ -5441,34 +5441,34 @@
           {
             "id": "rumble",
             "name": "Rumble",
-            "winRate": 55.97
+            "winRate": 56.96
           },
           {
             "id": "nasus",
             "name": "Nasus",
-            "winRate": 55.66
+            "winRate": 56.06
           },
           {
-            "id": "riven",
-            "name": "Riven",
-            "winRate": 55.26
+            "id": "ksante",
+            "name": "K'Sante",
+            "winRate": 55.68
           }
         ],
         "strugglesInto": [
           {
             "id": "kayle",
             "name": "Kayle",
-            "winRate": 47.88
+            "winRate": 47.97
+          },
+          {
+            "id": "quinn",
+            "name": "Quinn",
+            "winRate": 48.62
           },
           {
             "id": "shen",
             "name": "Shen",
-            "winRate": 48.21
-          },
-          {
-            "id": "mordekaiser",
-            "name": "Mordekaiser",
-            "winRate": 49.38
+            "winRate": 48.62
           }
         ]
       }
@@ -5477,36 +5477,36 @@
       "BOTTOM": {
         "strongInto": [
           {
-            "id": "corki",
-            "name": "Corki",
-            "winRate": 51.3
-          },
-          {
             "id": "kaisa",
             "name": "Kai'Sa",
-            "winRate": 50.89
+            "winRate": 51.39
           },
           {
-            "id": "yunara",
-            "name": "Yunara",
-            "winRate": 50.49
+            "id": "corki",
+            "name": "Corki",
+            "winRate": 51.17
+          },
+          {
+            "id": "aphelios",
+            "name": "Aphelios",
+            "winRate": 50.3
           }
         ],
         "strugglesInto": [
           {
             "id": "sivir",
             "name": "Sivir",
-            "winRate": 45.33
-          },
-          {
-            "id": "nilah",
-            "name": "Nilah",
-            "winRate": 45.88
+            "winRate": 44.84
           },
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 46.18
+            "winRate": 45.5
+          },
+          {
+            "id": "tristana",
+            "name": "Tristana",
+            "winRate": 45.84
           }
         ]
       }
@@ -5515,36 +5515,36 @@
       "BOTTOM": {
         "strongInto": [
           {
-            "id": "varus",
-            "name": "Varus",
-            "winRate": 56.58
-          },
-          {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 56
+            "winRate": 56.42
+          },
+          {
+            "id": "varus",
+            "name": "Varus",
+            "winRate": 55.89
           },
           {
             "id": "sivir",
             "name": "Sivir",
-            "winRate": 54.91
+            "winRate": 54.95
           }
         ],
         "strugglesInto": [
           {
             "id": "aphelios",
             "name": "Aphelios",
-            "winRate": 48.66
+            "winRate": 48.47
           },
           {
             "id": "smolder",
             "name": "Smolder",
-            "winRate": 49.05
+            "winRate": 48.79
           },
           {
             "id": "tristana",
             "name": "Tristana",
-            "winRate": 50.15
+            "winRate": 49.66
           }
         ]
       }
@@ -5555,34 +5555,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 58.95
+            "winRate": 59.27
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 57.55
+            "winRate": 57.69
           },
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 56.95
+            "winRate": 57.64
           }
         ],
         "strugglesInto": [
           {
             "id": "zoe",
             "name": "Zoe",
-            "winRate": 47.42
+            "winRate": 47.92
           },
           {
             "id": "zed",
             "name": "Zed",
-            "winRate": 48.78
+            "winRate": 48.55
           },
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 49.38
+            "winRate": 48.97
           }
         ]
       }
@@ -5591,36 +5591,36 @@
       "UTILITY": {
         "strongInto": [
           {
-            "id": "brand",
-            "name": "Brand",
-            "winRate": 58.23
-          },
-          {
             "id": "renata",
             "name": "Renata Glasc",
-            "winRate": 57.89
+            "winRate": 58.02
+          },
+          {
+            "id": "brand",
+            "name": "Brand",
+            "winRate": 57.93
           },
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 57.67
+            "winRate": 57.47
           }
         ],
         "strugglesInto": [
           {
             "id": "sona",
             "name": "Sona",
-            "winRate": 47.91
+            "winRate": 47.86
           },
           {
-            "id": "poppy",
-            "name": "Poppy",
-            "winRate": 48.63
+            "id": "taric",
+            "name": "Taric",
+            "winRate": 49.13
           },
           {
             "id": "pyke",
             "name": "Pyke",
-            "winRate": 48.65
+            "winRate": 49.22
           }
         ]
       }
@@ -5629,36 +5629,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "yone",
-            "name": "Yone",
-            "winRate": 59.07
-          },
-          {
             "id": "azir",
             "name": "Azir",
-            "winRate": 57.75
+            "winRate": 59.43
+          },
+          {
+            "id": "yone",
+            "name": "Yone",
+            "winRate": 58.95
           },
           {
             "id": "leblanc",
             "name": "LeBlanc",
-            "winRate": 56.74
+            "winRate": 57.09
           }
         ],
         "strugglesInto": [
           {
             "id": "vladimir",
             "name": "Vladimir",
-            "winRate": 47.06
-          },
-          {
-            "id": "taliyah",
-            "name": "Taliyah",
-            "winRate": 48.4
+            "winRate": 46.66
           },
           {
             "id": "veigar",
             "name": "Veigar",
-            "winRate": 48.44
+            "winRate": 47.8
+          },
+          {
+            "id": "hwei",
+            "name": "Hwei",
+            "winRate": 48.45
           }
         ]
       }
@@ -5669,34 +5669,34 @@
           {
             "id": "jayce",
             "name": "Jayce",
-            "winRate": 56.26
+            "winRate": 56.53
           },
           {
             "id": "gwen",
             "name": "Gwen",
-            "winRate": 55.32
+            "winRate": 54.77
           },
           {
-            "id": "karthus",
-            "name": "Karthus",
-            "winRate": 53.98
+            "id": "rammus",
+            "name": "Rammus",
+            "winRate": 54.45
           }
         ],
         "strugglesInto": [
           {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 47.44
+            "winRate": 46.59
           },
           {
             "id": "volibear",
             "name": "Volibear",
-            "winRate": 48.48
+            "winRate": 48.36
           },
           {
-            "id": "shyvana",
-            "name": "Shyvana",
-            "winRate": 48.94
+            "id": "wukong",
+            "name": "Wukong",
+            "winRate": 49.31
           }
         ]
       }
@@ -5707,34 +5707,34 @@
           {
             "id": "skarner",
             "name": "Skarner",
-            "winRate": 56.25
+            "winRate": 56.34
           },
           {
             "id": "diana",
             "name": "Diana",
-            "winRate": 54.52
+            "winRate": 54.61
           },
           {
-            "id": "vi",
-            "name": "Vi",
-            "winRate": 53.49
+            "id": "lillia",
+            "name": "Lillia",
+            "winRate": 53.25
           }
         ],
         "strugglesInto": [
           {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 48.41
-          },
-          {
-            "id": "nidalee",
-            "name": "Nidalee",
-            "winRate": 48.63
+            "winRate": 48.89
           },
           {
             "id": "evelynn",
             "name": "Evelynn",
-            "winRate": 48.9
+            "winRate": 49.04
+          },
+          {
+            "id": "belveth",
+            "name": "Bel'Veth",
+            "winRate": 49.27
           }
         ]
       }
@@ -5745,34 +5745,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 59.64
+            "winRate": 59.51
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 56.56
+            "winRate": 56.41
           },
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 55.77
+            "winRate": 55.93
           }
         ],
         "strugglesInto": [
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 47.77
-          },
-          {
-            "id": "zoe",
-            "name": "Zoe",
-            "winRate": 49.94
+            "winRate": 47.88
           },
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 50.07
+            "winRate": 49.94
+          },
+          {
+            "id": "zoe",
+            "name": "Zoe",
+            "winRate": 49.95
           }
         ]
       }
@@ -5783,34 +5783,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 59.34
+            "winRate": 59.7
           },
           {
             "id": "katarina",
             "name": "Katarina",
-            "winRate": 57.92
+            "winRate": 57.97
           },
           {
             "id": "yasuo",
             "name": "Yasuo",
-            "winRate": 57.71
+            "winRate": 57.53
           }
         ],
         "strugglesInto": [
           {
-            "id": "anivia",
-            "name": "Anivia",
-            "winRate": 48.28
-          },
-          {
             "id": "malzahar",
             "name": "Malzahar",
-            "winRate": 48.73
+            "winRate": 48.82
           },
           {
-            "id": "aurelionsol",
-            "name": "Aurelion Sol",
-            "winRate": 49.93
+            "id": "anivia",
+            "name": "Anivia",
+            "winRate": 49.48
+          },
+          {
+            "id": "aurora",
+            "name": "Aurora",
+            "winRate": 50.57
           }
         ]
       }
@@ -5819,36 +5819,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "warwick",
-            "name": "Warwick",
-            "winRate": 58.16
+            "id": "rammus",
+            "name": "Rammus",
+            "winRate": 57.43
           },
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 57.01
+            "winRate": 57.14
           },
           {
-            "id": "kindred",
-            "name": "Kindred",
-            "winRate": 56.82
+            "id": "skarner",
+            "name": "Skarner",
+            "winRate": 56.94
           }
         ],
         "strugglesInto": [
           {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 44.34
+            "winRate": 43.92
           },
           {
-            "id": "reksai",
-            "name": "Rek'Sai",
-            "winRate": 44.62
+            "id": "udyr",
+            "name": "Udyr",
+            "winRate": 46.88
           },
           {
-            "id": "jarvaniv",
-            "name": "Jarvan IV",
-            "winRate": 46.76
+            "id": "nunu",
+            "name": "Nunu & Willump",
+            "winRate": 46.96
           }
         ]
       }
@@ -5857,36 +5857,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "diana",
-            "name": "Diana",
-            "winRate": 58.75
-          },
-          {
             "id": "rengar",
             "name": "Rengar",
-            "winRate": 58.68
+            "winRate": 58.42
           },
           {
-            "id": "jayce",
-            "name": "Jayce",
-            "winRate": 57.36
+            "id": "diana",
+            "name": "Diana",
+            "winRate": 57.87
+          },
+          {
+            "id": "leesin",
+            "name": "Lee Sin",
+            "winRate": 56.61
           }
         ],
         "strugglesInto": [
           {
-            "id": "volibear",
-            "name": "Volibear",
-            "winRate": 49.6
-          },
-          {
             "id": "rammus",
             "name": "Rammus",
-            "winRate": 50.79
+            "winRate": 49.45
           },
           {
-            "id": "sejuani",
-            "name": "Sejuani",
-            "winRate": 51.65
+            "id": "volibear",
+            "name": "Volibear",
+            "winRate": 50.48
+          },
+          {
+            "id": "ekko",
+            "name": "Ekko",
+            "winRate": 51.74
           }
         ]
       }
@@ -5897,34 +5897,34 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 57.34
+            "winRate": 58.3
           },
           {
             "id": "samira",
             "name": "Samira",
-            "winRate": 57.02
+            "winRate": 56.75
           },
           {
-            "id": "kalista",
-            "name": "Kalista",
-            "winRate": 56.27
+            "id": "twitch",
+            "name": "Twitch",
+            "winRate": 56.28
           }
         ],
         "strugglesInto": [
           {
             "id": "smolder",
             "name": "Smolder",
-            "winRate": 49.16
+            "winRate": 49.11
           },
           {
             "id": "zeri",
             "name": "Zeri",
-            "winRate": 49.77
+            "winRate": 49.73
           },
           {
             "id": "ziggs",
             "name": "Ziggs",
-            "winRate": 50.78
+            "winRate": 50.49
           }
         ]
       }
@@ -5935,34 +5935,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 62.72
+            "winRate": 62.77
           },
           {
             "id": "azir",
             "name": "Azir",
-            "winRate": 59.49
+            "winRate": 59.28
           },
           {
             "id": "taliyah",
             "name": "Taliyah",
-            "winRate": 57.87
+            "winRate": 57.28
           }
         ],
         "strugglesInto": [
           {
-            "id": "naafiri",
-            "name": "Naafiri",
-            "winRate": 47.08
-          },
-          {
             "id": "fizz",
             "name": "Fizz",
-            "winRate": 47.79
+            "winRate": 47.8
+          },
+          {
+            "id": "naafiri",
+            "name": "Naafiri",
+            "winRate": 47.86
           },
           {
             "id": "katarina",
             "name": "Katarina",
-            "winRate": 49.95
+            "winRate": 49.88
           }
         ]
       }
@@ -5973,34 +5973,34 @@
           {
             "id": "amumu",
             "name": "Amumu",
-            "winRate": 55.92
-          },
-          {
-            "id": "sejuani",
-            "name": "Sejuani",
-            "winRate": 54.9
+            "winRate": 56
           },
           {
             "id": "rengar",
             "name": "Rengar",
-            "winRate": 54.85
+            "winRate": 54.91
+          },
+          {
+            "id": "fiddlesticks",
+            "name": "Fiddlesticks",
+            "winRate": 54.61
           }
         ],
         "strugglesInto": [
           {
             "id": "ivern",
             "name": "Ivern",
-            "winRate": 45.73
+            "winRate": 46.79
           },
           {
-            "id": "shyvana",
-            "name": "Shyvana",
-            "winRate": 47.51
+            "id": "belveth",
+            "name": "Bel'Veth",
+            "winRate": 48.2
           },
           {
-            "id": "udyr",
-            "name": "Udyr",
-            "winRate": 48.56
+            "id": "rammus",
+            "name": "Rammus",
+            "winRate": 48.4
           }
         ]
       }
@@ -6011,34 +6011,34 @@
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 58.47
+            "winRate": 58.92
           },
           {
             "id": "ryze",
             "name": "Ryze",
-            "winRate": 55.23
+            "winRate": 54.89
           },
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 53.98
+            "winRate": 54.35
           }
         ],
         "strugglesInto": [
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 45.34
-          },
-          {
-            "id": "vladimir",
-            "name": "Vladimir",
-            "winRate": 46.49
+            "winRate": 45.48
           },
           {
             "id": "lissandra",
             "name": "Lissandra",
-            "winRate": 46.5
+            "winRate": 46.25
+          },
+          {
+            "id": "vladimir",
+            "name": "Vladimir",
+            "winRate": 46.48
           }
         ]
       }
@@ -6049,34 +6049,34 @@
           {
             "id": "aurelionsol",
             "name": "Aurelion Sol",
-            "winRate": 58.84
-          },
-          {
-            "id": "naafiri",
-            "name": "Naafiri",
-            "winRate": 56.19
+            "winRate": 59.59
           },
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 55.98
+            "winRate": 56.1
+          },
+          {
+            "id": "naafiri",
+            "name": "Naafiri",
+            "winRate": 55.6
           }
         ],
         "strugglesInto": [
           {
             "id": "vex",
             "name": "Vex",
-            "winRate": 45
+            "winRate": 44.85
           },
           {
             "id": "annie",
             "name": "Annie",
-            "winRate": 45.58
+            "winRate": 45.73
           },
           {
             "id": "syndra",
             "name": "Syndra",
-            "winRate": 47.02
+            "winRate": 47.22
           }
         ]
       }
@@ -6087,34 +6087,34 @@
           {
             "id": "drmundo",
             "name": "Dr. Mundo",
-            "winRate": 57.88
-          },
-          {
-            "id": "ksante",
-            "name": "K'Sante",
-            "winRate": 57.3
+            "winRate": 57.7
           },
           {
             "id": "kennen",
             "name": "Kennen",
-            "winRate": 56.37
+            "winRate": 57.07
+          },
+          {
+            "id": "ksante",
+            "name": "K'Sante",
+            "winRate": 56.79
           }
         ],
         "strugglesInto": [
           {
             "id": "shen",
             "name": "Shen",
-            "winRate": 45.79
+            "winRate": 46.27
           },
           {
             "id": "tryndamere",
             "name": "Tryndamere",
-            "winRate": 47.73
+            "winRate": 47.83
           },
           {
-            "id": "renekton",
-            "name": "Renekton",
-            "winRate": 48.34
+            "id": "irelia",
+            "name": "Irelia",
+            "winRate": 48.59
           }
         ]
       }
@@ -6130,29 +6130,29 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 53.48
+            "winRate": 53.62
           },
           {
-            "id": "ezreal",
-            "name": "Ezreal",
-            "winRate": 53.42
+            "id": "sivir",
+            "name": "Sivir",
+            "winRate": 53.49
           }
         ],
         "strugglesInto": [
           {
-            "id": "kogmaw",
-            "name": "Kog'Maw",
-            "winRate": 48.13
+            "id": "nilah",
+            "name": "Nilah",
+            "winRate": 47.51
           },
           {
             "id": "tristana",
             "name": "Tristana",
-            "winRate": 48.22
+            "winRate": 47.83
           },
           {
-            "id": "nilah",
-            "name": "Nilah",
-            "winRate": 48.39
+            "id": "kogmaw",
+            "name": "Kog'Maw",
+            "winRate": 48.03
           }
         ]
       }
@@ -6161,36 +6161,36 @@
       "UTILITY": {
         "strongInto": [
           {
-            "id": "swain",
-            "name": "Swain",
-            "winRate": 55.68
-          },
-          {
             "id": "brand",
             "name": "Brand",
-            "winRate": 55.59
+            "winRate": 55.75
+          },
+          {
+            "id": "swain",
+            "name": "Swain",
+            "winRate": 55.56
           },
           {
             "id": "lux",
             "name": "Lux",
-            "winRate": 54.88
+            "winRate": 54.73
           }
         ],
         "strugglesInto": [
           {
             "id": "nautilus",
             "name": "Nautilus",
-            "winRate": 44.42
+            "winRate": 44.4
           },
           {
             "id": "braum",
             "name": "Braum",
-            "winRate": 45.2
+            "winRate": 44.94
           },
           {
-            "id": "alistar",
-            "name": "Alistar",
-            "winRate": 45.68
+            "id": "rell",
+            "name": "Rell",
+            "winRate": 45.67
           }
         ]
       }
@@ -6201,34 +6201,34 @@
           {
             "id": "sion",
             "name": "Sion",
-            "winRate": 57.22
+            "winRate": 57.33
           },
           {
             "id": "irelia",
             "name": "Irelia",
-            "winRate": 55.24
+            "winRate": 55.92
           },
           {
-            "id": "trundle",
-            "name": "Trundle",
-            "winRate": 54.56
+            "id": "riven",
+            "name": "Riven",
+            "winRate": 54.31
           }
         ],
         "strugglesInto": [
           {
             "id": "heimerdinger",
             "name": "Heimerdinger",
-            "winRate": 44.03
+            "winRate": 43.74
           },
           {
             "id": "singed",
             "name": "Singed",
-            "winRate": 45.58
+            "winRate": 45.9
           },
           {
             "id": "teemo",
             "name": "Teemo",
-            "winRate": 46.71
+            "winRate": 47.48
           }
         ]
       }
@@ -6237,36 +6237,36 @@
       "JUNGLE": {
         "strongInto": [
           {
-            "id": "evelynn",
-            "name": "Evelynn",
-            "winRate": 55.21
-          },
-          {
             "id": "udyr",
             "name": "Udyr",
-            "winRate": 55.16
+            "winRate": 55.53
           },
           {
-            "id": "rammus",
-            "name": "Rammus",
-            "winRate": 55.14
+            "id": "masteryi",
+            "name": "Master Yi",
+            "winRate": 54.94
+          },
+          {
+            "id": "evelynn",
+            "name": "Evelynn",
+            "winRate": 54.81
           }
         ],
         "strugglesInto": [
           {
             "id": "lillia",
             "name": "Lillia",
-            "winRate": 45.43
+            "winRate": 45.18
           },
           {
             "id": "belveth",
             "name": "Bel'Veth",
-            "winRate": 46.51
+            "winRate": 46.84
           },
           {
-            "id": "talon",
-            "name": "Talon",
-            "winRate": 46.77
+            "id": "shyvana",
+            "name": "Shyvana",
+            "winRate": 47.34
           }
         ]
       }
@@ -6277,34 +6277,34 @@
           {
             "id": "taliyah",
             "name": "Taliyah",
-            "winRate": 59.5
+            "winRate": 59.69
           },
           {
             "id": "mel",
             "name": "Mel",
-            "winRate": 57.15
+            "winRate": 57.89
           },
           {
-            "id": "aurelionsol",
-            "name": "Aurelion Sol",
-            "winRate": 56.32
+            "id": "veigar",
+            "name": "Veigar",
+            "winRate": 56.53
           }
         ],
         "strugglesInto": [
           {
             "id": "xerath",
             "name": "Xerath",
-            "winRate": 48.34
+            "winRate": 48.74
           },
           {
             "id": "sylas",
             "name": "Sylas",
-            "winRate": 49.07
+            "winRate": 49.21
           },
           {
             "id": "qiyana",
             "name": "Qiyana",
-            "winRate": 49.8
+            "winRate": 49.77
           }
         ]
       }
@@ -6315,34 +6315,34 @@
           {
             "id": "ezreal",
             "name": "Ezreal",
-            "winRate": 56.32
-          },
-          {
-            "id": "ziggs",
-            "name": "Ziggs",
-            "winRate": 55.74
+            "winRate": 56.37
           },
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 55.62
+            "winRate": 55.89
+          },
+          {
+            "id": "kaisa",
+            "name": "Kai'Sa",
+            "winRate": 55.47
           }
         ],
         "strugglesInto": [
           {
             "id": "kalista",
             "name": "Kalista",
-            "winRate": 49.18
+            "winRate": 48.77
           },
           {
-            "id": "tristana",
-            "name": "Tristana",
-            "winRate": 49.75
+            "id": "draven",
+            "name": "Draven",
+            "winRate": 49.4
           },
           {
             "id": "jinx",
             "name": "Jinx",
-            "winRate": 49.96
+            "winRate": 50.05
           }
         ]
       }
@@ -6353,12 +6353,12 @@
           {
             "id": "varus",
             "name": "Varus",
-            "winRate": 56.58
+            "winRate": 57.63
           },
           {
             "id": "caitlyn",
             "name": "Caitlyn",
-            "winRate": 56.46
+            "winRate": 56.25
           },
           {
             "id": "missfortune",
@@ -6370,17 +6370,17 @@
           {
             "id": "zeri",
             "name": "Zeri",
-            "winRate": 47.03
+            "winRate": 47.45
           },
           {
             "id": "vayne",
             "name": "Vayne",
-            "winRate": 49.17
+            "winRate": 49.13
           },
           {
             "id": "sivir",
             "name": "Sivir",
-            "winRate": 49.9
+            "winRate": 50.02
           }
         ]
       }
@@ -6391,34 +6391,34 @@
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 59.84
+            "winRate": 60.07
           },
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 57.26
+            "winRate": 57.28
           },
           {
             "id": "brand",
             "name": "Brand",
-            "winRate": 56.26
+            "winRate": 56.04
           }
         ],
         "strugglesInto": [
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 47.1
+            "winRate": 48.52
           },
           {
             "id": "janna",
             "name": "Janna",
-            "winRate": 49.97
+            "winRate": 49.55
           },
           {
             "id": "sona",
             "name": "Sona",
-            "winRate": 50.07
+            "winRate": 50
           }
         ]
       }
@@ -6427,36 +6427,36 @@
       "MIDDLE": {
         "strongInto": [
           {
-            "id": "azir",
-            "name": "Azir",
-            "winRate": 56.32
+            "id": "aurora",
+            "name": "Aurora",
+            "winRate": 56.59
+          },
+          {
+            "id": "qiyana",
+            "name": "Qiyana",
+            "winRate": 55.82
           },
           {
             "id": "orianna",
             "name": "Orianna",
-            "winRate": 56.28
-          },
-          {
-            "id": "veigar",
-            "name": "Veigar",
-            "winRate": 55.79
+            "winRate": 55.72
           }
         ],
         "strugglesInto": [
           {
             "id": "malzahar",
             "name": "Malzahar",
-            "winRate": 47.54
-          },
-          {
-            "id": "fizz",
-            "name": "Fizz",
-            "winRate": 48.15
+            "winRate": 47.39
           },
           {
             "id": "naafiri",
             "name": "Naafiri",
-            "winRate": 48.15
+            "winRate": 48.29
+          },
+          {
+            "id": "fizz",
+            "name": "Fizz",
+            "winRate": 49.1
           }
         ]
       }
@@ -6467,34 +6467,34 @@
           {
             "id": "renata",
             "name": "Renata Glasc",
-            "winRate": 59.19
+            "winRate": 59.52
           },
           {
             "id": "neeko",
             "name": "Neeko",
-            "winRate": 57.4
+            "winRate": 56.65
           },
           {
             "id": "swain",
             "name": "Swain",
-            "winRate": 56.9
+            "winRate": 56.4
           }
         ],
         "strugglesInto": [
           {
             "id": "taric",
             "name": "Taric",
-            "winRate": 46.04
+            "winRate": 44.91
           },
           {
             "id": "poppy",
             "name": "Poppy",
-            "winRate": 46.25
+            "winRate": 46.71
           },
           {
-            "id": "zilean",
-            "name": "Zilean",
-            "winRate": 47.82
+            "id": "maokai",
+            "name": "Maokai",
+            "winRate": 48.12
           }
         ]
       }
